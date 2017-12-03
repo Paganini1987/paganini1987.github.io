@@ -1,0 +1,149 @@
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.header
+		.menu_line
+			.logo
+				margin: 5px 0
+			nav
+				ul.menu
+					display: none
+				.hamburger
+					display: block
+					position: relative
+					width: 40px
+					height: 30px
+					border-top: 4px solid #132d69
+					border-bottom: 4px solid #132d69
+					&:before
+						content: ""
+						display: block
+						position: absolute
+						width: 100%
+						top: 50%
+						margin-top: -2px
+						left: 0
+						height: 4px
+						background-color: #132d69
+					&:hover
+						cursor: pointer
+				.m_menu
+					position: absolute
+					right: 0px
+					top: 0px
+					width: 250px
+					z-index: 10
+					background-color: #132d69
+					color: white
+					font-weight: 300
+					padding: 30px
+					font-size: 26px
+					ul
+						list-style: none
+						margin: 0
+						padding: 0
+						li:not(:last-of-type)
+							margin-bottom: 25px
+						li:hover
+							cursor: pointer
+				.close_m_menu
+					display: block
+					position: absolute
+					width: 50px
+					line-height: 50px
+					right: 0
+					top: 0
+					background-color: #fff
+					color: #132d69
+					text-align: center
+					&:hover
+						cursor: pointer
+
+	.main_section 
+		.center 
+			.form 
+				.wrap 
+					.form_body
+						&>div
+							width: 100%
+							flex-grow: 1
+						input
+							width: 100%!important
+
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	.header
+		.menu_line
+			padding: 0 10px
+
+	.main_section
+		.center
+			padding: 0
+			.form
+				.form_header
+					padding: 0 25px
+					line-height: 40px
+					font-size: 16px
+				.wrap
+					padding: 25px
+
+	.form_footer
+		.checkbox
+			label
+				width: 20px
+				height: 20px
+			.text
+				margin-left: 22px
+				margin-right: 10px
+				font-size: 12px
+
+		.next_button
+			width: 200px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+
