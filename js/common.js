@@ -86,7 +86,7 @@ var mainModule={
 		var xhr = new XMLHttpRequest();
 		var data=JSON.stringify(this.content);
 		
-		xhr.open('GET', 'http://localhost:3000/', true);
+		xhr.open('GET', '/', true);
 		xhr.send(data);
 		
 		xhr.onreadystatechange = function() {
@@ -109,6 +109,10 @@ var mainModule={
 			} else {
 				this.changeValue(obj, true);
 			}
+		}
+
+		if (obj.id==='comments') {
+			this.changeValue(obj, true);
 		}
 
 		if (obj.id==='primary_email') {
