@@ -10,7 +10,6 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
 	<link rel="stylesheet" href="css/main.min.css">
 </head>
@@ -44,12 +43,13 @@
 				
 			</nav>
 		</section>
-		<section class="line">
-			<div class="center">
-				<div clas="text">Make an order</div>
-			</div>
-		</section>
 	</header>
+
+	<section class="line">
+		<div class="center">
+			<div class="text">Make an order</div>
+		</div>
+	</section>
 
 	<section class="main_section">
 		<div class="center">
@@ -85,7 +85,7 @@
 							<label for="city">City</label>
 						</div>
 						<div class="comments">
-							<textarea id="comments" type="text"></textarea>
+							<textarea id="comments"></textarea>
 							<label for="comments">Comments</label>
 						</div>
 					</div>
@@ -93,7 +93,7 @@
 						<div class="checkbox">
 							<input type="checkbox" id="check">
 							<label for="check"></label>
-							<div class="text">I have read and accept the <a href="#">agreement</a></div>
+							<label for="check" class="text">I have read and accept the <a href="#">agreement</a></label>
 						</div>
 
 						<div class="next_button">next</div>

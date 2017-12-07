@@ -73,7 +73,7 @@ var mainModule={
 		return email.test(value);
 	},
 	checkPhone: function(value) {
-		var phone=/^([0-9]|[-]|[+]){8,100}$/;
+		var phone=/^([0-9]|[-]|[+]|\s){8,100}$/;
 
 		return phone.test(value);
 	},
@@ -86,7 +86,7 @@ var mainModule={
 		var xhr = new XMLHttpRequest();
 		var data=JSON.stringify(this.content);
 		
-		xhr.open('GET', '/', true);
+		xhr.open('GET', 'http://localhost:3000/', true);
 		xhr.send(data);
 		
 		xhr.onreadystatechange = function() {
@@ -100,8 +100,13 @@ var mainModule={
 		}
 		console.log(data);
 	},
-	checkForm: function(obj) {
-		var obj=obj.target ? obj.target : obj;
+	checkForm: function(obj_) {
+		var obj=obj_.target ? obj_.target : obj_;
+		var key=obj_.target ? obj_.key : '';
+		
+		if (key==='Tab') {
+			return null;
+		}
 
 		if (obj.id==='first_name' || obj.id==='last_name' || obj.id==='country' || obj.id==='city') {
 			if (this.isEmpty(obj.value)) {
@@ -131,9 +136,10 @@ var mainModule={
 			}
 		}
 
-		if (obj.id==='check') {
+		if (obj.id==='check' && key=='') {
 			if (!obj.checked) {
 				alert('Вы должны согласиться с условиями');
+				this.changeValue(obj, false);
 			}
 		}
 	},
@@ -147,7 +153,22 @@ var mainModule={
 
 		document.addEventListener('keyup', this.checkForm.bind(this))
 
+		document.addEventListener('keypress', function(e) {
+			var form = document.forms.personal_information;
+
+			if (e.key==='Enter') {
+				if (!that.formStatus()) {
+					for (var i=0; i<form.elements.length; i++) {
+						that.checkForm(form.elements[i]);
+					}
+				} else {
+					that.sendData();
+				}
+			}
+		})
+
 		check.addEventListener('click', function(e) {
+			console.log(e);
 			if (e.target.checked) {
 				that.changeValue(e.target, true);
 			} else {
@@ -173,6 +194,10 @@ var mainModule={
 		})
 
 		close_m_menu.addEventListener('click', function() {
+			m_menu.style.display='none';
+		})
+
+		window.addEventListener('resize', function() {
 			m_menu.style.display='none';
 		})
 
