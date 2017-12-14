@@ -1,0 +1,338 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*
+	-webkit-box-sizing: border-box
+	-moz-box-sizing: border-box
+	box-sizing: border-box
+	&:before, &:after
+		-webkit-box-sizing: border-box
+		-moz-box-sizing: border-box
+		box-sizing: border-box
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+a:hover, a
+	text-decoration: none
+
+//Маленькая шапка
+.header-wrap
+	.header.min_header
+		padding: 20px 105px
+		margin: 0 auto
+		text-align: center
+		.logo-wrap
+			display: inline-block
+			margin-bottom: 0
+
+			img
+				max-width: 340px
+		.h-button
+			display: inline-block
+			position: relative
+			width: 158px
+			line-height: 48px
+			border: 1px solid white
+			text-align: center
+			font-size: 1.4286em
+			color: white
+			margin-top: 10px
+			&_left
+				float: left
+				margin-right: 35px
+				
+			&_right
+				float: right
+				margin-left: 35px
+		.topage
+			display: none
+			
+// Шапка
+.header-wrap
+	display: block
+	background-color: black
+	width: 100%
+	.header
+		display: block
+		padding: 75px 0
+		margin: 0 auto
+		text-align: center
+		transition: all 1s linear
+		.logo-wrap
+			margin-bottom: 55px
+		.h-button
+			display: inline-block
+			position: relative
+			width: 209px
+			line-height: 69px
+			border: 1px solid white
+			text-align: center
+			font-size: 28px
+			color: white
+			&_left
+				margin-right: 35px
+				&:hover span:before
+					animation: slideLeft 2s ease-in-out 0s
+				span
+					display: inline-block
+					position: relative
+					padding-left: 30px
+					&:before
+						background: url(../img/sprite.png) no-repeat
+						content: ''
+						display: inline-block
+						height: 20px
+						margin-top: -10px
+						position: absolute
+						top: 50%
+						left: 0
+						width: 8px
+						background-position: -40px -40px
+						
+			&_right
+				margin-left: 35px
+				&:hover span:before
+					animation: slideRight 2s ease-in-out 0s
+				span
+					display: inline-block
+					position: relative
+					padding-right: 30px
+					&:before
+						background: url(../img/sprite.png) no-repeat
+						content: ''
+						display: block
+						height: 20px
+						margin-top: -10px
+						position: absolute
+						top: 50%
+						right: 0px
+						width: 8px
+						background-position: -53px -40px
+		.topage
+			display: block
+			position: relative
+			height: 30px
+			margin-top: 50px
+			animation: slideBottom 2s linear 0
+			animation-iteration-count: infinite
+			&:hover
+					animation-play-state: paused
+			&:before
+				background: url(../img/sprite.png) no-repeat -25px -40px
+				content: ''
+				display: block
+				position: absolute
+				left: 50%
+				margin-left: -7px
+				height: 19px
+				width: 14px
+				
+				
+@keyframes slideLeft
+    0%
+        left: 0
+    25%
+        left: -10px
+    50%
+        left: 0
+    75%
+        left: -10px
+    100%
+        left: 0
+    
+
+@keyframes slideRight
+    0%
+        right: 0
+    25%
+        right: -10px
+    50%
+        right: 0
+    75%
+        right: -10px
+    100%
+        right: 0
+    
+@keyframes slideBottom
+    0%
+        bottom: 0
+    25%
+        bottom: -10px
+    50%
+        bottom: 0
+    75%
+        bottom: -10px
+    100%
+        bottom: 0;
+    
+
+// Навигация
+.container_main-nav
+	.main-nav__item
+		line-height: 80px
+		text-align: center
+		font-size: 14px
+		font-weight: 700
+		letter-spacing: 1.2px;
+		text-transform: uppercase
+		color: black
+		&:hover
+			box-shadow: inset 0 0 0 5px #4b5b65
+		&_about
+			background-color: #A2D9DC
+		&_usloviya
+			background-color: #F9B7D3
+		&_phone
+			height: 80px
+			background-color: #FDE5A7
+			line-height: 1
+			&:hover
+				box-shadow: none
+			.main-nav__iteminner
+				display: block
+				position: absolute
+				top: 50%
+				left: 0
+				width: 100%
+				margin-top: -14px
+			.mainnav-ordercall
+				display: block
+				position: absolute
+				width: 100%
+				bottom: 0
+				left: 0
+				font-size: 10px
+				text-align: center
+				span
+					display: inline-block
+					padding-bottom: 7px
+					border-bottom: 1px solid black
+					
+		&_contacts
+			background-color: #97BDE2
+
+//Основной контент
+.content
+	.articles-list
+		.article-wrap
+			height: 510px
+			background-size: cover
+			background-position: center center
+			background-repeat: no-repeat
+		.article-wrap_onerow
+			.article-wrap
+				display: block
+				position: relative
+				height: 255px
+				padding: 25px
+				
+				&:before
+					content: ''
+					display: block
+					position: absolute
+					top: 0
+					left: 0
+					bottom: 0
+					right: 0
+					background: #4b5b65
+					border: 5px solid #000
+					opacity: 0
+					transition: opacity 0.2s
+				&:hover:before
+					opacity: 0.81
+				&:after
+					content: ''
+					display: block
+					position: absolute
+					background: url(../img/sprite.png) no-repeat 0 -67px
+					width: 19px
+					height: 14px
+					bottom: 20px
+					left: -19px
+					z-index: 2
+					transition: left 0.2s
+
+				&:hover:after
+					left: 50%
+					margin-left: -10px
+
+				&:hover .article .article__name
+					color: white
+					font-size: 1.2857em
+					padding: 35px 0
+				
+				&:hover .article .article__descr
+					display: none
+
+				&:hover .article .article__more
+					bottom: 25px
+					color: white
+					span
+						border-bottom: 1px solid white
+
+				.article
+					display: block
+					position: relative
+					height: 100%
+    				letter-spacing: 1.2px
+    				text-align: center
+					color: black
+					.article__name
+						text-align: center
+						letter-spacing: 1.2px
+						text-transform: uppercase
+						font-weight: 700
+						font-size: 14px
+						margin-bottom: 14px
+					.article__descr
+						letter-spacing: 0
+						text-align: center
+						max-height: 50%
+						overflow: hidden
+						line-height: 1.2
+						font-size: 14px
+					.article__more
+						display: block
+						position: absolute
+						left: 0
+						bottom: 0
+						width: 100%
+						font-size: 0.71em
+						font-weight: 700
+						text-align: center
+						text-transform: uppercase
+						transition: bottom 0.2s
+						span
+							border-bottom: 1px solid black
+							padding-bottom: 5px
+				
+
+
+@import "media" 

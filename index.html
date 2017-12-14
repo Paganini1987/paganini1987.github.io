@@ -5,110 +5,136 @@
 
 	<meta charset="utf-8">
 
-	<title>MAKE AN ORDER</title>
+	<title>Главная - Artcraft. Творчество и рукоделие</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
-	<link rel="stylesheet" href="css/main.min.css">
+
+	<link rel="stylesheet" href="css/main.css">
+
+	<!--[if IE 8]>
+        <link rel="stylesheet" type="text/css" href="css/ie8.css" media="screen, print" />
+    <![endif]-->
+    <!--[if IE 8]>
+        <script>
+            var e = ("article,aside,figcaption,figure,footer,header,hgroup,nav,section,time").split(',');
+            for (var i = 0; i < e.length; i++) {
+                document.createElement(e[i]);
+            }
+        </script>
+    <![endif]-->
+
 </head>
 
-<body>
-
-	<header class="header">
-		<section class="menu_line">
-			<div class="logo">
-				<img src="img/logo.png" alt="logo" class="logo">
+<body class="bodyblog startpage_body">
+	<div class="all-wrap_slide">
+		<div class="all-wrap">
+		<!-- Что за ссылка? -->
+		<a name="anchor_totop" id="anchor_totop" style="display: none;"></a>
+		<!-- Что за ссылка? -->
+			<div class="main-wrap">
+				<!-- Шапка -->
+				<div class="header-wrap" name="topage" id="topage">
+					<div class="container">
+						<div class="row">
+							<div class="col-md-12 col-sm-12 col-xs-12">
+								<header class="header" id="responsive_header">
+									<div class="logo-wrap">
+										<a href="/" class="logo" title="На главную">
+											<img src="img/big_logo.png" alt="artcraftclub.ru" />
+										</a>
+									</div>
+									<a class="h-button h-button_left" href="/blog/"><span>В блог</span></a>
+									<a class="h-button h-button_right" href="/catalog/"><span>В магазин</span></a>
+									<a href="#topage" class="topage"></a>
+								</header>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Шапка -->
+				<!-- Навигация -->
+				<div class="container container_main-nav">
+					<div class="row">
+						<nav class="main-nav">
+							<!-- Почему фон картинкой?  -->
+							<a  class="main-nav__item col-md-3 col-sm-3 col-xs-3 main-nav__item_about" href="/about/">
+								<div class="main-nav__iteminner">О нас</div>
+							</a>
+							<a  class="main-nav__item col-md-3 col-sm-3 col-xs-3 main-nav__item_usloviya" href="/usloviya/">
+								<div class="main-nav__iteminner">Условия</div>
+							</a>
+							<div class="main-nav__item col-md-3 col-sm-3 col-xs-3 main-nav__item_phone">
+								<div class="main-nav__iteminner">
+									8 (920) 738-03-88<br>
+									8 (920) 264-75-77
+								</div>
+								<a class="mainnav-ordercall get_popup" href="/order_call/"><span>позвоните мне</span></a>
+							</div>
+							<a  class="main-nav__item col-md-3 col-sm-3 col-xs-3 main-nav__item_contacts" href="/contacts/">
+								<div class="main-nav__iteminner">Контакты</div>
+							</a>
+						</nav>
+					</div>
+				</div>
+				<!-- Навигация -->
+				<!-- Основной контент -->
+				<div class="content-wrap">
+					<div class="container">
+						<div class="content" id="content">
+							<div class="articles-list row">
+								<div class="article-wrap col-lg-6 col-md-6 col-sm-6 col-xs-12 article-wrap_tworow article-wrap_black" style="background-image: url(img/sajt_v_razrabotke_zagruzka_2-1.jpg);">
+									<div class="article"></div>
+								</div>
+								<div class="article-wrap col-lg-6 col-md-6 col-sm-6 col-xs-12 article-wrap_tworow article-wrap_black" style="background-image: url(img/sajt_v_razrabotke_zagruzka_2-2.jpg);">
+									<div class="article"></div>
+								</div>
+								<div class="article-wrap col-lg-6 col-md-6 col-sm-6 col-xs-12 article-wrap_tworow article-wrap_black" style="background-image: url(img/gifkadizajnerskayabumaga1_5.gif);">
+									<div class="article"></div>
+								</div>
+								<div class="article-wrap col-lg-6 col-md-6 col-sm-6 col-xs-12 article-wrap_tworow article-wrap_black" style="background-image: url(img/gifkaartkraft3.gif);">
+									<div class="article"></div>
+								</div>
+								
+								<div class="article-wrap_onerow col-lg-6 col-md-6 col-sm-6 col-xs-12">
+									<a href="/blog/mk_korobochka_sumka/" class="article-wrap  article-wrap_black" style="background-image: url(img/korobka_sumochka_mal.jpg);" title="Новый мастер-класс">
+										<div class="article">
+											<div class="article__name"><span>Новый мастер-класс</span></div>
+											<div class="article__descr"><p>Оригинальная коробочка, которую вы легко и просто сможете сделать сами с помощью наших материалов</p></div>
+											<span class="article__more"><span>Ознакомиться с мастер-классом подробнее</span></span>
+										</div>
+									</a>
+									<a href="/blog/master_klass_podarochnyj_konvert_dlya_deneg/" class="article-wrap  article-wrap_black" style="background-image: url(img/bolshoe_izo_konvret.jpg);" title="Мастер-класс "Подарочный конверт для денег"">
+										<div class="article">
+											<div class="article__name"><span>Мастер-класс "Подарочный конверт для денег"</span></div>
+											<div class="article__descr"><p>Новый оригинальный мастер-класс подарочного конверта для денег.</p></div>
+											<span class="article__more"><span>Ознакомиться с мастер-классом подробнее</span></span>
+										</div>
+									</a>
+								</div>
+								
+								
+								<div class="article-wrap col-lg-6 col-md-6 col-sm-6 col-xs-12 article-wrap_tworow article-wrap_black" style="background-image: url(img/artkraftprodukciya-2-animashka2-kvadratik.gif);">
+									<div class="article"></div>
+								</div>
+								
+								
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
-			<nav>	
-				<ul class="menu">
-					<li>Magazine</li>
-					<li>Production</li>
-					<li>Contacts</li>
-					<li>Feedback</li>
-					<li>Our philosophy</li>
-				</ul>
-				<div class="hamburger"></div>
-				<div class="m_menu">
-					<div class="close_m_menu">X</div>
-					<ul>
-						<li>Magazine</li>
-						<li>Production</li>
-						<li>Contacts</li>
-						<li>Feedback</li>
-						<li>Our philosophy</li>
-					</ul>
-				</div>
+			<div class="footer-wrap">
 				
-			</nav>
-		</section>
-	</header>
-
-	<section class="line">
-		<div class="center">
-			<div class="text">Make an order</div>
+				
+			</div>
+			<!-- <script type="text/javascript"> var is_creative = true; </script> -->
 		</div>
-	</section>
-
-	<section class="main_section">
-		<div class="center">
-			<form action="#" class="form" name="personal_information">
-				<div class="form_header">
-					<div class="title">Personal information</div>
-					<div class="navigation">Step 1 of 4</div>
-				</div>
-				<div class="wrap">
-					<div class="form_body">
-						<div class="first_name">
-							<input id="first_name" type="text">
-							<label for="first_name">First name</label>
-						</div>
-						<div class="first_name">
-							<input id="last_name" type="text">
-							<label for="last_name">Last name</label>
-						</div>
-						<div class="primary_email">
-							<input id="primary_email" type="text">
-							<label for="primary_email">Primary email</label>
-						</div>
-						<div class="phone_number">
-							<input id="phone_number" type="text">
-							<label for="phone_number">Phone_number</label>
-						</div>
-						<div class="country">
-							<input id="country" type="text">
-							<label for="country">Country</label>
-						</div>
-						<div class="city">
-							<input id="city" type="text">
-							<label for="city">City</label>
-						</div>
-						<div class="comments">
-							<textarea id="comments"></textarea>
-							<label for="comments">Comments</label>
-						</div>
-					</div>
-					<div class="form_footer">
-						<div class="checkbox">
-							<input type="checkbox" id="check">
-							<label for="check"></label>
-							<label for="check" class="text">I have read and accept the <a href="#">agreement</a></label>
-						</div>
-
-						<div class="next_button">next</div>
-					</div>
-				</div>
-			</form>
-		</div>
-	</section>
-
-	<footer class="footer">
-		<span class="center">2017 © BRAND LLC.</span>
-	</footer>
-
+    </div>
+	<a class="link_totop" href="#anchor_totop" title="Наверх"></a>
 	
-	<script src="js/common.js"></script>
 
+	<script src="js/common.js"></script>
 </body>
 </html>
