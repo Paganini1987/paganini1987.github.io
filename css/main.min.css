@@ -1590,8 +1590,8 @@ input, textarea {
   position: absolute;
   top: 0;
   right: 0;
-  width: 18px;
-  height: 18px;
+  width: 25px;
+  height: 25px;
 }
 
 .p-cities__close img {
@@ -2448,6 +2448,10 @@ form.sended .questions__success div {
   }
   .p-cities__center {
     width: 950px;
+  }
+  .p-cities__close {
+    width: 18px;
+    height: 18px;
   }
   .p-cities__name {
     font-size: 13px;
