@@ -925,6 +925,10 @@ template {
  *	  -Качество
  *	  -Остались вопросы?
  *	  -Посмотреть каталог
+ *
+ *	 -Стили страницы каталог
+ *	  -Меню вверху страницы
+ *	  -Page-Hamburger
  */
 /* Общие стили */
 * {
@@ -1070,7 +1074,7 @@ input, textarea {
 }
 
 .autoheight-1024 {
-  min-height: 669px !important;
+  min-height: 600px !important;
 }
 
 .scrollbar::-webkit-scrollbar {
@@ -1213,6 +1217,7 @@ input, textarea {
 
 /* Hamburger */
 .hamburger {
+  display: block;
   position: fixed;
   top: 0;
   left: -200px;
@@ -1902,8 +1907,8 @@ input, textarea {
   bottom: 0;
   right: 0;
   background-color: #afcb07;
-  font-size: 22px;
-  line-height: 42px;
+  font-size: 20px;
+  line-height: 40px;
   letter-spacing: 0.025em;
   color: #ffffff;
   font-weight: 300;
@@ -1981,7 +1986,7 @@ input, textarea {
 .product__img {
   display: block;
   position: relative;
-  height: 380px;
+  height: 340px;
 }
 
 .product__img img {
@@ -2014,7 +2019,7 @@ input, textarea {
 }
 
 .product__nav {
-  margin-top: 120px;
+  margin-top: 15vh;
   text-align: center;
 }
 
@@ -2148,7 +2153,7 @@ input, textarea {
 .questions__title {
   font-size: 60px;
   color: #323232;
-  margin-bottom: 70px;
+  margin-bottom: 45px;
 }
 
 .questions__form {
@@ -2188,7 +2193,7 @@ input, textarea {
 
 .questions__textarea {
   width: 100%;
-  height: 220px;
+  height: 22vh;
   resize: none;
   margin-top: 43px;
   font-size: 24px;
@@ -2318,6 +2323,61 @@ form.sended .questions__success div {
 
 .show-catalog .fp-tableCell {
   height: 220px !important;
+}
+
+/* Стили страницы каталог */
+/* Меню вверху страницы */
+.page-menu {
+  position: relative;
+  padding-left: 0;
+  z-index: auto;
+}
+
+.page-menu__logo {
+  margin-left: 30px;
+}
+
+.page-menu__logo svg * {
+  fill: #969696;
+}
+
+.page-menu__city, .page-menu__phone {
+  color: #646464;
+}
+
+.breadcrumbs {
+  margin-left: 110px;
+}
+
+.breadcrumbs__item {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  letter-spacing: 0.025em;
+  color: #969696;
+  font-weight: bold;
+}
+
+.breadcrumbs__item a:hover {
+  color: #646464;
+}
+
+.breadcrumbs__item:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  vertical-align: middle;
+  width: 38px;
+  height: 30px;
+  background-image: url("../img/icons/Breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover;
+  margin: 0 10px;
+}
+
+/* Page-Hamburger */
+.page-hamburger {
+  position: relative;
 }
 
 /*==========  Desktop First  ==========*/
