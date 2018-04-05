@@ -1537,6 +1537,11 @@ input, textarea {
   height: 0;
 }
 
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
+  -ms-touch-action: auto;
+      touch-action: auto;
+}
+
 .disabled .main-header__prev, .disabled .main-header__next {
   display: none;
 }
