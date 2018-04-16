@@ -3441,7 +3441,7 @@ input, textarea, label, select, a {
 }
 
 .menu__city:hover {
-  color: #ff8c00;
+  color: #ff8c00 !important;
 }
 
 .menu__phone {
@@ -3452,7 +3452,7 @@ input, textarea, label, select, a {
 }
 
 .menu__phone:hover {
-  color: #ff8c00;
+  color: #ff8c00 !important;
 }
 
 .js-p-menu-opened .menu__logo {
@@ -5759,6 +5759,10 @@ input:disabled + .filters__box {
   font-weight: bold;
 }
 
+.news__title:hover {
+  color: #646464 !important;
+}
+
 /* Стили страницы акции */
 .events__list {
   margin-top: 65px;
@@ -5787,6 +5791,10 @@ input:disabled + .filters__box {
   color: #323232 !important;
   margin-bottom: 25px;
   font-weight: bold;
+}
+
+.events__title:hover {
+  color: #646464 !important;
 }
 
 .events__description {
