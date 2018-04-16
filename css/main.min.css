@@ -2443,6 +2443,10 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
  *	  -переключаталь
  *	  -карта
  *	  -список
+ *
+ *	 -Стили страницы новости
+ *
+ *	 -Стили страницы акции
  */
 /* Общие стили */
 * {
@@ -2451,7 +2455,6 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
 }
 
 html, body {
-  height: 100%;
   width: 100%;
 }
 
@@ -5601,17 +5604,15 @@ input:disabled + .filters__box {
   color: #ff8c00;
 }
 
-.wrapper-slide {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+/* Карта */
+/* Менее яркая карта */
+[class*="ymaps-2"][class*="-ground-pane"] {
+  opacity: 0.7;
 }
 
-/* Карта */
 .map {
   display: block;
-  width: 100%;
+  width: 100vw;
   height: -webkit-calc(100vh - 70px);
   height: calc(100vh - 70px);
   min-height: 530px;
@@ -5649,6 +5650,7 @@ input:disabled + .filters__box {
   display: block;
   font-size: 18px;
   line-height: 30px;
+  width: 100vw;
   letter-spacing: 0.025em;
   color: #323232;
   background-color: #fafafa;
@@ -5666,7 +5668,7 @@ input:disabled + .filters__box {
   margin-top: 100px;
 }
 
-.addresses__item:not(:last-of-type) {
+.addresses__item {
   margin-bottom: 90px;
 }
 
@@ -5709,6 +5711,89 @@ input:disabled + .filters__box {
 
 .list-active .js-map {
   color: #646464;
+}
+
+/* Стили страницы новости */
+.news__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  margin-top: 65px;
+  margin-left: -25px;
+  margin-right: -25px;
+}
+
+.news__item {
+  width: -webkit-calc(50% - 50px);
+  width: calc(50% - 50px);
+  margin: 0 25px;
+  margin-bottom: 100px;
+}
+
+.news__img {
+  margin-bottom: 20px;
+}
+
+.news__img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.news__date {
+  font-size: 16px;
+  letter-spacing: 0.025em;
+  color: #646464;
+  white-space: nowrap;
+  margin-bottom: 14px;
+}
+
+.news__title {
+  font-size: 30px;
+  letter-spacing: 0.025em;
+  color: #323232 !important;
+  font-weight: bold;
+}
+
+/* Стили страницы акции */
+.events__list {
+  margin-top: 65px;
+}
+
+.events__item {
+  margin-bottom: 100px;
+}
+
+.events__img {
+  display: block;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.events__img img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.events__title {
+  display: block;
+  font-size: 30px;
+  letter-spacing: 0.025em;
+  color: #323232 !important;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.events__description {
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.025em;
+  color: #323232;
 }
 
 /*==========  Desktop First  ==========*/
@@ -6316,7 +6401,7 @@ input:disabled + .filters__box {
   .addresses__list {
     margin-top: 70px;
   }
-  .addresses__item:not(:last-of-type) {
+  .addresses__item {
     margin-bottom: 60px;
   }
   .addresses__name {
@@ -6327,6 +6412,31 @@ input:disabled + .filters__box {
   }
   .addresses__header {
     margin-bottom: 20px;
+  }
+  .news__list {
+    margin-top: 40px;
+  }
+  .news__item {
+    margin-bottom: 60px;
+  }
+  .news__title {
+    font-size: 24px;
+  }
+  .news__date {
+    font-size: 13px;
+  }
+  .events__list {
+    margin-top: 40px;
+  }
+  .events__item {
+    margin-bottom: 60px;
+  }
+  .events__title {
+    font-size: 24px;
+  }
+  .events__description {
+    font-size: 16px;
+    line-height: 22px;
   }
 }
 
@@ -7169,7 +7279,7 @@ input:disabled + .filters__box {
     font-size: 31px;
     line-height: 43px;
   }
-  .addresses__item:not(:last-of-type) {
+  .addresses__item {
     margin-bottom: 95px;
   }
   .addresses__title {
@@ -7209,6 +7319,43 @@ input:disabled + .filters__box {
     height: 40px;
     -webkit-background-size: 100% 100%;
             background-size: 100%;
+  }
+  .news__list {
+    margin-top: 70px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .news__item {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 100px;
+  }
+  .news__img {
+    margin-bottom: 35px;
+  }
+  .news__title {
+    font-size: 53px;
+  }
+  .news__date {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+  .events__list {
+    margin-top: 70px;
+  }
+  .events__item {
+    margin-bottom: 100px;
+  }
+  .events__img {
+    margin-bottom: 35px;
+  }
+  .events__title {
+    font-size: 53px;
+  }
+  .events__description {
+    font-size: 31px;
+    line-height: 43px;
   }
 }
 
@@ -7858,7 +8005,7 @@ input:disabled + .filters__box {
     font-size: 13px;
     line-height: 18px;
   }
-  .addresses__item:not(:last-of-type) {
+  .addresses__item {
     margin-bottom: 33px;
   }
   .addresses__header {
@@ -7871,6 +8018,39 @@ input:disabled + .filters__box {
     font-size: 13px;
     line-height: 1;
     margin-top: 10px;
+  }
+  .news__list {
+    margin-top: 30px;
+  }
+  .news__item {
+    margin-bottom: 60px;
+  }
+  .news__img {
+    margin-bottom: 20px;
+  }
+  .news__title {
+    font-size: 22px;
+  }
+  .news__date {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+  .events__list {
+    margin-top: 26px;
+  }
+  .events__item {
+    margin-bottom: 43px;
+  }
+  .events__img {
+    margin-bottom: 17px;
+  }
+  .events__title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  .events__description {
+    font-size: 13px;
+    line-height: 18px;
   }
 }
 
