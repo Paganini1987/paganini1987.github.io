@@ -2447,6 +2447,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
  *	 -Стили страницы новости
  *
  *	 -Стили страницы акции
+ *
+ *	 -Стили текстовой страницы
  */
 /* Общие стили */
 * {
@@ -4490,7 +4492,7 @@ input:disabled + .filters__box {
 }
 
 .footer__copyright a:hover, .footer__design a:hover {
-  color: #ff8c00;
+  color: #646464;
 }
 
 /* Стили страницы продукт */
@@ -5619,6 +5621,7 @@ input:disabled + .filters__box {
 }
 
 .map__content {
+  display: inline-block;
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.025em;
@@ -5628,6 +5631,10 @@ input:disabled + .filters__box {
 .map__content span {
   font-weight: bold;
   white-space: normal;
+}
+
+.map .ymaps-2-1-62-cluster-accordion-panel__menu-item-number {
+  top: 12px;
 }
 
 .map .ymaps-2-1-62-balloon__content {
@@ -5714,6 +5721,10 @@ input:disabled + .filters__box {
 }
 
 /* Стили страницы новости */
+.news {
+  background-color: #fafafa;
+}
+
 .news__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5735,6 +5746,8 @@ input:disabled + .filters__box {
 }
 
 .news__img {
+  display: block;
+  width: 100%;
   margin-bottom: 20px;
 }
 
@@ -5764,6 +5777,10 @@ input:disabled + .filters__box {
 }
 
 /* Стили страницы акции */
+.events {
+  background-color: #fafafa;
+}
+
 .events__list {
   margin-top: 65px;
 }
@@ -5801,6 +5818,85 @@ input:disabled + .filters__box {
   font-size: 18px;
   line-height: 25px;
   letter-spacing: 0.025em;
+  color: #323232;
+}
+
+/* Стили текстовой страницы */
+.text-page {
+  background-color: #fafafa;
+  letter-spacing: 0.025em;
+  color: #323232;
+  font-size: 18px;
+  line-height: 1.38;
+}
+
+.text-page h1 {
+  margin: 0;
+  padding: 0;
+  font-size: 45px;
+  font-weight: bold;
+  text-align: left;
+  margin-bottom: 36px;
+}
+
+.text-page h2 {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 65px 0;
+}
+
+.text-page time {
+  font-size: 16px;
+  color: #646464;
+}
+
+.text-page p {
+  margin: 30px 0;
+}
+
+.text-page p:first-of-type {
+  margin-top: 40px;
+}
+
+.text-page p:last-of-type {
+  margin-bottom: 55px;
+}
+
+.text-page figure {
+  margin: 70px 0;
+}
+
+.text-page figure img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  margin-bottom: 30px;
+}
+
+.text-page figure figcaption {
+  text-align: center;
+  font-weight: bold;
+}
+
+.text-page ul {
+  list-style: disc;
+  padding-left: 20px;
+  margin: 50px 0;
+}
+
+.text-page ul li:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.text-page a {
+  color: #ff8c00;
+  font-weight: bold;
+  -webkit-transition: color 0.3s;
+  -o-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.text-page a:hover {
   color: #323232;
 }
 
@@ -6445,6 +6541,42 @@ input:disabled + .filters__box {
   .events__description {
     font-size: 16px;
     line-height: 22px;
+  }
+  .text-page {
+    font-size: 16px;
+  }
+  .text-page h1 {
+    font-size: 35px;
+    margin-bottom: 31px;
+  }
+  .text-page h2 {
+    font-size: 24px;
+    margin: 52px 0;
+  }
+  .text-page time {
+    font-size: 13px;
+  }
+  .text-page p {
+    margin: 24px 0;
+  }
+  .text-page p:first-of-type {
+    margin-top: 32px;
+  }
+  .text-page p:last-of-type {
+    margin-bottom: 44px;
+  }
+  .text-page figure {
+    margin: 56px 0;
+  }
+  .text-page figure img {
+    margin-bottom: 24px;
+  }
+  .text-page ul {
+    padding-left: 20px;
+    margin: 40px 0;
+  }
+  .text-page ul li:not(:last-child) {
+    margin-bottom: 24px;
   }
 }
 
@@ -7365,6 +7497,42 @@ input:disabled + .filters__box {
     font-size: 31px;
     line-height: 43px;
   }
+  .text-page {
+    font-size: 31px;
+  }
+  .text-page h1 {
+    font-size: 62px;
+    margin-bottom: 68px;
+  }
+  .text-page h2 {
+    font-size: 53px;
+    margin: 114px 0;
+  }
+  .text-page time {
+    font-size: 36px;
+  }
+  .text-page p {
+    margin: 52px 0;
+  }
+  .text-page p:first-of-type {
+    margin-top: 70px;
+  }
+  .text-page p:last-of-type {
+    margin-bottom: 96px;
+  }
+  .text-page figure {
+    margin: 123px 0;
+  }
+  .text-page figure img {
+    margin-bottom: 52px;
+  }
+  .text-page ul {
+    padding-left: 20px;
+    margin: 88px 0;
+  }
+  .text-page ul li:not(:last-child) {
+    margin-bottom: 52px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -8059,6 +8227,42 @@ input:disabled + .filters__box {
   .events__description {
     font-size: 13px;
     line-height: 18px;
+  }
+  .text-page {
+    font-size: 13px;
+  }
+  .text-page h1 {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+  .text-page h2 {
+    font-size: 22px;
+    margin: 50px 0;
+  }
+  .text-page time {
+    font-size: 15px;
+  }
+  .text-page p {
+    margin: 22px 0;
+  }
+  .text-page p:first-of-type {
+    margin-top: 30px;
+  }
+  .text-page p:last-of-type {
+    margin-bottom: 42px;
+  }
+  .text-page figure {
+    margin: 54px 0;
+  }
+  .text-page figure img {
+    margin-bottom: 22px;
+  }
+  .text-page ul {
+    padding-left: 20px;
+    margin: 38px 0;
+  }
+  .text-page ul li:not(:last-child) {
+    margin-bottom: 22px;
   }
 }
 
