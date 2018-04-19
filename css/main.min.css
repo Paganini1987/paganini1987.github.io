@@ -3820,14 +3820,27 @@ input, textarea, label, select, a {
 }
 
 .questions__agreement {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   width: 100%;
   text-align: center;
   font-size: 16px;
   line-height: 22px;
   letter-spacing: 0.025em;
   color: #323232;
-  padding: 0 100px;
+  padding: 0 70px;
   margin-bottom: 35px;
+}
+
+.questions__text {
+  text-align: left;
+  padding-top: 5px;
 }
 
 .questions a {
@@ -4613,6 +4626,14 @@ input:disabled + .filters__box {
 }
 
 .p-checkout__agreement {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   font-size: 16px;
   line-height: 22px;
   color: #969696;
@@ -4626,6 +4647,11 @@ input:disabled + .filters__box {
 .p-checkout__agreement a:hover {
   text-decoration: none;
   color: #ff8c00;
+}
+
+.p-checkout__text {
+  text-align: left;
+  padding-top: 5px;
 }
 
 .p-checkout__button {
@@ -4646,6 +4672,44 @@ input:disabled + .filters__box {
 
 .p-checkout__input:-ms-input-placeholder {
   font-size: 18px;
+}
+
+/* Стилизация checkbox */
+.checkbox {
+  width: 30px;
+  margin-right: 10px;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+}
+
+.checkbox input {
+  display: none;
+}
+
+.checkbox input:checked + .checkbox__box {
+  -webkit-background-size: 100% 100%;
+          background-size: 100%;
+}
+
+.checkbox input.invalid + .checkbox__box {
+  border: 2px solid #FF6347;
+}
+
+.checkbox__box {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border: 2px solid #646464;
+  background-image: url("../img/icons/Check.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: 0 0;
+          background-size: 0;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /* popup success */
@@ -7316,6 +7380,14 @@ input:disabled + .filters__box {
   .p-checkout {
     max-width: 100%;
   }
+  .checkbox {
+    width: 50px;
+    margin-right: 20px;
+  }
+  .checkbox__box {
+    width: 50px;
+    height: 50px;
+  }
   .p-checkout__agreement, .p-personal__text, .p-success__text {
     font-size: 31px;
     line-height: 43px;
@@ -8090,6 +8162,14 @@ input:disabled + .filters__box {
   .p-checkout__agreement {
     font-size: 13px;
     line-height: 18px;
+  }
+  .checkbox {
+    width: 25px;
+    margin-right: 10px;
+  }
+  .checkbox__box {
+    width: 25px;
+    height: 25px;
   }
   .p-personal {
     height: auto;
