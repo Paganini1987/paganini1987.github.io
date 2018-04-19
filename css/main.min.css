@@ -3951,9 +3951,19 @@ input, textarea, label, select, a {
   margin-left: 110px;
 }
 
+.breadcrumbs__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .breadcrumbs__item {
-  display: inline-block;
-  vertical-align: middle;
+  position: relative;
   font-size: 16px;
   letter-spacing: 0.025em;
   color: #969696;
@@ -3970,10 +3980,19 @@ input, textarea, label, select, a {
   color: #646464;
 }
 
+.breadcrumbs__item:not(:last-child) {
+  margin-right: 65px;
+}
+
 .breadcrumbs__item:not(:last-child)::after {
   content: '';
-  display: inline-block;
-  vertical-align: middle;
+  display: block;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  right: -63px;
   width: 38px;
   height: 30px;
   background-image: url("../img/icons/Breadcrumbs-arrow.svg");
@@ -4151,6 +4170,10 @@ input, textarea, label, select, a {
   font-weight: normal;
 }
 
+.filters__description::first-letter {
+  text-transform: uppercase;
+}
+
 .filters__buttons {
   display: -webkit-box;
   display: -webkit-flex;
@@ -4310,6 +4333,7 @@ input:disabled + .filters__box {
           background-size: cover;
   vertical-align: middle;
   margin-left: 20px;
+  margin-top: -1px;
 }
 
 .marquee-mobile {
@@ -4476,6 +4500,10 @@ input:disabled + .filters__box {
   color: #969696;
   text-align: center;
   margin-bottom: 40px;
+}
+
+.footer__copyright {
+  margin-bottom: 5px;
 }
 
 .footer__copyright, .footer__design {
@@ -4905,6 +4933,7 @@ input:disabled + .filters__box {
   height: 50px;
   font-weight: bold;
   font-size: 16px;
+  line-height: 1;
   letter-spacing: 0.025em;
   background-color: #ff8c00;
   -webkit-border-radius: 25px;
@@ -5633,6 +5662,10 @@ input:disabled + .filters__box {
   white-space: normal;
 }
 
+.map .ymaps-2-1-62-balloon__close {
+  margin-right: 5px;
+}
+
 .map .ymaps-2-1-62-cluster-accordion-panel__menu-item-number {
   top: 12px;
 }
@@ -6244,7 +6277,11 @@ input:disabled + .filters__box {
   .breadcrumbs__item {
     font-size: 13px;
   }
+  .breadcrumbs__item:not(:last-child) {
+    margin-right: 55px;
+  }
   .breadcrumbs__item:not(:last-child)::after {
+    right: -52px;
     width: 28px;
     height: 23px;
   }
@@ -7453,6 +7490,9 @@ input:disabled + .filters__box {
   .map .ymaps-2-1-62-balloon__content {
     padding: 40px;
     margin-right: 95px !important;
+  }
+  .map .ymaps-2-1-62-balloon__close {
+    margin-right: 0px;
   }
   .map .ymaps-2-1-62-balloon__close-button {
     width: 40px;
