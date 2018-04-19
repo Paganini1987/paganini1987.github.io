@@ -842,9 +842,18 @@
                 <input type="email" class="p-checkout__input default__input js-save js-validation" name="email" placeholder="E-mail">
                 <input type="tel" class="p-checkout__input default__input js-save js-validation" name="tel" placeholder="Телефон">
                 <div class="p-checkout__agreement">
-                    Нажимая кнопку «Отправить», я подтверждаю свою дееспособность, даю согласие на
-                    <a href="#" class="js-personal-open">обработку своих персональных данных</a> в соответствии с
-                    <a href="#" class="js-personal-open">Условиями</a>.
+                    <div class="checkbox">
+                        <label>
+                            <input class="js-validation" type="checkbox" name="agreement" id="" placeholder="Соглашение">
+                            <div class="checkbox__box"></div>
+                        </label>
+                    </div>
+                    <div class="p-checkout__text">
+                        Нажимая кнопку &quot;Отправить заявку&quot;, я подтверждаю свою дееспособность, даю согласие на&nbsp;
+                        <a href="#"
+                            class="js-personal-open">обработку своих персональных данных</a> в&nbsp;соответствии с
+                        <a href="#" class="js-personal-open">Условиями</a>.
+                    </div>
                 </div>
                 <button class="p-checkout__button default-button">Отправить заявку</button>
             </form>
