@@ -5017,6 +5017,7 @@ input:disabled + .filters__box {
 .cover__sticker span {
   color: #ffffff;
   margin-right: 7px;
+  margin-top: -1px;
 }
 
 .cover__sticker img {
