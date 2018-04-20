@@ -5498,6 +5498,10 @@ input:disabled + .filters__box {
   background-color: #fafafa;
 }
 
+.sale__wrapper {
+  padding-bottom: 110px;
+}
+
 .sale__list {
   margin-top: 63px;
 }
@@ -5824,6 +5828,10 @@ input:disabled + .filters__box {
   background-color: #fafafa;
 }
 
+.news__wrapper {
+  padding-bottom: 0;
+}
+
 .news__list {
   display: -webkit-box;
   display: -webkit-flex;
@@ -5880,11 +5888,15 @@ input:disabled + .filters__box {
   background-color: #fafafa;
 }
 
+.events__wrapper {
+  padding-bottom: 100px;
+}
+
 .events__list {
   margin-top: 65px;
 }
 
-.events__item {
+.events__item:not(:last-of-type) {
   margin-bottom: 100px;
 }
 
@@ -6620,6 +6632,9 @@ input:disabled + .filters__box {
   .addresses__header {
     margin-bottom: 20px;
   }
+  .news__wrapper {
+    padding-bottom: 0;
+  }
   .news__list {
     margin-top: 40px;
   }
@@ -6635,7 +6650,7 @@ input:disabled + .filters__box {
   .events__list {
     margin-top: 40px;
   }
-  .events__item {
+  .events__item:not(:last-of-type) {
     margin-bottom: 60px;
   }
   .events__title {
@@ -7411,6 +7426,9 @@ input:disabled + .filters__box {
     width: 60px;
     height: 60px;
   }
+  .sale__wrapper {
+    padding-bottom: 100px;
+  }
   .sale__item:not(:last-of-type) {
     margin-bottom: 100px;
   }
@@ -7595,10 +7613,13 @@ input:disabled + .filters__box {
     font-size: 36px;
     margin-bottom: 25px;
   }
+  .events__wrapper {
+    padding-bottom: 100px;
+  }
   .events__list {
     margin-top: 70px;
   }
-  .events__item {
+  .events__item:not(:last-of-type) {
     margin-bottom: 100px;
   }
   .events__img {
@@ -8194,6 +8215,9 @@ input:disabled + .filters__box {
   .h1-page-title {
     font-size: 26px;
   }
+  .sale__wrapper {
+    padding-bottom: 40px;
+  }
   .sale__item:not(:last-of-type) {
     margin-bottom: 40px;
   }
@@ -8333,10 +8357,13 @@ input:disabled + .filters__box {
     font-size: 15px;
     margin-bottom: 14px;
   }
+  .events__wrapper {
+    padding-bottom: 43px;
+  }
   .events__list {
     margin-top: 26px;
   }
-  .events__item {
+  .events__item:not(:last-of-type) {
     margin-bottom: 43px;
   }
   .events__img {
