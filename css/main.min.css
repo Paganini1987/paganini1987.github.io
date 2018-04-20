@@ -4577,7 +4577,7 @@ input:disabled + .filters__box {
   background-color: #ffffff;
   -webkit-box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.2);
-  padding: 55px 90px;
+  padding: 55px 85px;
   text-align: center;
   letter-spacing: 0.025em;
 }
