@@ -6124,6 +6124,7 @@ input:disabled + .filters__box {
   .menu {
     padding-right: 33px;
     height: 50px;
+    padding-left: 72px;
   }
   .hamburger {
     width: 50px;
