@@ -4039,15 +4039,16 @@ input, textarea, label, select, a {
 }
 
 .filters__filter:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 15px;
 }
 
 .filters__filter::after {
   content: '';
   display: block;
   position: absolute;
-  top: 21px;
-  right: 10px;
+  top: 50%;
+  margin-top: -14px;
+  right: 17px;
   width: 30px;
   height: 30px;
   background-image: url("../img/icons/Filter-arrow.svg");
@@ -6147,6 +6148,12 @@ input:disabled + .filters__box {
     font-size: 13px;
     margin-right: 20px;
   }
+  .menu__city::before {
+    left: -22px;
+    top: -3px;
+    width: 20px;
+    height: 22px;
+  }
   .menu__phone {
     font-size: 15px;
   }
@@ -6169,10 +6176,10 @@ input:disabled + .filters__box {
     margin-left: -57px;
   }
   .main-header__text::after {
-    width: 29px;
-    height: 11px;
-    margin-left: -15px;
-    bottom: -32px;
+    width: 37px;
+    height: 20px;
+    margin-left: -13px;
+    bottom: -46px;
   }
   .main-header__next, .main-header__prev {
     width: 20px;
@@ -6362,7 +6369,7 @@ input:disabled + .filters__box {
   .breadcrumbs__item:not(:last-child)::after {
     right: -52px;
     width: 28px;
-    height: 23px;
+    height: 19px;
   }
   .breadcrumbs {
     margin-left: 75px;
@@ -6376,9 +6383,14 @@ input:disabled + .filters__box {
     line-height: 50px;
   }
   .filters__filter::after {
-    top: 15px;
+    right: 13px;
+    top: 50%;
+    margin-top: -8px;
     width: 20px;
     height: 20px;
+  }
+  .filters__filter:not(:last-child) {
+    margin-right: 18px;
   }
   .filters__popup {
     left: -25px;
@@ -6440,7 +6452,8 @@ input:disabled + .filters__box {
   .marquee a::after {
     width: 21px;
     height: 21px;
-    margin-left: 25px;
+    margin-left: 20px;
+    margin-top: -3px;
   }
   .products__no-data {
     font-size: 14px;
