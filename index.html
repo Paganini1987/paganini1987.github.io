@@ -30,16 +30,13 @@
 			<nav class="nav">
 				<ul class="nav__list">
 					<li class="nav__item">
-						<a href="">условия</a>
+						<a class="scroll" href="#conditions">условия</a>
 					</li>
 					<li class="nav__item">
-						<a href="">преимущества</a>
+						<a class="scroll" href="#calc">калькулятор</a>
 					</li>
 					<li class="nav__item">
-						<a href="">документы</a>
-					</li>
-					<li class="nav__item">
-						<a href="">заявка</a>
+						<a class="scroll" href="#request">заявка</a>
 					</li>
 				</ul>
 			</nav>
@@ -51,7 +48,7 @@
 			<div class="wallet__center section_">
 				<h1 class="h1_">Одна карта</h1>
 				<div class="wallet__text">Множество возможностей</div>
-				<button class="wallet__button button_">Заказать карту</button>
+				<button data-card="gold" class="wallet__button button_ js-open-modal">Заказать карту</button>
 			</div>
 			<div class="wallet__body">
 				<div class="wallet__wrap visibility-hidden">
@@ -127,7 +124,7 @@
 				</li>
 			</ul>
 		</div>
-		<div class="collect section_">
+		<div id="conditions" class="collect section_">
 			<h2 class="collect__title h2_ visibility-hidden">Как накопить баллы</h2>
 			<div class="collect__text visibility-hidden delay01">
 					Получайте баллы за&nbsp;каждую покупку по&nbsp;карте&nbsp;*
@@ -164,7 +161,7 @@
 		</div>
 	</header>
 
-	<section class="spend section_">
+	<section id="calc" class="spend section_">
 		<div class="spend__line1">
 			<h2 class="spend__title h2_ visibility-hidden">На что потратить баллы</h2>
 			<div class="spend__note visibility-hidden delay01">
@@ -260,13 +257,20 @@
 					<option value="sport">Спорт и развлечения</option>
 				</select>
 			</div>
-			<ul class="cards__list">
-				<li v-for="(card, index) in cardsList"  v-bind:data-id="index" v-bind:key="index" v-bind:class="{ isGiftCard: card.type == 'ПК', 
+			<transition-group tag="ul" class="cards__list"
+				 v-on:before-enter="beforeEnter"
+				 v-on:enter="enter"
+				 v-on:after-enter="afterEnter"
+				 v-on:leave="leave"
+				 v-on:after-leave="afterLeave"
+			>
+				<li v-for="(card, index) in cardsList" v-bind:data-id="index" v-show="index < items" v-bind:key="index" v-bind:class="{ 
+																		isGiftCard: card.type == 'ПК', 
 																		home: card.category == 'Дом и дети',
 																		beauty: card.category == 'Красота и здоровье',
 																		clothes: card.category == 'Одежда и аксессуары',
 																		electronics: card.category == 'Электроника',
-																		sport: card.category == 'Спорт и развлечения' }" class="cards__card">
+																		sport: card.category == 'Спорт и развлечения' }" class="cards__card animated">
 					<div>
 						<div class="cards__type">
 							{{ setStatus(card.type) }}
@@ -283,7 +287,8 @@
 						</div>
 					</div>
 				</li>
-			</ul>
+			</transition-group>
+			<button @click="loadMore" v-if="!cardsOver" class="cards__button button_">загрузить еще</button>
 		</div>
 		<div class="spend__line3">
 			<div class="spend__more">
@@ -294,7 +299,7 @@
 				 Смотрите, сколько у&nbsp;вас баллов и&nbsp;на
 				<br /> что их&nbsp;можно обменять, в&nbsp;личном кабинете.
 			</div>
-			<a href="#" class="spend__button button_"><span>Личный кабинет</span></a>
+			<a href="" class="spend__button button_"><span>Личный кабинет</span></a>
 		</div>
 	</section>
 	<section class="wallet-and-cards">
@@ -325,7 +330,7 @@
 			 Выберите карту,
 			<br /> чтобы получать баллы:
 		</h2>
-		<div class="online section_">
+		<div id="request" class="online section_">
 			<div class="online__title">Кредитное решение онлайн!</div>
 			<ul class="online__cards">
 				<li class="card standard">
@@ -345,7 +350,7 @@
 					</a>
 				</li>
 			</ul>
-			<button class="button_ online__button" disabled>Выберите карту</button>
+			<button class="button_ online__button js-open-modal" disabled>Выберите карту</button>
 			<div class="online__note">
 				 <span>* Начиная со второго года плата за обслуживание составляет 700 р. в год.</span> <br>
 				<span>** Начиная со второго года плата за обслуживание составляет 2 700 р. в год.</span> 
@@ -397,6 +402,11 @@
 		</div>
 	</footer>
 	
+	<div class="modal">
+		<a href="#" class="modal__close js-close-modal" title="Закрыть">
+		</a>
+		<iframe id="modal-iframe" class="modal__iframe" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+	</div>
 	
 	<script src="js/scripts.min.js"></script>
 

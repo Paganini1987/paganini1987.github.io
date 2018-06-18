@@ -5289,6 +5289,7 @@ body {
           border-radius: 3px;
   line-height: 60px;
   white-space: nowrap;
+  outline: none;
   overflow: hidden;
 }
 
@@ -5452,18 +5453,18 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .wallet__button {
   font-size: 18px;
-  color: #151728;
-  font-weight: 500;
+  color: #fff;
+  font-weight: 700;
   padding-left: 56px;
   padding-right: 56px;
-  background-color: #f4f7f8;
+  background-color: #ea0604;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .wallet__button:hover {
-  background-color: #ededed;
-  color: #151728;
+  background-color: #d10807;
+  color: #fff;
 }
 
 .wallet__body {
@@ -6214,6 +6215,24 @@ a, a:hover, a:active, a:visited, a:focus {
   background-color: #fff;
 }
 
+.cards__button {
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 0 auto;
+  margin-top: 30px;
+  font-size: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #ea0604;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.cards__button:hover {
+  background-color: #d10807;
+}
+
 .isGiftCard .cards__type {
   color: #fff;
 }
@@ -6685,6 +6704,63 @@ a, a:hover, a:active, a:visited, a:focus {
   border-left: 1px solid #f74948;
 }
 
+/* PopUp */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  padding: 0;
+  z-index: 1000;
+  display: none;
+  max-width: 100%;
+  max-height: 100%;
+  overflow: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  background-color: #fff;
+}
+
+.modal__close {
+  display: block;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  width: 33px;
+  height: 33px;
+  z-index: 1001;
+}
+
+.modal__close::before, .modal__close::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 11px;
+  height: 3px;
+  background: #e4432d;
+  -webkit-transition: background-color 0.15s linear;
+  transition: background-color 0.15s linear;
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal__close::after {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal__close:hover::before, .modal__close:hover::after {
+  background-color: #be2a16;
+}
+
+.modal.opened {
+  display: block;
+}
+
 /* Animations */
 .delay01 {
   -webkit-animation-delay: 0.1s;
@@ -6830,7 +6906,6 @@ a, a:hover, a:active, a:visited, a:focus {
     top: 81px;
     width: 630px;
     margin-left: -315px;
-    max-width: 100%;
     -webkit-transform: scale(1);
         -ms-transform: scale(1);
             transform: scale(1);
@@ -7174,7 +7249,7 @@ a, a:hover, a:active, a:visited, a:focus {
   }
   .wallet__body {
     left: auto;
-    right: -20%;
+    right: -204px;
     top: 200px;
     -webkit-transform: rotate(-90deg);
         -ms-transform: rotate(-90deg);
@@ -7366,6 +7441,7 @@ a, a:hover, a:active, a:visited, a:focus {
   .cards {
     border: none;
     padding-top: 0;
+    margin-top: 60px;
   }
   .cards__categories {
     display: none;
@@ -7409,6 +7485,9 @@ a, a:hover, a:active, a:visited, a:focus {
   .wallet__text {
     margin-top: -42px;
     width: 50%;
+  }
+  .wallet__body {
+    right: -328px;
   }
   .cards__list {
     -webkit-box-pack: center;
