@@ -2,19 +2,117 @@
 <html lang="ru">
 
 <head>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+		w[l] = w[l] || []; w[l].push({
+			'gtm.start':
+				new Date().getTime(), event: 'gtm.js'
+		}); var f = d.getElementsByTagName(s)[0],
+			j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+				'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K234GK');</script>
+	<!-- End Google Tag Manager -->
 
 	<meta charset="utf-8">
 
-	<title>Loyalty program</title>
+	<title>Программа лояльности ЮниКредит Банка</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="shortcut icon" href="favicon.ico">
+
 	<link rel="stylesheet" href="css/main.min.css">
 	
 </head>
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K234GK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+		i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+			(i[r].q = i[r].q || []).push(arguments)
+		}, i[r].l = 1 * new Date(); a = s.createElement(o),
+			m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-71193331-24', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<style>
+		.loader-default,
+		.loader-active {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 133px;
+			height: 133px;
+			background: transparent url(img/icons/loader.png) 0 0 no-repeat;
+			-moz-background-size: 133px;
+			-o-background-size: 133px;
+			-webkit-background-size: 133px;
+			background-size: 133px
+		}
+	
+		.loader-active {
+			background-position: 0 100%;
+			top: auto;
+			bottom: 0;
+			max-height: 0;
+			-webkit-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-moz-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+	
+		.loader-wrap {
+			position: absolute;
+			width: 133px;
+			height: 133px;
+			margin-top: -66px;
+			margin-left: -66px;
+			left: 50%;
+			top: 50%
+		}
+	
+		@-webkit-keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@-moz-keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	</style>
+	<div class="loader" style="position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #1d1c26;">
+		<div class="loader-wrap">
+			<div class="loader-default"></div>
+			<div class="loader-active"></div>
+		</div>
+	</div>
 	<header class="header">
 		<div class="menu">
 			<div class="menu__logos">
@@ -48,7 +146,7 @@
 			<div class="wallet__center section_">
 				<h1 class="h1_">Одна карта</h1>
 				<div class="wallet__text">Множество возможностей</div>
-				<button data-card="gold" class="wallet__button button_ js-open-modal">Заказать карту</button>
+				<a href="#request" class="wallet__button button_ scroll">Заказать карту</a>
 			</div>
 			<div class="wallet__body">
 				<div class="wallet__wrap visibility-hidden">
@@ -276,7 +374,7 @@
 							{{ setStatus(card.type) }}
 						</div>
 						<div class="cards__logo">
-							<img src="img/partners/ozon.jpg" alt="">
+							<img v-bind:src="card.logo" alt="">
 						</div>
 						<div class="cards__value">
 							<span>{{ card.value }}</span>
@@ -302,14 +400,14 @@
 			<a href="" class="spend__button button_"><span>Личный кабинет</span></a>
 		</div>
 	</section>
-	<section class="wallet-and-cards">
+	<section id="counter" class="wallet-and-cards">
 		<div class="watched section_">
 			<div class="watched__col1">
 				 Пока вы смотрели эту страницу
 			</div>
 			<div class="watched__col2">
 				<div class="watched__count watched__count--star">
-					150 000
+					{{ nowPoints | pointsFormat }}
 				</div>
 				<div class="watched__text">
 					 бонусных баллов получено
@@ -318,7 +416,7 @@
 			</div>
 			<div class="watched__col3">
 				<div class="watched__count">
-					50
+					{{ nowClients | pointsFormat }}
 				</div>
 				<div class="watched__text">
 					 новых клиентов подключилось
@@ -379,7 +477,7 @@
 		<div class="footer__left">
 			<div class="footer__logo">
 				<a href="#">
-					<img src="img/icons/logo-footer.png" alt="">
+					<img src="img/icons/logo-footer.svg" alt="">
 				</a>
 			</div>
 			<div class="footer__text">

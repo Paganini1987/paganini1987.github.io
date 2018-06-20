@@ -5,7 +5,8 @@
 		"partner": "Детский Мир",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/detskiy_mir.svg"
 	},
 	{
 		"id": "2",
@@ -13,7 +14,8 @@
 		"partner": "Детский Мир",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/detskiy_mir.svg"
 	},
 	{
 		"id": "3",
@@ -21,7 +23,8 @@
 		"partner": "Детский Мир",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/detskiy_mir.svg"
 	},
 	{
 		"id": "4",
@@ -29,7 +32,8 @@
 		"partner": "Детский Мир",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/detskiy_mir.svg"
 	},
 	{
 		"id": "5",
@@ -37,7 +41,8 @@
 		"partner": "Hoff",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/hoff-1.svg"
 	},
 	{
 		"id": "6",
@@ -45,7 +50,8 @@
 		"partner": "Hoff",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/hoff-1.svg"
 	},
 	{
 		"id": "7",
@@ -53,7 +59,8 @@
 		"partner": "Hoff",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/hoff-1.svg"
 	},
 	{
 		"id": "8",
@@ -61,7 +68,8 @@
 		"partner": "Hoff",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/hoff-1.svg"
 	},
 	{
 		"id": "9",
@@ -69,7 +77,8 @@
 		"partner": "Кораблик",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/korablik.jpg"
 	},
 	{
 		"id": "10",
@@ -77,7 +86,8 @@
 		"partner": "Кораблик",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/korablik.jpg"
 	},
 	{
 		"id": "11",
@@ -85,7 +95,8 @@
 		"partner": "Кораблик",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/korablik.jpg"
 	},
 	{
 		"id": "12",
@@ -93,7 +104,8 @@
 		"partner": "Кораблик",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/korablik.jpg"
 	},
 	{
 		"id": "13",
@@ -101,7 +113,8 @@
 		"partner": "Красный Куб",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/red_cube.svg"
 	},
 	{
 		"id": "14",
@@ -109,7 +122,8 @@
 		"partner": "Красный Куб",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/red_cube.svg"
 	},
 	{
 		"id": "15",
@@ -117,7 +131,8 @@
 		"partner": "Красный Куб",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/red_cube.svg"
 	},
 	{
 		"id": "16",
@@ -125,7 +140,8 @@
 		"partner": "Красный Куб",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/red_cube.svg"
 	},
 	{
 		"id": "17",
@@ -133,7 +149,8 @@
 		"partner": "Ikea",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/IKEA.svg"
 	},
 	{
 		"id": "18",
@@ -141,7 +158,8 @@
 		"partner": "Ikea",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/IKEA.svg"
 	},
 	{
 		"id": "19",
@@ -149,7 +167,8 @@
 		"partner": "Ikea",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/IKEA.svg"
 	},
 	{
 		"id": "20",
@@ -157,7 +176,8 @@
 		"partner": "Ikea",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/IKEA.svg"
 	},
 	{
 		"id": "21",
@@ -165,7 +185,8 @@
 		"partner": "OBI",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/obi-seeklogo.com.svg"
 	},
 	{
 		"id": "22",
@@ -173,7 +194,8 @@
 		"partner": "OBI",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/obi-seeklogo.com.svg"
 	},
 	{
 		"id": "23",
@@ -181,7 +203,8 @@
 		"partner": "OBI",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/obi-seeklogo.com.svg"
 	},
 	{
 		"id": "24",
@@ -189,7 +212,8 @@
 		"partner": "OBI",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/obi-seeklogo.com.svg"
 	},
 	{
 		"id": "25",
@@ -197,7 +221,8 @@
 		"partner": "Л'Этуаль",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/L_Etoile.svg"
 	},
 	{
 		"id": "26",
@@ -205,7 +230,8 @@
 		"partner": "Л'Этуаль",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/L_Etoile.svg"
 	},
 	{
 		"id": "27",
@@ -213,7 +239,8 @@
 		"partner": "Л'Этуаль",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/L_Etoile.svg"
 	},
 	{
 		"id": "28",
@@ -221,7 +248,8 @@
 		"partner": "Л'Этуаль",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/L_Etoile.svg"
 	},
 	{
 		"id": "29",
@@ -229,7 +257,8 @@
 		"partner": "Рив Гош",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/riv.jpg"
 	},
 	{
 		"id": "30",
@@ -237,7 +266,8 @@
 		"partner": "Рив Гош",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/riv.jpg"
 	},
 	{
 		"id": "31",
@@ -245,7 +275,8 @@
 		"partner": "Рив Гош",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/riv.jpg"
 	},
 	{
 		"id": "32",
@@ -253,7 +284,8 @@
 		"partner": "Рив Гош",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/riv.jpg"
 	},
 	{
 		"id": "33",
@@ -261,7 +293,8 @@
 		"partner": "LUSH",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/lush.svg"
 	},
 	{
 		"id": "34",
@@ -269,7 +302,8 @@
 		"partner": "LUSH",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/lush.svg"
 	},
 	{
 		"id": "35",
@@ -277,7 +311,8 @@
 		"partner": "LUSH",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/lush.svg"
 	},
 	{
 		"id": "36",
@@ -285,7 +320,8 @@
 		"partner": "Ив Роше",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/yves-rocher-vector-logo.svg"
 	},
 	{
 		"id": "37",
@@ -293,7 +329,8 @@
 		"partner": "Ив Роше",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/yves-rocher-vector-logo.svg"
 	},
 	{
 		"id": "38",
@@ -301,7 +338,8 @@
 		"partner": "Ив Роше",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/yves-rocher-vector-logo.svg"
 	},
 	{
 		"id": "39",
@@ -309,7 +347,8 @@
 		"partner": "Иль Де Ботэ",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/il_de_bote.jpg"
 	},
 	{
 		"id": "40",
@@ -317,7 +356,8 @@
 		"partner": "Иль Де Ботэ",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/il_de_bote.jpg"
 	},
 	{
 		"id": "41",
@@ -325,7 +365,8 @@
 		"partner": "Иль Де Ботэ",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/il_de_bote.jpg"
 	},
 	{
 		"id": "42",
@@ -333,7 +374,8 @@
 		"partner": "Nike",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/nike-logo.svg"
 	},
 	{
 		"id": "43",
@@ -341,7 +383,8 @@
 		"partner": "Nike",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/nike-logo.svg"
 	},
 	{
 		"id": "44",
@@ -349,7 +392,8 @@
 		"partner": "Nike",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/nike-logo.svg"
 	},
 	{
 		"id": "45",
@@ -357,7 +401,8 @@
 		"partner": "Nike",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/nike-logo.svg"
 	},
 	{
 		"id": "46",
@@ -365,7 +410,8 @@
 		"partner": "WildBerries",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/wildberries.jpg"
 	},
 	{
 		"id": "47",
@@ -373,7 +419,8 @@
 		"partner": "WildBerries",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/wildberries.jpg"
 	},
 	{
 		"id": "48",
@@ -381,7 +428,8 @@
 		"partner": "WildBerries",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/wildberries.jpg"
 	},
 	{
 		"id": "49",
@@ -389,7 +437,8 @@
 		"partner": "WildBerries",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/wildberries.jpg"
 	},
 	{
 		"id": "50",
@@ -397,7 +446,8 @@
 		"partner": "H&M",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/H_and_M.svg"
 	},
 	{
 		"id": "51",
@@ -405,7 +455,8 @@
 		"partner": "H&M",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/H_and_M.svg"
 	},
 	{
 		"id": "52",
@@ -413,7 +464,8 @@
 		"partner": "H&M",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/H_and_M.svg"
 	},
 	{
 		"id": "53",
@@ -421,7 +473,8 @@
 		"partner": "H&M",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/H_and_M.svg"
 	},
 	{
 		"id": "54",
@@ -429,7 +482,8 @@
 		"partner": "Zara",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/ZARA.svg"
 	},
 	{
 		"id": "55",
@@ -437,7 +491,8 @@
 		"partner": "Zara",
 		"value": "3000",
 		"cost": "5000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/ZARA.svg"
 	},
 	{
 		"id": "56",
@@ -445,7 +500,8 @@
 		"partner": "Zara",
 		"value": "5000",
 		"cost": "7500",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/ZARA.svg"
 	},
 	{
 		"id": "57",
@@ -453,7 +509,8 @@
 		"partner": "Zara",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ПК"
+		"type": "ПК",
+		"logo": "img/partners/ZARA.svg"
 	},
 	{
 		"id": "58",
@@ -461,7 +518,8 @@
 		"partner": "re:Store",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/restore.jpg"
 	},
 	{
 		"id": "59",
@@ -469,7 +527,8 @@
 		"partner": "re:Store",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/restore.jpg"
 	},
 	{
 		"id": "60",
@@ -477,7 +536,8 @@
 		"partner": "re:Store",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/restore.jpg"
 	},
 	{
 		"id": "61",
@@ -485,7 +545,8 @@
 		"partner": "re:Store",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/restore.jpg"
 	},
 	{
 		"id": "62",
@@ -493,7 +554,8 @@
 		"partner": "М.Видео",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/M_video.svg"
 	},
 	{
 		"id": "63",
@@ -501,7 +563,8 @@
 		"partner": "М.Видео",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/M_video.svg"
 	},
 	{
 		"id": "64",
@@ -509,7 +572,8 @@
 		"partner": "М.Видео",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/M_video.svg"
 	},
 	{
 		"id": "65",
@@ -517,7 +581,8 @@
 		"partner": "М.Видео",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/M_video.svg"
 	},
 	{
 		"id": "66",
@@ -525,7 +590,8 @@
 		"partner": "Евросеть",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/euroset.jpg"
 	},
 	{
 		"id": "67",
@@ -533,7 +599,8 @@
 		"partner": "Евросеть",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/euroset.jpg"
 	},
 	{
 		"id": "68",
@@ -541,7 +608,8 @@
 		"partner": "Евросеть",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/euroset.jpg"
 	},
 	{
 		"id": "69",
@@ -549,7 +617,8 @@
 		"partner": "Евросеть",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/euroset.jpg"
 	},
 	{
 		"id": "70",
@@ -557,7 +626,8 @@
 		"partner": "OZON.ru",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/OZON.svg"
 	},
 	{
 		"id": "71",
@@ -565,7 +635,8 @@
 		"partner": "OZON.ru",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/OZON.svg"
 	},
 	{
 		"id": "72",
@@ -573,7 +644,8 @@
 		"partner": "OZON.ru",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/OZON.svg"
 	},
 	{
 		"id": "73",
@@ -581,7 +653,8 @@
 		"partner": "OZON.ru",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/OZON.svg"
 	},
 	{
 		"id": "74",
@@ -589,7 +662,8 @@
 		"partner": "Спортмастер",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/sportmaster.svg"
 	},
 	{
 		"id": "75",
@@ -597,7 +671,8 @@
 		"partner": "Спортмастер",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/sportmaster.svg"
 	},
 	{
 		"id": "76",
@@ -605,7 +680,8 @@
 		"partner": "Спортмастер",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/sportmaster.svg"
 	},
 	{
 		"id": "77",
@@ -613,7 +689,8 @@
 		"partner": "Спортмастер",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/sportmaster.svg"
 	},
 	{
 		"id": "78",
@@ -621,7 +698,8 @@
 		"partner": "Партер.ру",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/parter.jpg"
 	},
 	{
 		"id": "79",
@@ -629,7 +707,8 @@
 		"partner": "Партер.ру",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/parter.jpg"
 	},
 	{
 		"id": "80",
@@ -637,7 +716,8 @@
 		"partner": "Партер.ру",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/parter.jpg"
 	},
 	{
 		"id": "81",
@@ -645,7 +725,8 @@
 		"partner": "Coral Travel",
 		"value": "5000",
 		"cost": "5000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/coral_travel-logo.jpg"
 	},
 	{
 		"id": "82",
@@ -653,7 +734,8 @@
 		"partner": "Coral Travel",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/coral_travel-logo.jpg"
 	},
 	{
 		"id": "83",
@@ -661,7 +743,8 @@
 		"partner": "Intersport",
 		"value": "1000",
 		"cost": "2000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/intersport.svg"
 	},
 	{
 		"id": "84",
@@ -669,7 +752,8 @@
 		"partner": "Intersport",
 		"value": "3000",
 		"cost": "4500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/intersport.svg"
 	},
 	{
 		"id": "85",
@@ -677,7 +761,8 @@
 		"partner": "Intersport",
 		"value": "5000",
 		"cost": "6500",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/intersport.svg"
 	},
 	{
 		"id": "86",
@@ -685,6 +770,7 @@
 		"partner": "Intersport",
 		"value": "10000",
 		"cost": "10000",
-		"type": "ЭПС"
+		"type": "ЭПС",
+		"logo": "img/partners/intersport.svg"
 	}
 ]

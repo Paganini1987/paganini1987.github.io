@@ -5452,12 +5452,14 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .wallet__button {
+  display: inline-block;
   font-size: 18px;
   color: #fff;
   font-weight: 700;
   padding-left: 56px;
   padding-right: 56px;
   background-color: #ea0604;
+  text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -6757,8 +6759,12 @@ a, a:hover, a:active, a:visited, a:focus {
   background-color: #be2a16;
 }
 
-.modal.opened {
+.modal-opened .modal {
   display: block;
+}
+
+body.modal-opened {
+  overflow: hidden;
 }
 
 /* Animations */
