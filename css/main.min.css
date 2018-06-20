@@ -5488,8 +5488,8 @@ a, a:hover, a:active, a:visited, a:focus {
   overflow: hidden;
   -webkit-animation: show 2s ease-in-out forwards;
           animation: show 2s ease-in-out forwards;
-  -webkit-animation-delay: 1s;
-          animation-delay: 1s;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .wallet__line img {
