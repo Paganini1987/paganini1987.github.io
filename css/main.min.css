@@ -5222,8 +5222,8 @@ html:not([dir=rtl]) .noUi-horizontal .noUi-handle {
   font-family: "Circle";
   font-weight: 700;
   font-style: normal;
-  src: url("../fonts/Circle-Bold/Circe-Bold.eot");
-  src: url("../fonts/Circle-Bold/Circe-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Circle-Bold/Circe-Bold.woff") format("woff"), url("../fonts/Circle-Bold/Circe-Bold.ttf") format("truetype");
+  src: url("../fonts/Circle-Bold/Circle-Bold.eot");
+  src: url("../fonts/Circle-Bold/Circle-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Circle-Bold/Circle-Bold.woff") format("woff"), url("../fonts/Circle-Bold/Circle-Bold.ttf") format("truetype");
 }
 
 @font-face {
