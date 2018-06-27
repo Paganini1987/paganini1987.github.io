@@ -2,20 +2,22 @@
 <html lang="ru">
 
 <head>
+
 	<meta charset="utf-8">
 
-	<title>Программа лояльности ЮниКредит Банка</title>
+	<title>Title</title>
 	<meta name="description" content="">
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-	<link rel="shortcut icon" href="favicon.ico">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
 
 	<link rel="stylesheet" href="css/main.min.css">
-	
 </head>
+
 <body>
 	<style>
 		.loader-default,
@@ -87,420 +89,532 @@
 			<div class="loader-active"></div>
 		</div>
 	</div>
-	<header class="header">
-		<div class="menu">
-			<div class="menu__logos">
-				<div class="menu__logo-uc">
-					<img src="img/icons/logo-white.svg" alt="">
+	<div id="fullpage">
+		<header class="header js-section">
+
+			<!-- Background -->
+			<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="header__background">
+				<defs>
+					<linearGradient id="grad" x1="0" x2="0" y1="0" y2="1">
+						<stop offset="0%" stop-color="#110e38" />
+						<stop offset="60%" stop-color="#110e38" />
+						<stop class="end-point" offset="100%" stop-color="#110e38" />
+					</linearGradient>
+					<radialGradient id="grad1" cx="100%" cy="35%" r="30%">
+						<stop offset="0%" stop-color="#1e3385" stop-opacity="0.8" />
+						<stop offset="100%" stop-color="#11103c" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient id="grad2" cx="15%" cy="15%" r="30%">
+						<stop offset="0%" stop-color="#18215f" />
+						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient id="grad3" cx="50%" cy="80%" r="50%">
+						<stop offset="0%" stop-color="#473771" stop-opacity="0.8" />
+						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient id="grad4" cx="90%" cy="70%" r="30%">
+						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="0.7" />
+						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient id="grad5" cx="0%" cy="100%" r="70%">
+						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="0.8" />
+						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient class="gold-gradient" gradientUnits="userSpaceOnUse" id="g" cx="30%" cy="90%" r="1">
+						<stop offset="0" stop-color="#996699" stop-opacity="1" />
+						<stop offset="1" stop-color="#996699" stop-opacity="0" />
+					</radialGradient>
+					<radialGradient class="standard-gradient" gradientUnits="userSpaceOnUse" id="s" cx="60%" cy="90%" r="1">
+						<stop offset="0" stop-color="#6699cc" stop-opacity="1" />
+						<stop offset="1" stop-color="#6699cc" stop-opacity="0" />
+					</radialGradient>
+				</defs>
+			
+				<rect width="100%" height="100%" fill="url(#grad)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#grad1)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#grad2)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#grad3)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#grad4)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#grad5)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#g)" stroke-width="0"></rect>
+				<rect width="100%" height="100%" fill="url(#s)" stroke-width="0"></rect>
+			</svg>
+			<!-- Background -->
+
+			<div class="header__top">
+				<div class="header__logos">
+					<div class="header__logo">
+						<img src="img/icons/logo-white.svg" alt="">
+					</div>
+					<div class="header__mc">
+						<img src="img/icons/mastercard.svg" alt="">
+					</div>
 				</div>
-				<div class="menu__logo-mc">
-					<img src="img/icons/mastercard.svg" alt="">
+				<div class="header__phone">
+					8 800 700-10-20
 				</div>
 			</div>
-			<nav class="nav">
-				<ul class="nav__list">
-					<li class="nav__item">
-						<a class="scroll" href="#conditions">условия</a>
+
+			<div class="banner section">
+				<h1 class="banner__title h1">Получайте зарплату <br>на карту с кешбэком</h1>
+				<div class="banner__text">от ЮниКредит Банка!</div>
+				<ul class="banner__list">
+					<li class="banner__item banner__item--1">
+						<div class="banner__img">
+							<img src="img/icons/icon-1.svg" alt="">
+						</div>
+						<div class="banner__description">
+							 Без комиссии переводите зарплату на карту ЮниКредит&nbsp;Банка
+						</div>
 					</li>
-					<li class="nav__item">
-						<a class="scroll" href="#calc">калькулятор</a>
+					<li class="banner__item banner__item--2">
+						<div class="banner__img">
+							<img src="img/icons/icon-2.svg" alt="">
+						</div>
+						<div class="banner__description">
+							 Получайте кешбэк до 3% за&nbsp;любые покупки
+						</div>
 					</li>
-					<li class="nav__item">
-						<a class="scroll" href="#request">заявка</a>
+					<li class="banner__item banner__item--3">
+						<div class="banner__img">
+							<img src="img/icons/icon-3.svg" alt="">
+						</div>
+						<div class="banner__description">
+							 Пользуйтесь картой бесплатно
+						</div>
 					</li>
 				</ul>
-			</nav>
-			<div class="menu__phone">
-				 +7 (800) 700-79-60
-			</div>
-		</div>
-		<div class="wallet">
-			<div class="wallet__center section_">
-				<h1 class="h1_">Одна карта</h1>
-				<div class="wallet__text">Множество возможностей</div>
-				<a href="#request" class="wallet__button button_ scroll">Заказать карту</a>
-			</div>
-			<div class="wallet__body">
-				<div class="wallet__wrap visibility-hidden">
-					<img src="img/wallet.png" alt="">
-					<div class="wallet__card">
-						<img src="img/card-gold.png" alt="">
+				<div class="cards">
+					<div class="cards__gold">
+						<img src="img/icons/-e-gold_persp.png" alt="">
 					</div>
-					<div class="wallet__pocket">
-						<img src="img/pocket.png" alt="">
+					<div class="cards__standard">
+						<img src="img/icons/-e-classic_persp.png" alt="">
 					</div>
 				</div>
 			</div>
-
-			<div class="wallet__line">
-				<img src="img/red_line.png" alt="">
-			</div>
-
-		</div>
-		<div class="steps section_">
-			<ul class="steps__list">
-				<li class="steps__item visibility-hidden">
-					<div class="steps__number">
-						01
-					</div>
-					<div class="steps__text">
-						Получайте до&nbsp;5% от&nbsp;суммы покупок в&nbsp;виде баллов
-					</div>
-				</li>
-				<li class="steps__item delay01 visibility-hidden">
-					<div class="steps__number">
-						02
-					</div>
-					<div class="steps__text">
-						 Обменивайте на денежные сертификаты от&nbsp;партнеров
-					</div>
-				</li>
-				<li class="steps__item delay02 visibility-hidden">
-					<div class="steps__number">
-						03
-					</div>
-					<div class="steps__text">
-						 Выбирайте среди самых популярных магазинов
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div class="advantages section_">
-			<ul class="advantages__list">
-				<li class="advantages__item visibility-hidden">
-					<div class="advantages__img">
-						<img src="img/icons/1year.svg" alt="">
-					</div>
-					<div class="advantages__text">
-						 1-й год <br>
-						 <span>бесплатно</span>
-					</div>
-				</li>
-				<li class="advantages__item visibility-hidden delay01">
-					<div class="advantages__img">
-						<img src="img/icons/Money.svg" alt="">
-					</div>
-					<div class="advantages__text">
-						лимит до <br>600 т. рублей <br>
-					</div>
-				</li>
-				<li class="advantages__item visibility-hidden delay02">
-					<div class="advantages__img">
-						<img src="img/icons/Calendar2.svg" alt="">
-					</div>
-					<div class="advantages__text">
-						 льготный период <br>до 55 дней
-					</div>
-				</li>
-			</ul>
-		</div>
-		<div id="conditions" class="collect section_">
-			<h2 class="collect__title h2_ visibility-hidden">Как накопить баллы</h2>
-			<div class="collect__text visibility-hidden delay01">
-					Получайте баллы за&nbsp;каждую покупку по&nbsp;карте&nbsp;*
-				<br /> Подробнее о&nbsp;накоплении баллов &mdash;
-				<br /> в&nbsp; <a class="collect__rules" href="http://">правилах программы</a>
-			</div>
-			<div class="collect__note visibility-hidden">
-				<div class="collect__wrap">
-					 * Сумма баллов, начисленных в&nbsp;течение календарного месяца, не&nbsp;может превышать 1&nbsp;000 баллов в промо-категории
-					и&nbsp;1&nbsp;000 баллов за&nbsp;все остальные покупки. Баллы доступны для использования в&nbsp;течение 24&nbsp;месяцев с&nbsp;момента
-					начисления.
+		</header>
+		<section class="select js-section">
+			<div class="select__container section">
+				<div class="select__center">
+					<div class="select__text h3">Выберите карту</div>
+					<h2 class="select__title h2">Mastercard в пакете GOLD или CLASSIC</h2>
+					<ul class="select__cards">
+						<li class="select__card">
+							<label>
+								<input class="js-select-card" type="radio" data-card="gold" name="card" id="">
+								<div class="select__img js-gold">
+									<img src="img/icons/gold.png" alt="">
+								</div>
+								<div class="select__description">
+									<div class="select__circle"></div>
+									<div class="select__t">Пакет GOLD</div>
+								</div>
+							</label>
+						</li>
+						<li class="select__card">
+							<label>
+								<input class="js-select-card" type="radio" data-card="standard" name="card" id="">
+								<div class="select__img js-standard">
+									<img src="img/icons/standard.png" alt="">
+								</div>
+								<div class="select__description">
+									<div class="select__circle"></div>
+									<div class="select__t">Пакет CLASSIC</div>
+								</div>
+							</label>
+						</li>
+					</ul>
 				</div>
 			</div>
-			<ul class="collect__list">
-				<li class="collect__item visibility-hidden delay01">
-					<div class="collect__img">
-						<img src="img/icons/collect5.png" alt="">
-					</div>
-					<div class="collect__description">
-						<span>5%</span> &nbsp;от&nbsp;потраченной суммы
-						<br /> в&nbsp;ресторанах и&nbsp;кафе
-					</div>
-				</li>
-				<li class="collect__item visibility-hidden delay02">
-					<div class="collect__img">
-						<img src="img/icons/collect1.png" alt="">
-					</div>
-					<div class="collect__description">
-						<span>1%</span> &nbsp;за&nbsp;все
-						<br /> остальные покупки
-					</div>
-				</li>
-			</ul>
-		</div>
-	</header>
-
-	<section id="calc" class="spend section_">
-		<div class="spend__line1">
-			<h2 class="spend__title h2_ visibility-hidden">На что потратить баллы</h2>
-			<div class="spend__note visibility-hidden delay01">
-				 Накопленные баллы можно потратить на&nbsp;электронные сертификаты или подарочные карты наших партнеров
-				<br /> из&nbsp;самых разных категорий. Выбирайте&nbsp;то, что вам нужно:
-			</div>
-		</div>
-		<div id="calculator" class="spend__line2">
-			<div class="spend__total">
-				<div class="selector">
-					<div class="selector__text">В месяц я трачу по карте</div>
-					<div class="selector__counter">
-						<div class="selector__img">
-							<img src="img/icons/Card.svg" alt="">
+			<div class="select__overflow"></div>
+		</section>
+		<section class="compare js-section fp-auto-height">
+			 <div class="compare__container">
+				 <ul class="compare__list section">
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-1.svg" alt="">
 						</div>
-						<div class="selector__value js-set-total-value">
-							0
+						<div class="compare__title compare__title--left">
+							 5 карт Masterсard Gold+
 						</div>
-						<div class="selector__rouble">
-							 &#8381;
+						<div class="compare__title compare__title--right">
+							 2 карты Mastercard Standard+
 						</div>
-					</div>
-					<div class="selector__range">
-						<div id="range"></div>
-					</div>
-				</div>
-			</div>
-			<div class="spend__cafe">
-				<div class="selector">
-					<div class="selector__text">Из них в кафе и ресторанах</div>
-					<div class="selector__counter">
-						<div class="selector__img">
-							<img src="img/icons/Kotel.svg" alt="">
+						<div class="compare__left">
+							<div class="compare__description">
+								до 3%
+							</div>
 						</div>
-						<div class="selector__value js-set-cafe-value">
-							0
+						<div class="compare__right">
+							<div class="compare__description">
+								1%
+							</div>
 						</div>
-						<div class="selector__rouble">
-							&#8381;
+					</li>
+					 <li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-2.svg" alt="">
 						</div>
-					</div>
-					<div class="selector__range">
-						<div id="range2"></div>
-					</div>
-				</div>
-			</div>
-			<div class="spend__month">
-				<select name="month" id="month">
-					<option value="6">За 6 месяцев</option>
-					<option value="12">За 12 месяцев</option>
-					<option value="24">За 24 месяца</option>
-				</select>
-			</div>
-			<div class="spend__summ">
-				<div class="spend__equally">=</div>
-				<div class="spend__value">{{ result }}</div>
-			</div>
-		</div>
-		<div id="list" class="cards">
-			<ul class="cards__categories">
-				<li>
-					<a class="cards__cat home js-set-active active" href="#/home">
-						<span>Дом и дети</span>
-					</a>
-				</li>
-				<li>
-					<a class="cards__cat beauty js-set-active" href="#/beauty">
-						<span>Красота и здоровье</span>
-					</a>
-				</li>
-				<li>
-					<a class="cards__cat clothes js-set-active" href="#/clothes">
-						<span>Одежда и аксессуары</span>	
-					</a>
-				</li>
-				<li>
-					<a class="cards__cat electronics js-set-active" href="#/electronics">
-						<span>Электроника</span>
-					</a>
-				</li>
-				<li>
-					<a class="cards__cat sport js-set-active" href="#/sport">
-						<span>Спорт и развлечения</span>
-					</a>
-				</li>
-			</ul>
-			<div class="cards__categories-m">
-				<select name="categories" id="categories">
-					<option value="home">Дом и дети</option>
-					<option value="beauty">Красота и здоровье</option>
-					<option value="clothes">Одежда и аксессуары</option>
-					<option value="electronics">Электроника</option>
-					<option value="sport">Спорт и развлечения</option>
-				</select>
-			</div>
-			<transition-group tag="ul" class="cards__list"
-				 v-on:before-enter="beforeEnter"
-				 v-on:enter="enter"
-				 v-on:after-enter="afterEnter"
-				 v-on:leave="leave"
-				 v-on:after-leave="afterLeave"
-			>
-				<li v-for="(card, index) in cardsList" v-bind:data-id="index" v-show="index < items" v-bind:key="index" v-bind:class="{ 
-																		isGiftCard: card.type == 'ПК', 
-																		home: card.category == 'Дом и дети',
-																		beauty: card.category == 'Красота и здоровье',
-																		clothes: card.category == 'Одежда и аксессуары',
-																		electronics: card.category == 'Электроника',
-																		sport: card.category == 'Спорт и развлечения' }" class="cards__card animated">
-					<div>
-						<div class="cards__type">
-							{{ setStatus(card.type) }}
+						<div class="compare__title">
+							 Кешбэк за все покупки по основной и дополнительным картам в рублях
 						</div>
-						<div class="cards__logo">
-							<img v-bind:src="card.logo" alt="">
+						<div class="compare__left">
+							<div class="compare__description">
+								 до 3%
+							</div>
 						</div>
-						<div class="cards__value">
-							<span>{{ card.value }}</span>
-							<span class="cards__rouble">&#8381;</span>
+						<div class="compare__right">
+							<div class="compare__description">
+								 1%
+							</div>
 						</div>
-						<div class="cards__cost">
-							{{ card.cost }} баллов
+					 </li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-3-4.svg" alt="">
 						</div>
-					</div>
-				</li>
-			</transition-group>
-			<button @click="loadMore" v-if="!cardsOver" class="cards__button button_">загрузить еще</button>
-		</div>
-		<div class="spend__line3">
-			<div class="spend__more">
-				 Подробнее об&nbsp;обмене баллов&nbsp;&mdash;
-				<br /> в&nbsp; <a href="#">правилах программы</a>
+						<div class="compare__title">
+							 Снятие наличных в банкоматах группы UniCredit и банков-партнеров
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								 бесплатно
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								 бесплатно
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-3-4.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Снятие наличных в банкоматах любых других банков
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								 бесплатно в рублях на территории РФ
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								 бесплатно 2 снятия в месяц
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-5.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Сервис СМС-уведомлений SMS.UniCredit
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								 бесплатно
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								 бесплатно
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-6.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Страхование во время поездок за рубеж
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								бесплатно
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								<span class="compare__line"></span>
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-7.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Пополнение с карт любых российских банков через мобильное приложение Mobile.UniCredit
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								 без комиссии
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								 без комиссии
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-8.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Перевод денежных средств на счета в ЮниКредит Банке через интернет-банк Enter.UniCredit
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								без комиссии
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								без комиссии
+							</div>
+						</div>
+					</li>
+					<li class="compare__item animated visible-hidden">
+						<div class="compare__icon">
+							<img src="img/icons/icon-compare-9.svg" alt="">
+						</div>
+						<div class="compare__title">
+							 Перевод денежных средств на счета в других банках через Enter.UniCredit в рублях
+						</div>
+						<div class="compare__left">
+							<div class="compare__description">
+								 комиссия 0,3% от суммы перевода
+							</div>
+							<div class="compare__note">
+								 (мин. 20 руб., макс. 150 руб.)
+							</div>
+						</div>
+						<div class="compare__right">
+							<div class="compare__description">
+								 комиссия 0,3% от суммы перевода
+							</div>
+							<div class="compare__note">
+								(мин. 20 руб., макс. 150 руб.)
+							</div>
+						</div>
+					</li>
+				 </ul>
+			 </div>
+			 <div class="compare__wrap">
+				<button class="compare__button js-checkout">оформить карту</button>
 			</div>
-			<div class="spend__text">
-				 Смотрите, сколько у&nbsp;вас баллов и&nbsp;на
-				<br /> что их&nbsp;можно обменять, в&nbsp;личном кабинете.
-			</div>
-			<a href="" class="spend__button button_"><span>Личный кабинет</span></a>
-		</div>
-	</section>
-	<section id="counter" class="wallet-and-cards">
-		<div class="watched section_">
-			<div class="watched__col1">
-				 Пока вы смотрели эту страницу
-			</div>
-			<div class="watched__col2">
-				<div class="watched__count watched__count--star">
-					{{ nowPoints | pointsFormat }}
-				</div>
-				<div class="watched__text">
-					 бонусных баллов получено
-					<br /> нашими клиентами
-				</div>
-			</div>
-			<div class="watched__col3">
-				<div class="watched__count">
-					{{ nowClients | pointsFormat }}
-				</div>
-				<div class="watched__text">
-					 новых клиентов подключилось
-					<br /> к&nbsp;бонусной программе
-				</div>
-			</div>
-		</div>
-		<h2 class="wallet-and-cards__title h2_ section_">
-			 Выберите карту,
-			<br /> чтобы получать баллы:
-		</h2>
-		<div id="request" class="online section_">
-			<div class="online__title">Кредитное решение онлайн!</div>
-			<ul class="online__cards">
-				<li class="card standard">
-					<a href="#" class="js-show-standard">
-						<div class="card__name">Mastercard Standard</div>
-						<div class="card__limit">Кредитный лимит: до 300 000 ₽</div>
-						<div class="card__rate">Ставка: 27,9 % годовых</div>
-						<div class="card__service">Обслуживание: 0 р. за первый год*</div>
-					</a>
-				</li>
-				<li class="card gold">
-					<a href="#" class="js-show-gold">
-						<div class="card__name">Mastercard Gold</div>
-						<div class="card__limit">Кредитный лимит: до 600 000 ₽</div>
-						<div class="card__rate">Ставка: 26,9 % годовых</div>
-						<div class="card__service">Обслуживание: 0 р. в год**</div>
-					</a>
-				</li>
-			</ul>
-			<button class="button_ online__button js-open-modal" disabled>Выберите карту</button>
-			<div class="online__note">
-				 <span>* Начиная со второго года плата за обслуживание составляет 700 р. в год.</span> <br>
-				<span>** Начиная со второго года плата за обслуживание составляет 2 700 р. в год.</span> 
-			</div>
-			<div class="wallet2">
-				<img src="img/wallet/body.png" alt="">
-				<div class="wallet2__standard">
-					<img src="img/card-standard.png" alt="">
-				</div>
-				<div class="wallet2__gold">
-					<img src="img/card-gold.png" alt="">
-				</div>
-				<div class="wallet2__logo">
-					<img src="img/wallet/logo.png" alt="">
-				</div>
-				<div class="wallet2__pocket1">
-					<img src="img/wallet/pocket1.png" alt="">
-				</div>
-				<div class="wallet2__pocket2">
-					<img src="img/wallet/pocket2.png" alt="">
-				</div>
-			</div>
-		</div>
-	</section>
-	<footer class="footer">
-		<div class="footer__left">
-			<div class="footer__logo">
-				<img src="img/icons/logo-footer.svg" alt="">
-			</div>
-			<div class="footer__text">
-				 &copy;&nbsp;АО&nbsp;ЮниКредит Банк
-				<br /> Генеральная лицензия &#8470;&nbsp;1&nbsp;Банка России
-			</div>
-		</div>
-		<div class="footer__right">
-			<ul class="footer__menu">
-				<li>
-					<a href="#">правила</a>
-				</li>
-				<li>
-					<a href="#">FAQ</a>
-				</li>
-			</ul>
-			<div class="footer__phone">
-				 +7 (800) 700-79-60
-			</div>
-		</div>
-	</footer>
+		</section>
+		<section class="get js-section">
+			 <div class="get__container section">
+				<div class="get__text h3">способы</div>
+				<h2 class="get__title h2">Как получать зарплату <br>на карту ЮниКредит Банка</h2>
+				<ul class="get__list">
+					<li class="get__item get__item--1">
+						<div class="get__number">01</div>
+						<div class="get__img">
+							<img src="img/icons/icon-way-1.svg" alt="">
+						</div>
+						<div class="get__description">
+							 Пополнением с карт других банков через <a href="#">Mobile.UniCredit</a> без комиссии
+						</div>
+					</li>
+					<li class="get__item get__item--2">
+						<div class="get__number">02</div>
+						<div class="get__img">
+							<img src="img/icons/icon-way-2.svg" alt="">
+						</div>
+						<div class="get__description">
+							 Переводом со счета в другом банке по <a href="#">реквизитам</a>
+						</div>
+					</li>
+					<li class="get__item get__item--3">
+						<div class="get__number">03</div>
+						<div class="get__img">
+							<img src="img/icons/icon-way-3.svg" alt="">
+						</div>
+						<div class="get__description">
+							 Передать в бухгалтерию своего работодателя <a class="get__link" href="#">заявление</a>
+						</div>
+					</li>
+				</ul>
+			 </div>
+			 <div class="get__background">
+				<svg>
+					<path class="back" d="M 0 400 Q 80 440 240 440 C 520 400 560 200 800 200 C 1000 200 1080 320 1320 320 C 1600 280 1640 80 1920 80 L 1920 2000 L 0 2000 Z"/>
 	
-	<div class="modal">
-		<a href="#" class="modal__close js-close-modal" title="Закрыть">
-		</a>
-		<iframe id="modal-iframe" class="modal__iframe" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+					<path class="wave1" d="M 0 480 C 200 480 280 280 480 280 C 680 280 760 360 1000 360 C 1240 360 1360 120 1600 120 C 1800 120 1840 160 1920 200"/>
+					<path class="wave1_2" d="M 0 487 C 200 487 280 287 480 287 C 680 287 760 367 1000 367 C 1240 367 1360 127 1600 127 C 1800 127 1840 167 1920 207"/>
+					<path class="wave1_3" d="M 0 494 C 200 494 280 294 480 294 C 680 294 760 374 1000 374 C 1240 374 1360 134 1600 134 C 1800 134 1840 174 1920 214"/>
+					
+					<path class="wave2" d="M 0 400 C 80 400 240 520 480 440 C 720 360 760 200 1000 200 C 1240 200 1280 280 1480 280 C 1720 280 1840 80 1920 80"/>
+					<path class="wave2_2" d="M 0 407 C 80 407 240 527 480 447 C 720 367 760 207 1000 207 C 1240 207 1280 287 1480 287 C 1720 287 1840 87 1920 87"/>
+					<path class="wave2_3" d="M 0 414 C 80 414 240 534 480 454 C 720 374 760 214 1000 214 C 1240 214 1280 294 1480 294 C 1720 294 1840 94 1920 94"/>
+				</svg>
+			 </div>
+		</section>
+		<section class="rates js-section">
+			<div class="rates__container section">
+				<div class="rates__text h3">тарифы</div>
+				<h2 class="rates__title h2">Условия бесплатного <br>обслуживания</h2>
+				<ul class="rates__list">
+					<li class="rate">
+						<div class="rate__wrap">
+							<div class="rate__left">
+								<div class="rate__title">
+									ПАКЕТ GOLD
+								</div>
+								<div class="rate__img">
+									<img src="img/icons/gold.png" alt="">
+								</div>
+							</div>
+							<div class="rate__right">
+								<ul class="rate__list">
+									<li class="rate__item">
+										Поступления
+										<span>75 000 руб.</span> в месяц
+									</li>
+									<li class="rate__item">
+										Среднемесячные остатки на счетах
+										<br>и вкладах
+										<span>400 000 руб.</span>
+									</li>
+									<li class="rate__item">
+										Остатки
+										<span>100 000 руб.</span> + ежемесячные
+										<br>покупки по карте
+										<span>20 000 руб.</span>
+									</li>
+									<li class="rate__item">
+										Ежемесячные покупки по карте
+										<span>50 000 руб.</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rate__note">
+							 Необходимо выполнить одно из условий. <br>При несоблюдении условий ежемесячная плата составляет 500 руб.
+						</div>
+					</li>
+					<li class="rate">
+						<div class="rate__wrap">
+							<div class="rate__left">
+								<div class="rate__title">
+									 ПАКЕТ CLASSIC
+								</div>
+								<div class="rate__img">
+									<img src="img/icons/standard.png" alt="">
+								</div>
+							</div>
+							<div class="rate__right">
+								<ul class="rate__list">
+									<li class="rate__item">
+										 Поступления <span>30 000 руб.</span> в месяц
+									</li>
+									<li class="rate__item">
+										 Среднемесячные остатки на счетах <br>и вкладах <span>100 000 руб.</span>
+									</li>
+									<li class="rate__item">
+										 Остатки <span>30 000 руб.</span> + ежемесячные <br>покупки по карте <span>10 000 руб.</span>
+									</li>
+									<li class="rate__item">
+										 Ежемесячные покупки по карте <span>30 000 руб.</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+						<div class="rate__note">
+							 Необходимо выполнить одно из условий. <br>При несоблюдении условий ежемесячная плата составляет 150 руб.
+						</div>
+					</li>
+				</ul>
+			</div>
+		</section>
+		<section class="buy js-section">
+			<div class="buy__container section">
+				<div class="buy__text h3">Совершайте покупки</div>
+				<h1 class="buy__title h2">При помощи телефона с сервисами <br>бесконтактной оплаты</h1>
+				<ul class="buy__icons">
+					<li class="buy__icon">
+						<img src="img/icons/apple-pay-logo.svg" alt="">
+					</li>
+					<li class="buy__icon">
+						<img src="img/icons/google-pay-logo.svg" alt="">
+					</li>
+					<li class="buy__icon buy__icon--large">
+						<img src="img/icons/garnin-pay-logo.svg" alt="">
+					</li>
+				</ul>
+				<div class="buy__note">
+					<p>
+						 Период проведения акции – с 02.07.2018 по 31.12.2018. <a href="#">Полные правила акции</a>
+					</p>
+					<p>
+						 Комиссия за&nbsp;перевод со&nbsp;счета в&nbsp;другом банке по&nbsp;реквизитам взимается в&nbsp;соответствии с&nbsp;тарифами
+						банка-отправителя <br>
+						ЮниКредит Банк комиссию за&nbsp;зачисление денежных средств не&nbsp;взимает.
+						<br>Некоторые банки-эмитенты могут взимать дополнительные комиссии при переводе со&nbsp;своих карт на&nbsp;карты других банков
+					</p>
+					<p>
+						 Банк выплачивает вознаграждение ежемесячно, в&nbsp;течение календарного месяца, следующего за&nbsp;отчетным. Минимальный
+						размер вознаграждения&nbsp;&mdash; 30&nbsp;руб., максимальный&nbsp;&mdash; 3000&nbsp;руб. Рассчитывается суммарное вознаграждение
+						по&nbsp;основной и&nbsp;дополнительным картам. С&nbsp;пакетом GOLD кешбэк начисляется в&nbsp;зависимости от&nbsp;суммы покупок
+						по&nbsp;карте: до&nbsp;50&nbsp;000&nbsp;руб. &mdash;&nbsp;1%, от&nbsp;50&nbsp;000 до&nbsp;100&nbsp;000&nbsp;руб. &mdash;&nbsp;2%,
+						от&nbsp;100&nbsp;000&nbsp;руб. &mdash;&nbsp;3%. С&nbsp;пакетом CLASSIC&nbsp;&mdash; 1%&nbsp;вне зависимости от&nbsp;суммы
+						покупок.
+					</p>
+					<p>
+						 В&nbsp;качестве &laquo;Поступлений&raquo; при расчете комиссии за&nbsp;обслуживание пакетов услуг не&nbsp;учитывается внесение
+						наличных денежных средств через кассу (кассовые операции)
+						и&nbsp;с&nbsp;помощью банкоматов, а&nbsp;также внутрибанковские переводы (за&nbsp;исключением заработной платы и&nbsp;приравненных
+						к&nbsp;ней типов выплат в&nbsp;рамках зарплатных проектов).
+					</p>
+				</div>
+				<div class="phone">
+					<div class="phone__card">
+						<img src="img/icons/-e-card_pay_gold.png" alt="">
+					</div>
+					<div class="phone__shadow">
+						<img src="img/icons/shadow.png" alt="">
+					</div>
+					<div class="phone__phone">
+						<svg id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="686px" height="429px">
+							<path  stroke="rgb(197, 217, 234)" d="M0.594,286.636 C0.594,300.748 7.894,313.386 20.121,320.442 L198.316,423.275 C204.245,426.696 210.997,428.505 217.843,428.505 C224.689,428.505 231.442,426.696 237.370,423.275 L665.621,176.141 C677.848,169.085 685.148,156.447 685.148,142.334 C685.148,128.222 677.848,115.585 665.621,108.528 L487.506,5.743 C481.553,2.307 474.773,0.491 467.898,0.491 C461.024,0.491 454.243,2.307 448.290,5.743 L20.121,252.830 C7.894,259.886 0.594,272.524 0.594,286.636 ZM657.188,107.268 L657.187,107.268 L663.657,111.001 C676.675,118.514 676.675,137.295 663.657,144.807 L235.808,391.710 C230.250,394.918 224.047,396.522 217.843,396.522 C211.640,396.522 205.437,394.918 199.878,391.710 L20.913,288.433 C9.218,281.684 8.471,265.464 18.665,257.499 C18.739,257.446 18.812,257.391 18.887,257.339 C19.291,257.032 19.734,256.756 20.172,256.476 C20.669,256.157 21.163,255.835 21.683,255.535 L31.884,249.648 L42.068,243.771 L42.068,243.771 L449.852,8.447 C455.435,5.225 461.667,3.614 467.898,3.614 C474.129,3.614 480.361,5.225 485.944,8.447 L657.188,107.268 ZM11.660,264.064 C10.568,266.576 9.978,269.330 9.978,272.206 C9.978,279.544 13.774,286.116 20.132,289.785 L199.097,393.062 C204.789,396.347 211.271,398.083 217.843,398.083 C224.415,398.083 230.898,396.347 236.589,393.062 L664.438,146.160 C671.041,142.349 674.983,135.525 674.983,127.904 C674.983,124.336 674.109,120.948 672.512,117.957 C687.549,134.114 684.742,161.500 664.058,173.436 L235.808,420.570 C230.250,423.778 224.047,425.382 217.843,425.382 C211.640,425.382 205.437,423.778 199.878,420.570 L21.683,317.738 C1.752,306.236 -1.578,280.387 11.660,264.064 ZM255.519,367.000 L54.358,250.915 C53.361,250.340 52.766,249.307 52.766,248.156 C52.766,247.005 53.361,245.973 54.358,245.398 L422.222,33.110 C424.691,31.687 427.754,31.687 430.222,33.110 L631.383,149.196 C632.381,149.771 632.976,150.803 632.976,151.954 C632.976,153.106 632.381,154.138 631.383,154.714 L263.519,367.000 C262.285,367.712 260.903,368.069 259.519,368.069 C258.136,368.069 256.753,367.712 255.519,367.000 ZM630.602,153.362 C631.110,153.068 631.414,152.542 631.414,151.954 C631.414,151.367 631.110,150.842 630.602,150.548 L429.441,34.462 C427.455,33.317 424.990,33.317 423.004,34.462 L55.139,246.749 C54.631,247.043 54.328,247.569 54.328,248.156 C54.328,248.743 54.631,249.269 55.139,249.564 L256.300,365.649 C258.287,366.793 260.752,366.793 262.738,365.649 L630.602,153.362 ZM113.138,361.317 L96.718,351.840 C94.676,350.663 93.077,347.640 93.077,344.957 C93.077,343.413 93.629,342.210 94.592,341.655 C95.434,341.168 96.467,341.229 97.499,341.827 L113.919,351.302 C115.962,352.481 117.560,355.505 117.560,358.185 C117.560,359.730 117.008,360.933 116.047,361.488 C115.670,361.706 115.257,361.814 114.822,361.814 C114.282,361.814 113.710,361.648 113.138,361.317 ZM95.371,343.007 C94.914,343.271 94.639,344.000 94.639,344.957 C94.639,347.062 95.949,349.594 97.499,350.489 L113.919,359.966 C114.293,360.181 114.831,360.386 115.266,360.137 C115.724,359.872 115.998,359.143 115.998,358.185 C115.998,356.083 114.688,353.550 113.138,352.653 L96.718,343.178 C96.465,343.033 96.139,342.891 95.820,342.891 C95.666,342.891 95.513,342.925 95.371,343.007 Z"
+							/>
+						</svg>
+					</div>
+					 
+				</div>
+			</div>
+			<div class="footer">
+				<div class="footer__container section">
+					<div class="footer__center">
+						<div class="footer__left">
+							<div class="footer__logo">
+								<img src="img/icons/logo-footer.svg" alt="">
+							</div>
+							<div class="footer__text">
+								АО ЮниКредит Банк © 2018
+								<br>Генеральная лицензия №1 Банка России
+							</div>
+						</div>
+						<div class="footer__right">
+							<div class="footer__phone">
+								8 800 700-10-20
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 	</div>
 	
+	
 	<script src="js/scripts.min.js"></script>
-	<!-- Google Tag Manager -->
-	<script>(function (w, d, s, l, i) {
-			w[l] = w[l] || []; w[l].push({
-				'gtm.start':
-					new Date().getTime(), event: 'gtm.js'
-			}); var f = d.getElementsByTagName(s)[0],
-				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
-					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
-		})(window, document, 'script', 'dataLayer', 'GTM-K234GK');</script>
-	<!-- End Google Tag Manager -->
-	<!-- Google Tag Manager (noscript) -->
-	<noscript>
-		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K234GK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
-	</noscript>
-	<!-- End Google Tag Manager (noscript) -->
-	<script>
-		(function (i, s, o, g, r, a, m) {
-			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
-				(i[r].q = i[r].q || []).push(arguments)
-			}, i[r].l = 1 * new Date(); a = s.createElement(o),
-				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
-		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
-		ga('create', 'UA-71193331-24', 'auto');
-		ga('send', 'pageview');
-	</script>
+
 </body>
 </html>
