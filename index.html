@@ -101,7 +101,7 @@
 						<stop class="end-point" offset="100%" stop-color="#110e38" />
 					</linearGradient>
 					<radialGradient id="grad1" cx="100%" cy="35%" r="30%">
-						<stop offset="0%" stop-color="#1e3385" stop-opacity="0.8" />
+						<stop offset="0%" stop-color="#1e3385" stop-opacity="1" />
 						<stop offset="100%" stop-color="#11103c" stop-opacity="0" />
 					</radialGradient>
 					<radialGradient id="grad2" cx="15%" cy="15%" r="30%">
@@ -109,15 +109,15 @@
 						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
 					</radialGradient>
 					<radialGradient id="grad3" cx="50%" cy="80%" r="50%">
-						<stop offset="0%" stop-color="#473771" stop-opacity="0.8" />
+						<stop offset="0%" stop-color="#473771" stop-opacity="1" />
 						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
 					</radialGradient>
 					<radialGradient id="grad4" cx="90%" cy="70%" r="30%">
-						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="0.7" />
+						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="1" />
 						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
 					</radialGradient>
 					<radialGradient id="grad5" cx="0%" cy="100%" r="70%">
-						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="0.8" />
+						<stop offset="0%" stop-color="#3a4e7d" stop-opacity="1" />
 						<stop offset="100%" stop-color="#17205f" stop-opacity="0" />
 					</radialGradient>
 					<radialGradient class="gold-gradient" gradientUnits="userSpaceOnUse" id="g" cx="30%" cy="90%" r="1">
@@ -232,7 +232,7 @@
 		<section class="compare js-section fp-auto-height">
 			 <div class="compare__container">
 				 <ul class="compare__list section">
-					<li class="compare__item animated visible-hidden">
+					<li class="compare__item animated visible-hidden  js-show-button">
 						<div class="compare__icon">
 							<img src="img/icons/icon-compare-1.svg" alt="">
 						</div>
@@ -343,7 +343,7 @@
 							</div>
 						</div>
 					</li>
-					<li class="compare__item animated visible-hidden">
+					<li class="compare__item animated visible-hidden js-show-small">
 						<div class="compare__icon">
 							<img src="img/icons/icon-compare-7.svg" alt="">
 						</div>
@@ -404,213 +404,276 @@
 						</div>
 					</li>
 				 </ul>
-			 </div>
-			 <div class="compare__wrap">
-				<button class="compare__button js-checkout">оформить карту</button>
-			</div>
-		</section>
-		<section class="get js-section">
-			 <div class="get__container section">
-				<div class="get__text h3">способы</div>
-				<h2 class="get__title h2">Как получать зарплату <br>на карту ЮниКредит Банка</h2>
-				<ul class="get__list">
-					<li class="get__item get__item--1">
-						<div class="get__number">01</div>
-						<div class="get__img">
-							<img src="img/icons/icon-way-1.svg" alt="">
-						</div>
-						<div class="get__description">
-							 Пополнением с карт других банков через <a href="#">Mobile.UniCredit</a> без комиссии
-						</div>
-					</li>
-					<li class="get__item get__item--2">
-						<div class="get__number">02</div>
-						<div class="get__img">
-							<img src="img/icons/icon-way-2.svg" alt="">
-						</div>
-						<div class="get__description">
-							 Переводом со счета в другом банке по <a href="#">реквизитам</a>
-						</div>
-					</li>
-					<li class="get__item get__item--3">
-						<div class="get__number">03</div>
-						<div class="get__img">
-							<img src="img/icons/icon-way-3.svg" alt="">
-						</div>
-						<div class="get__description">
-							 Передать в бухгалтерию своего работодателя <a class="get__link" href="#">заявление</a>
-						</div>
-					</li>
-				</ul>
-			 </div>
-			 <div class="get__background">
-				<svg>
-					<path class="back" d="M 0 400 Q 80 440 240 440 C 520 400 560 200 800 200 C 1000 200 1080 320 1320 320 C 1600 280 1640 80 1920 80 L 1920 2000 L 0 2000 Z"/>
-	
-					<path class="wave1" d="M 0 480 C 200 480 280 280 480 280 C 680 280 760 360 1000 360 C 1240 360 1360 120 1600 120 C 1800 120 1840 160 1920 200"/>
-					<path class="wave1_2" d="M 0 487 C 200 487 280 287 480 287 C 680 287 760 367 1000 367 C 1240 367 1360 127 1600 127 C 1800 127 1840 167 1920 207"/>
-					<path class="wave1_3" d="M 0 494 C 200 494 280 294 480 294 C 680 294 760 374 1000 374 C 1240 374 1360 134 1600 134 C 1800 134 1840 174 1920 214"/>
-					
-					<path class="wave2" d="M 0 400 C 80 400 240 520 480 440 C 720 360 760 200 1000 200 C 1240 200 1280 280 1480 280 C 1720 280 1840 80 1920 80"/>
-					<path class="wave2_2" d="M 0 407 C 80 407 240 527 480 447 C 720 367 760 207 1000 207 C 1240 207 1280 287 1480 287 C 1720 287 1840 87 1920 87"/>
-					<path class="wave2_3" d="M 0 414 C 80 414 240 534 480 454 C 720 374 760 214 1000 214 C 1240 214 1280 294 1480 294 C 1720 294 1840 94 1920 94"/>
-				</svg>
-			 </div>
-		</section>
-		<section class="rates js-section">
-			<div class="rates__container section">
-				<div class="rates__text h3">тарифы</div>
-				<h2 class="rates__title h2">Условия бесплатного <br>обслуживания</h2>
-				<ul class="rates__list">
-					<li class="rate">
-						<div class="rate__wrap">
-							<div class="rate__left">
-								<div class="rate__title">
-									ПАКЕТ GOLD
+
+				<section class="get">
+					<div class="get__container section">
+						<div class="get__text h3">способы</div>
+						<h2 class="get__title h2">Как получать зарплату
+							<br>на карту ЮниКредит Банка</h2>
+						<ul class="get__list">
+							<li class="get__item get__item--1">
+								<div class="get__number">01</div>
+								<div class="get__img">
+									<img src="img/icons/icon-way-1.svg" alt="">
 								</div>
-								<div class="rate__img">
-									<img src="img/icons/gold.png" alt="">
+								<div class="get__description">
+									Пополнением с карт других банков через
+									<a href="#">Mobile.UniCredit</a> без комиссии
 								</div>
-							</div>
-							<div class="rate__right">
-								<ul class="rate__list">
-									<li class="rate__item">
-										Поступления
-										<span>75 000 руб.</span> в месяц
-									</li>
-									<li class="rate__item">
-										Среднемесячные остатки на счетах
-										<br>и вкладах
-										<span>400 000 руб.</span>
-									</li>
-									<li class="rate__item">
-										Остатки
-										<span>100 000 руб.</span> + ежемесячные
-										<br>покупки по карте
-										<span>20 000 руб.</span>
-									</li>
-									<li class="rate__item">
-										Ежемесячные покупки по карте
-										<span>50 000 руб.</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="rate__note">
-							 Необходимо выполнить одно из условий. <br>При несоблюдении условий ежемесячная плата составляет 500 руб.
-						</div>
-					</li>
-					<li class="rate">
-						<div class="rate__wrap">
-							<div class="rate__left">
-								<div class="rate__title">
-									 ПАКЕТ CLASSIC
+							</li>
+							<li class="get__item get__item--2">
+								<div class="get__number">02</div>
+								<div class="get__img">
+									<img src="img/icons/icon-way-2.svg" alt="">
 								</div>
-								<div class="rate__img">
-									<img src="img/icons/standard.png" alt="">
+								<div class="get__description">
+									Переводом со счета в другом банке по
+									<a href="#">реквизитам</a>
 								</div>
-							</div>
-							<div class="rate__right">
-								<ul class="rate__list">
-									<li class="rate__item">
-										 Поступления <span>30 000 руб.</span> в месяц
-									</li>
-									<li class="rate__item">
-										 Среднемесячные остатки на счетах <br>и вкладах <span>100 000 руб.</span>
-									</li>
-									<li class="rate__item">
-										 Остатки <span>30 000 руб.</span> + ежемесячные <br>покупки по карте <span>10 000 руб.</span>
-									</li>
-									<li class="rate__item">
-										 Ежемесячные покупки по карте <span>30 000 руб.</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-						<div class="rate__note">
-							 Необходимо выполнить одно из условий. <br>При несоблюдении условий ежемесячная плата составляет 150 руб.
-						</div>
-					</li>
-				</ul>
-			</div>
-		</section>
-		<section class="buy js-section">
-			<div class="buy__container section">
-				<div class="buy__text h3">Совершайте покупки</div>
-				<h1 class="buy__title h2">При помощи телефона с сервисами <br>бесконтактной оплаты</h1>
-				<ul class="buy__icons">
-					<li class="buy__icon">
-						<img src="img/icons/apple-pay-logo.svg" alt="">
-					</li>
-					<li class="buy__icon">
-						<img src="img/icons/google-pay-logo.svg" alt="">
-					</li>
-					<li class="buy__icon buy__icon--large">
-						<img src="img/icons/garnin-pay-logo.svg" alt="">
-					</li>
-				</ul>
-				<div class="buy__note">
-					<p>
-						 Период проведения акции – с 02.07.2018 по 31.12.2018. <a href="#">Полные правила акции</a>
-					</p>
-					<p>
-						 Комиссия за&nbsp;перевод со&nbsp;счета в&nbsp;другом банке по&nbsp;реквизитам взимается в&nbsp;соответствии с&nbsp;тарифами
-						банка-отправителя <br>
-						ЮниКредит Банк комиссию за&nbsp;зачисление денежных средств не&nbsp;взимает.
-						<br>Некоторые банки-эмитенты могут взимать дополнительные комиссии при переводе со&nbsp;своих карт на&nbsp;карты других банков
-					</p>
-					<p>
-						 Банк выплачивает вознаграждение ежемесячно, в&nbsp;течение календарного месяца, следующего за&nbsp;отчетным. Минимальный
-						размер вознаграждения&nbsp;&mdash; 30&nbsp;руб., максимальный&nbsp;&mdash; 3000&nbsp;руб. Рассчитывается суммарное вознаграждение
-						по&nbsp;основной и&nbsp;дополнительным картам. С&nbsp;пакетом GOLD кешбэк начисляется в&nbsp;зависимости от&nbsp;суммы покупок
-						по&nbsp;карте: до&nbsp;50&nbsp;000&nbsp;руб. &mdash;&nbsp;1%, от&nbsp;50&nbsp;000 до&nbsp;100&nbsp;000&nbsp;руб. &mdash;&nbsp;2%,
-						от&nbsp;100&nbsp;000&nbsp;руб. &mdash;&nbsp;3%. С&nbsp;пакетом CLASSIC&nbsp;&mdash; 1%&nbsp;вне зависимости от&nbsp;суммы
-						покупок.
-					</p>
-					<p>
-						 В&nbsp;качестве &laquo;Поступлений&raquo; при расчете комиссии за&nbsp;обслуживание пакетов услуг не&nbsp;учитывается внесение
-						наличных денежных средств через кассу (кассовые операции)
-						и&nbsp;с&nbsp;помощью банкоматов, а&nbsp;также внутрибанковские переводы (за&nbsp;исключением заработной платы и&nbsp;приравненных
-						к&nbsp;ней типов выплат в&nbsp;рамках зарплатных проектов).
-					</p>
-				</div>
-				<div class="phone">
-					<div class="phone__card">
-						<img src="img/icons/-e-card_pay_gold.png" alt="">
+							</li>
+							<li class="get__item get__item--3">
+								<div class="get__number">03</div>
+								<div class="get__img">
+									<img src="img/icons/icon-way-3.svg" alt="">
+								</div>
+								<div class="get__description">
+									Передать в бухгалтерию своего работодателя
+									<a class="get__link" href="#">заявление</a>
+								</div>
+							</li>
+						</ul>
 					</div>
-					<div class="phone__shadow">
-						<img src="img/icons/shadow.png" alt="">
-					</div>
-					<div class="phone__phone">
-						<svg id="phone" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="686px" height="429px">
-							<path  stroke="rgb(197, 217, 234)" d="M0.594,286.636 C0.594,300.748 7.894,313.386 20.121,320.442 L198.316,423.275 C204.245,426.696 210.997,428.505 217.843,428.505 C224.689,428.505 231.442,426.696 237.370,423.275 L665.621,176.141 C677.848,169.085 685.148,156.447 685.148,142.334 C685.148,128.222 677.848,115.585 665.621,108.528 L487.506,5.743 C481.553,2.307 474.773,0.491 467.898,0.491 C461.024,0.491 454.243,2.307 448.290,5.743 L20.121,252.830 C7.894,259.886 0.594,272.524 0.594,286.636 ZM657.188,107.268 L657.187,107.268 L663.657,111.001 C676.675,118.514 676.675,137.295 663.657,144.807 L235.808,391.710 C230.250,394.918 224.047,396.522 217.843,396.522 C211.640,396.522 205.437,394.918 199.878,391.710 L20.913,288.433 C9.218,281.684 8.471,265.464 18.665,257.499 C18.739,257.446 18.812,257.391 18.887,257.339 C19.291,257.032 19.734,256.756 20.172,256.476 C20.669,256.157 21.163,255.835 21.683,255.535 L31.884,249.648 L42.068,243.771 L42.068,243.771 L449.852,8.447 C455.435,5.225 461.667,3.614 467.898,3.614 C474.129,3.614 480.361,5.225 485.944,8.447 L657.188,107.268 ZM11.660,264.064 C10.568,266.576 9.978,269.330 9.978,272.206 C9.978,279.544 13.774,286.116 20.132,289.785 L199.097,393.062 C204.789,396.347 211.271,398.083 217.843,398.083 C224.415,398.083 230.898,396.347 236.589,393.062 L664.438,146.160 C671.041,142.349 674.983,135.525 674.983,127.904 C674.983,124.336 674.109,120.948 672.512,117.957 C687.549,134.114 684.742,161.500 664.058,173.436 L235.808,420.570 C230.250,423.778 224.047,425.382 217.843,425.382 C211.640,425.382 205.437,423.778 199.878,420.570 L21.683,317.738 C1.752,306.236 -1.578,280.387 11.660,264.064 ZM255.519,367.000 L54.358,250.915 C53.361,250.340 52.766,249.307 52.766,248.156 C52.766,247.005 53.361,245.973 54.358,245.398 L422.222,33.110 C424.691,31.687 427.754,31.687 430.222,33.110 L631.383,149.196 C632.381,149.771 632.976,150.803 632.976,151.954 C632.976,153.106 632.381,154.138 631.383,154.714 L263.519,367.000 C262.285,367.712 260.903,368.069 259.519,368.069 C258.136,368.069 256.753,367.712 255.519,367.000 ZM630.602,153.362 C631.110,153.068 631.414,152.542 631.414,151.954 C631.414,151.367 631.110,150.842 630.602,150.548 L429.441,34.462 C427.455,33.317 424.990,33.317 423.004,34.462 L55.139,246.749 C54.631,247.043 54.328,247.569 54.328,248.156 C54.328,248.743 54.631,249.269 55.139,249.564 L256.300,365.649 C258.287,366.793 260.752,366.793 262.738,365.649 L630.602,153.362 ZM113.138,361.317 L96.718,351.840 C94.676,350.663 93.077,347.640 93.077,344.957 C93.077,343.413 93.629,342.210 94.592,341.655 C95.434,341.168 96.467,341.229 97.499,341.827 L113.919,351.302 C115.962,352.481 117.560,355.505 117.560,358.185 C117.560,359.730 117.008,360.933 116.047,361.488 C115.670,361.706 115.257,361.814 114.822,361.814 C114.282,361.814 113.710,361.648 113.138,361.317 ZM95.371,343.007 C94.914,343.271 94.639,344.000 94.639,344.957 C94.639,347.062 95.949,349.594 97.499,350.489 L113.919,359.966 C114.293,360.181 114.831,360.386 115.266,360.137 C115.724,359.872 115.998,359.143 115.998,358.185 C115.998,356.083 114.688,353.550 113.138,352.653 L96.718,343.178 C96.465,343.033 96.139,342.891 95.820,342.891 C95.666,342.891 95.513,342.925 95.371,343.007 Z"
+					<div class="get__background">
+						<svg>
+							<path class="back" d="M 0 400 Q 80 440 240 440 C 520 400 560 200 800 200 C 1000 200 1080 320 1320 320 C 1600 280 1640 80 1920 80 L 1920 2000 L 0 2000 Z"
+							/>
+				
+							<path class="wave1" d="M 0 480 C 200 480 280 280 480 280 C 680 280 760 360 1000 360 C 1240 360 1360 120 1600 120 C 1800 120 1840 160 1920 200"
+							/>
+							<path class="wave1_2" d="M 0 487 C 200 487 280 287 480 287 C 680 287 760 367 1000 367 C 1240 367 1360 127 1600 127 C 1800 127 1840 167 1920 207"
+							/>
+							<path class="wave1_3" d="M 0 494 C 200 494 280 294 480 294 C 680 294 760 374 1000 374 C 1240 374 1360 134 1600 134 C 1800 134 1840 174 1920 214"
+							/>
+				
+							<path class="wave2" d="M 0 400 C 80 400 240 520 480 440 C 720 360 760 200 1000 200 C 1240 200 1280 280 1480 280 C 1720 280 1840 80 1920 80"
+							/>
+							<path class="wave2_2" d="M 0 407 C 80 407 240 527 480 447 C 720 367 760 207 1000 207 C 1240 207 1280 287 1480 287 C 1720 287 1840 87 1920 87"
+							/>
+							<path class="wave2_3" d="M 0 414 C 80 414 240 534 480 454 C 720 374 760 214 1000 214 C 1240 214 1280 294 1480 294 C 1720 294 1840 94 1920 94"
 							/>
 						</svg>
 					</div>
-					 
-				</div>
-			</div>
-			<div class="footer">
-				<div class="footer__container section">
-					<div class="footer__center">
-						<div class="footer__left">
-							<div class="footer__logo">
-								<img src="img/icons/logo-footer.svg" alt="">
-							</div>
-							<div class="footer__text">
-								АО ЮниКредит Банк © 2018
-								<br>Генеральная лицензия №1 Банка России
-							</div>
+				</section>
+				<section class="rates">
+					<div class="rates__container section">
+						<div class="rates__text h3">тарифы</div>
+						<h2 class="rates__title h2">Условия бесплатного
+							<br>обслуживания</h2>
+						<ul class="rates__list">
+							<li class="rate">
+								<div class="rate__wrap">
+									<div class="rate__left">
+										<div class="rate__title">
+											ПАКЕТ GOLD
+										</div>
+										<div class="rate__img">
+											<img src="img/icons/gold.png" alt="">
+										</div>
+									</div>
+									<div class="rate__right">
+										<ul class="rate__list">
+											<li class="rate__item">
+												Поступления
+												<span>75 000 руб.</span> в месяц
+											</li>
+											<li class="rate__item">
+												Среднемесячные остатки на счетах
+												<br>и вкладах
+												<span>400 000 руб.</span>
+											</li>
+											<li class="rate__item">
+												Остатки
+												<span>100 000 руб.</span> + ежемесячные
+												<br>покупки по карте
+												<span>20 000 руб.</span>
+											</li>
+											<li class="rate__item">
+												Ежемесячные покупки по карте
+												<span>50 000 руб.</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="rate__note">
+									Необходимо выполнить одно из условий.
+									<br>При несоблюдении условий ежемесячная плата составляет 500 руб.
+								</div>
+							</li>
+							<li class="rate">
+								<div class="rate__wrap">
+									<div class="rate__left">
+										<div class="rate__title">
+											ПАКЕТ CLASSIC
+										</div>
+										<div class="rate__img">
+											<img src="img/icons/standard.png" alt="">
+										</div>
+									</div>
+									<div class="rate__right">
+										<ul class="rate__list">
+											<li class="rate__item">
+												Поступления
+												<span>30 000 руб.</span> в месяц
+											</li>
+											<li class="rate__item">
+												Среднемесячные остатки на счетах
+												<br>и вкладах
+												<span>100 000 руб.</span>
+											</li>
+											<li class="rate__item">
+												Остатки
+												<span>30 000 руб.</span> + ежемесячные
+												<br>покупки по карте
+												<span>10 000 руб.</span>
+											</li>
+											<li class="rate__item">
+												Ежемесячные покупки по карте
+												<span>30 000 руб.</span>
+											</li>
+										</ul>
+									</div>
+								</div>
+								<div class="rate__note">
+									Необходимо выполнить одно из условий.
+									<br>При несоблюдении условий ежемесячная плата составляет 150 руб.
+								</div>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="buy">
+					<div class="buy__container section">
+						<div class="buy__text h3">Совершайте покупки</div>
+						<h1 class="buy__title h2">При помощи телефона с сервисами
+							<br>бесконтактной оплаты</h1>
+						<ul class="buy__icons">
+							<li class="buy__icon">
+								<img src="img/icons/apple-pay-logo.svg" alt="">
+							</li>
+							<li class="buy__icon">
+								<img src="img/icons/google-pay-logo.svg" alt="">
+							</li>
+							<li class="buy__icon buy__icon--large">
+								<img src="img/icons/garnin-pay-logo.svg" alt="">
+							</li>
+						</ul>
+						<div class="buy__note">
+							<p>
+								Период проведения акции – с 02.07.2018 по 31.12.2018.
+								<a href="#">Полные правила акции</a>
+							</p>
+							<p>
+								Комиссия за&nbsp;перевод со&nbsp;счета в&nbsp;другом банке по&nbsp;реквизитам взимается в&nbsp;соответствии с&nbsp;тарифами
+								банка-отправителя
+								<br> ЮниКредит Банк комиссию за&nbsp;зачисление денежных средств не&nbsp;взимает.
+								<br>Некоторые банки-эмитенты могут взимать дополнительные комиссии при переводе со&nbsp;своих карт на&nbsp;карты других банков
+							</p>
+							<p>
+								Банк выплачивает вознаграждение ежемесячно, в&nbsp;течение календарного месяца, следующего за&nbsp;отчетным. Минимальный
+								размер вознаграждения&nbsp;&mdash; 30&nbsp;руб., максимальный&nbsp;&mdash; 3000&nbsp;руб. Рассчитывается суммарное вознаграждение
+								по&nbsp;основной и&nbsp;дополнительным картам. С&nbsp;пакетом GOLD кешбэк начисляется в&nbsp;зависимости от&nbsp;суммы
+								покупок по&nbsp;карте: до&nbsp;50&nbsp;000&nbsp;руб. &mdash;&nbsp;1%, от&nbsp;50&nbsp;000 до&nbsp;100&nbsp;000&nbsp;руб.
+								&mdash;&nbsp;2%, от&nbsp;100&nbsp;000&nbsp;руб. &mdash;&nbsp;3%. С&nbsp;пакетом CLASSIC&nbsp;&mdash; 1%&nbsp;вне зависимости
+								от&nbsp;суммы покупок.
+							</p>
+							<p>
+								В&nbsp;качестве &laquo;Поступлений&raquo; при расчете комиссии за&nbsp;обслуживание пакетов услуг не&nbsp;учитывается внесение
+								наличных денежных средств через кассу (кассовые операции) и&nbsp;с&nbsp;помощью банкоматов, а&nbsp;также внутрибанковские
+								переводы (за&nbsp;исключением заработной платы и&nbsp;приравненных к&nbsp;ней типов выплат в&nbsp;рамках зарплатных проектов).
+							</p>
 						</div>
-						<div class="footer__right">
-							<div class="footer__phone">
-								8 800 700-10-20
+						<div class="phone">
+							<div class="phone__card">
+								<img src="img/icons/-e-card_pay_gold.png" alt="">
+							</div>
+							<div class="phone__shadow">
+								<img src="img/icons/shadow.png" alt="">
+							</div>
+							<div class="phone__phone">
+								<svg id="phone"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 684.87416 429.53851" width="100%" height="429px">
+									<defs>
+										<style>
+											.cls-1,
+											.cls-2,
+											.cls-3 {
+												fill: none;
+											}
+								
+											.cls-1,
+											.cls-2 {
+												stroke: #c5d9ea;
+												stroke-miterlimit: 10;
+											}
+								
+											.cls-1 {
+												stroke-width: 3px;
+											}
+								
+											.cls-2 {
+												stroke-width: 2px;
+											}
+								
+											.cls-3 {
+												opacity: 0.8;
+												isolation: isolate;
+											}
+										</style>
+									</defs>
+									<title>phone_pay_new</title>
+									<path class="cls-1" d="M1.64207,285.6203a38.50505,38.50505,0,0,0,19.45061,33.68944l177.49775,102.4784a38.90137,38.90137,0,0,0,38.90131,0L664.06563,175.50572a38.90145,38.90145,0,0,0,0-67.37915L486.64864,5.69489a39.06277,39.06277,0,0,0-39.063,0L21.09268,251.93077A38.50551,38.50551,0,0,0,1.64207,285.6203Z"
+									 transform="translate(-0.14207 1.03859)" />
+									<path class="cls-2" d="M113.74537,360.044l-16.3552-9.44416a8.4878,8.4878,0,0,1-3.62731-6.8594,3.61634,3.61634,0,0,1,1.509-3.29141,2.81963,2.81963,0,0,1,2.89637.1717l16.3552,9.44265a8.49215,8.49215,0,0,1,3.62722,6.8594,3.6188,3.6188,0,0,1-1.50737,3.29141,2.40593,2.40593,0,0,1-1.22024.32518A3.36861,3.36861,0,0,1,113.74537,360.044Z"
+									 transform="translate(-0.14207 1.03859)" />
+									<path class="cls-2" d="M655.66563,103.29688l-.00009.00009,6.44417,3.72049a19.45078,19.45078,0,0,1,0,33.68962l-426.174,246.05167a35.78917,35.78917,0,0,1-35.7892,0L21.88143,283.83742A18.67851,18.67851,0,0,1,19.64187,253.01c.07406-.05289.14651-.10729.22111-.15964.40273-.30562.84423-.58033,1.28028-.85932.49555-.31822.98743-.63938,1.50549-.93848l10.16073-5.86625,10.14447-5.857h0L449.14169,4.81663a35.95075,35.95075,0,0,1,35.951,0Z"
+									 transform="translate(-0.14207 1.03859)" />
+									<path class="cls-2" d="M255.56943,362.13406,55.19593,246.44839a3.17483,3.17483,0,0,1,0-5.49783L421.62019,29.39442a7.99647,7.99647,0,0,1,7.96869,0l200.3735,115.68576a3.17615,3.17615,0,0,1,0,5.49935L263.53812,362.13406a7.984,7.984,0,0,1-7.96869,0Z"
+									 transform="translate(-0.14207 1.03859)" />
+									<path class="cls-3" transform="translate(-0.14207 1.03859)" />
+								</svg>
+							</div>
+				
+						</div>
+					</div>
+					<div class="footer">
+						<div class="footer__container section">
+							<div class="footer__center">
+								<div class="footer__left">
+									<div class="footer__logo">
+										<img src="img/icons/logo-footer.svg" alt="">
+									</div>
+									<div class="footer__text">
+										АО ЮниКредит Банк © 2018
+										<br>Генеральная лицензия №1 Банка России
+									</div>
+								</div>
+								<div class="footer__right">
+									<div class="footer__phone">
+										8 800 700-10-20
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
+			 </div>
+
+
+			 <div class="compare__wrap">
+				<button class="compare__button js-checkout">оформить карту</button>
 			</div>
+
 		</section>
+		
 	</div>
 	
 	
