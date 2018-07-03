@@ -6889,10 +6889,6 @@ ul {
   margin-top: 6vh;
 }
 
-.select__cards--min {
-  display: none;
-}
-
 .select__card {
   position: relative;
 }
@@ -6909,6 +6905,16 @@ ul {
   -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
           transform: scale(1.1);
+}
+
+.select__card input:checked ~ .select__img--gold {
+  -webkit-box-shadow: 0 0 60px 2px #9857a6, 1rem 1rem 30px #4c2c53;
+          box-shadow: 0 0 60px 2px #9857a6, 1rem 1rem 30px #4c2c53;
+}
+
+.select__card input:checked ~ .select__img--standard {
+  -webkit-box-shadow: 0 0 60px 2px #2c72af, 1rem 1rem 30px #163958;
+          box-shadow: 0 0 60px 2px #2c72af, 1rem 1rem 30px #163958;
 }
 
 .select__card input:checked ~ .select__description .select__circle {
@@ -6935,27 +6941,24 @@ ul {
           transform: scale(1.1);
 }
 
-.select__card--min label {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
 .select__img {
   position: relative;
   width: 47vh;
   z-index: 10;
   -webkit-border-radius: 15px;
           border-radius: 15px;
-  -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
-.select__img--min {
-  width: 17vh;
+.select__img--gold {
+  -webkit-box-shadow: 0 0 0 0 #9857a6, 0.5rem 0.5rem 30px #13092d;
+          box-shadow: 0 0 0 0 #9857a6, 0.5rem 0.5rem 30px #13092d;
+}
+
+.select__img--standard {
+  -webkit-box-shadow: 0 0 0 0 #2c72af, 0.5rem 0.5rem 30px #13092d;
+          box-shadow: 0 0 0 0 #2c72af, 0.5rem 0.5rem 30px #13092d;
 }
 
 .select__img img {
@@ -6979,11 +6982,6 @@ ul {
   z-index: 10;
 }
 
-.select__description--min {
-  margin: 0;
-  margin-left: 50px;
-}
-
 .select__circle {
   width: 50px;
   height: 50px;
@@ -7004,21 +7002,18 @@ ul {
   color: #fff;
 }
 
-.select__back {
+.select__tm {
+  visibility: hidden;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  bottom: 0;
-  background-color: transparent;
-}
-
-.select__gradient {
-  position: absolute;
-  top: -100%;
-  right: -100%;
-  width: 300%;
-  height: 300%;
+  right: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%) translateX(120%);
+      -ms-transform: translateY(-50%) translateX(120%);
+          transform: translateY(-50%) translateX(120%);
+  font-weight: 500;
+  color: #fff;
+  font-size: 45px;
+  opacity: 0;
 }
 
 .active .select__overflow {
@@ -7624,141 +7619,6 @@ ul {
 .header__background {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #110e37), color-stop(80%, #110e37), to(#110e37));
   background: linear-gradient(to bottom, #110e37 20%, #110e37 80%, #110e37 100%);
-}
-
-.header__grad1 {
-  position: absolute;
-  right: 0%;
-  top: 15%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(50% 50%, #1e3385, transparent);
-  -webkit-animation: grad1 25s infinite alternate linear;
-          animation: grad1 25s infinite alternate linear;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-}
-
-.header__grad2 {
-  position: absolute;
-  left: 0%;
-  top: 0%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(50% 50%, #1e3385, transparent);
-  -webkit-animation: grad2 19s infinite alternate linear;
-          animation: grad2 19s infinite alternate linear;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-}
-
-.header__grad3 {
-  position: absolute;
-  left: 80%;
-  top: 5%;
-  width: 80vw;
-  height: 80vw;
-  background: radial-gradient(50% 50%, #473771, transparent);
-  -webkit-animation: grad3 20s infinite alternate linear;
-          animation: grad3 20s infinite alternate linear;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-}
-
-.header__grad4 {
-  position: absolute;
-  left: 0%;
-  top: 80%;
-  width: 70vw;
-  height: 70vw;
-  background: radial-gradient(50% 50%, #3a4e7d, transparent);
-  -webkit-animation: grad4 27s infinite alternate linear;
-          animation: grad4 27s infinite alternate linear;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-}
-
-.header__grad5 {
-  position: absolute;
-  left: 80%;
-  top: 80%;
-  width: 50vw;
-  height: 50vw;
-  background: radial-gradient(50% 50%, #3a4e7d, transparent);
-  -webkit-animation: grad5 13s infinite alternate linear;
-          animation: grad5 13s infinite alternate linear;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-}
-
-@-webkit-keyframes grad1 {
-  100% {
-    -webkit-transform: translate(-100%, 0%);
-            transform: translate(-100%, 0%);
-  }
-}
-
-@keyframes grad1 {
-  100% {
-    -webkit-transform: translate(-100%, 0%);
-            transform: translate(-100%, 0%);
-  }
-}
-
-@-webkit-keyframes grad2 {
-  100% {
-    -webkit-transform: translate(100%, 80%);
-            transform: translate(100%, 80%);
-  }
-}
-
-@keyframes grad2 {
-  100% {
-    -webkit-transform: translate(100%, 80%);
-            transform: translate(100%, 80%);
-  }
-}
-
-@-webkit-keyframes grad3 {
-  100% {
-    -webkit-transform: translate(-80%, 50%);
-            transform: translate(-80%, 50%);
-  }
-}
-
-@keyframes grad3 {
-  100% {
-    -webkit-transform: translate(-80%, 50%);
-            transform: translate(-80%, 50%);
-  }
-}
-
-@-webkit-keyframes grad4 {
-  100% {
-    -webkit-transform: translate(100%, -100%);
-            transform: translate(100%, -100%);
-  }
-}
-
-@keyframes grad4 {
-  100% {
-    -webkit-transform: translate(100%, -100%);
-            transform: translate(100%, -100%);
-  }
-}
-
-@-webkit-keyframes grad5 {
-  100% {
-    -webkit-transform: translate(-100%, -100%);
-            transform: translate(-100%, -100%);
-  }
-}
-
-@keyframes grad5 {
-  100% {
-    -webkit-transform: translate(-100%, -100%);
-            transform: translate(-100%, -100%);
-  }
 }
 
 .selected-gold .header__grad-s {
