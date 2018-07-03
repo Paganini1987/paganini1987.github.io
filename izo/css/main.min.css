@@ -6659,6 +6659,7 @@ ul {
   margin: 0;
   width: 100%;
   height: 175vh;
+  overflow: hidden;
 }
 
 .header__background rect {
@@ -6716,16 +6717,8 @@ ul {
   letter-spacing: 0.05em;
 }
 
-.menu-hide .select__container {
-  margin-top: -16vh;
-}
-
 .menu-hide .compare__container {
   height: 100vh;
-}
-
-.menu-hide .compare__wrap {
-  display: none;
 }
 
 /* Banner */
@@ -6819,6 +6812,14 @@ ul {
   width: 522px;
 }
 
+.cards__shadow {
+  position: absolute;
+  width: 600px;
+  top: 0;
+  right: 0;
+  z-index: 5;
+}
+
 /* Выберите карту */
 .select {
   position: relative;
@@ -6855,6 +6856,10 @@ ul {
 
 .select__center {
   padding-bottom: 2vh;
+  -webkit-perspective: 500px;
+          perspective: 500px;
+  overflow: hidden;
+  z-index: 11;
 }
 
 .select__text {
@@ -6881,7 +6886,11 @@ ul {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 8vh;
+  margin-top: 6vh;
+}
+
+.select__cards--min {
+  display: none;
 }
 
 .select__card {
@@ -6926,12 +6935,27 @@ ul {
           transform: scale(1.1);
 }
 
+.select__card--min label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .select__img {
   position: relative;
   width: 47vh;
   z-index: 10;
+  -webkit-border-radius: 15px;
+          border-radius: 15px;
+  -webkit-box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.3);
   -webkit-transition: 0.5s;
   transition: 0.5s;
+}
+
+.select__img--min {
+  width: 17vh;
 }
 
 .select__img img {
@@ -6953,6 +6977,11 @@ ul {
   margin-top: 6vh;
   margin-bottom: 4vh;
   z-index: 10;
+}
+
+.select__description--min {
+  margin: 0;
+  margin-left: 50px;
 }
 
 .select__circle {
@@ -7099,12 +7128,19 @@ ul {
 
 .compare__wrap {
   display: block;
-  position: fixed;
-  bottom: 0;
-  left: 0;
   width: 100%;
   text-align: center;
   z-index: 1000;
+}
+
+.compare__wrap--fix {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.compare__wrap--rel {
+  margin-top: 50px;
 }
 
 .compare__button {
@@ -7122,15 +7158,22 @@ ul {
   color: #d0d0d0;
   font-size: 20px;
   text-transform: uppercase;
-  -webkit-transform: translateY(200px);
-      -ms-transform: translateY(200px);
-          transform: translateY(200px);
   -webkit-transition-property: background-color, width, -webkit-transform;
   transition-property: background-color, width, -webkit-transform;
   transition-property: transform, background-color, width;
   transition-property: transform, background-color, width, -webkit-transform;
   -webkit-transition-duration: 1s, 0.3s, 0.5s;
           transition-duration: 1s, 0.3s, 0.5s;
+}
+
+.compare__button--fix {
+  -webkit-transform: translateY(200px);
+      -ms-transform: translateY(200px);
+          transform: translateY(200px);
+}
+
+.compare__button--rel {
+  width: 30%;
 }
 
 .compare__button.button-active {
@@ -7142,11 +7185,7 @@ ul {
   background-color: #cb221a;
 }
 
-.compare__button.button-small {
-  width: 30%;
-}
-
-.show-button.compare__button {
+.show-button {
   -webkit-transform: translateY(0px);
       -ms-transform: translateY(0px);
           transform: translateY(0px);
@@ -7189,10 +7228,6 @@ ul {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
   min-width: 100%;
   margin: 0 -15px;
   margin-top: 90px;
@@ -7593,13 +7628,13 @@ ul {
 
 .header__grad1 {
   position: absolute;
-  left: 90%;
+  right: 0%;
   top: 15%;
-  width: 35%;
-  height: 35%;
+  width: 50vw;
+  height: 50vw;
   background: radial-gradient(50% 50%, #1e3385, transparent);
-  -webkit-animation: grad1 15s infinite alternate linear;
-          animation: grad1 15s infinite alternate linear;
+  -webkit-animation: grad1 25s infinite alternate linear;
+          animation: grad1 25s infinite alternate linear;
   -webkit-border-radius: 999px;
           border-radius: 999px;
 }
@@ -7608,11 +7643,11 @@ ul {
   position: absolute;
   left: 0%;
   top: 0%;
-  width: 50%;
-  height: 50%;
-  background: radial-gradient(50% 50%, #18215f, transparent);
-  -webkit-animation: grad2 15s infinite alternate linear;
-          animation: grad2 15s infinite alternate linear;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(50% 50%, #1e3385, transparent);
+  -webkit-animation: grad2 19s infinite alternate linear;
+          animation: grad2 19s infinite alternate linear;
   -webkit-border-radius: 999px;
           border-radius: 999px;
 }
@@ -7621,11 +7656,11 @@ ul {
   position: absolute;
   left: 80%;
   top: 5%;
-  width: 50%;
-  height: 50%;
+  width: 80vw;
+  height: 80vw;
   background: radial-gradient(50% 50%, #473771, transparent);
-  -webkit-animation: grad3 15s infinite alternate linear;
-          animation: grad3 15s infinite alternate linear;
+  -webkit-animation: grad3 20s infinite alternate linear;
+          animation: grad3 20s infinite alternate linear;
   -webkit-border-radius: 999px;
           border-radius: 999px;
 }
@@ -7634,11 +7669,11 @@ ul {
   position: absolute;
   left: 0%;
   top: 80%;
-  width: 40%;
-  height: 40%;
+  width: 70vw;
+  height: 70vw;
   background: radial-gradient(50% 50%, #3a4e7d, transparent);
-  -webkit-animation: grad4 15s infinite alternate linear;
-          animation: grad4 15s infinite alternate linear;
+  -webkit-animation: grad4 27s infinite alternate linear;
+          animation: grad4 27s infinite alternate linear;
   -webkit-border-radius: 999px;
           border-radius: 999px;
 }
@@ -7647,26 +7682,26 @@ ul {
   position: absolute;
   left: 80%;
   top: 80%;
-  width: 50%;
-  height: 50%;
+  width: 50vw;
+  height: 50vw;
   background: radial-gradient(50% 50%, #3a4e7d, transparent);
-  -webkit-animation: grad5 15s infinite alternate linear;
-          animation: grad5 15s infinite alternate linear;
+  -webkit-animation: grad5 13s infinite alternate linear;
+          animation: grad5 13s infinite alternate linear;
   -webkit-border-radius: 999px;
           border-radius: 999px;
 }
 
 @-webkit-keyframes grad1 {
   100% {
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    -webkit-transform: translate(-100%, 0%);
+            transform: translate(-100%, 0%);
   }
 }
 
 @keyframes grad1 {
   100% {
-    -webkit-transform: translate(-50%, 50%);
-            transform: translate(-50%, 50%);
+    -webkit-transform: translate(-100%, 0%);
+            transform: translate(-100%, 0%);
   }
 }
 
@@ -7726,57 +7761,31 @@ ul {
   }
 }
 
-.select__back {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  -webkit-border-radius: 999px;
-          border-radius: 999px;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: -webkit-transform 0.5s;
-  transition: transform 0.5s;
-  transition: transform 0.5s, -webkit-transform 0.5s;
-  z-index: 5;
+.selected-gold .header__grad-s {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(80%, transparent), to(#996699));
+  background: linear-gradient(to bottom, transparent 20%, transparent 80%, #996699 100%);
 }
 
-.select__back--gold {
-  background: radial-gradient(50% 50%, #996699, transparent);
-}
-
-.select__back--standard {
-  background: radial-gradient(50% 50%, #6699cc, transparent);
-}
-
-.selected-gold .select__back--gold {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.selected-gold .header__background {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #110e37), color-stop(80%, #110e37), to(#996699));
-  background: linear-gradient(to bottom, #110e37 20%, #110e37 80%, #996699 100%);
-}
-
-.selected-standard .select__back--standard {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-.selected-standard .header__background {
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, #110e37), color-stop(80%, #110e37), to(#6699cc));
-  background: linear-gradient(to bottom, #110e37 20%, #110e37 80%, #6699cc 100%);
+.selected-standard .header__grad-s {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(20%, transparent), color-stop(80%, transparent), to(#6699cc));
+  background: linear-gradient(to bottom, transparent 20%, transparent 80%, #6699cc 100%);
 }
 
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 1280px) {
   .section {
     max-width: 1080px;
     padding: 0 40px;
@@ -7844,6 +7853,9 @@ ul {
   .cards__standard {
     width: 354px;
     top: 105px;
+  }
+  .cards__shadow {
+    width: 400px;
   }
   .select__cards {
     margin-top: 4vh;

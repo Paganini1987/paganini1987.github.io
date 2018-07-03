@@ -98,6 +98,7 @@
 				<div class="header__grad3"></div>
 				<div class="header__grad4"></div>
 				<div class="header__grad5"></div>
+				<div class="header__grad-s"></div>
 			</div>
 
 			<div class="header__top">
@@ -147,6 +148,9 @@
 					<div class="cards__gold">
 						<img src="img/icons/-e-gold_persp.png" alt="">
 					</div>
+					<div class="cards__shadow">
+						<img src="img/icons/shadow0.png" alt="">
+					</div>
 					<div class="cards__standard">
 						<img src="img/icons/-e-classic_persp.png" alt="">
 					</div>
@@ -158,13 +162,12 @@
 				<div class="select__center">
 					<div class="select__text h3">Выберите карту</div>
 					<h2 class="select__title h2">Mastercard в пакете GOLD или CLASSIC</h2>
-					<ul class="select__cards">
+					<ul class="select__cards select__cards--large">
 						<li class="select__card">
 							<label>
 								<input class="js-select-card" type="radio" data-card="gold" name="card" id="">
 								<div class="select__img js-gold">
 									<img src="img/icons/gold.png" alt="">
-									<div class="select__back select__back--gold"></div>
 								</div>
 								<div class="select__description">
 									<div class="select__circle"></div>
@@ -177,9 +180,34 @@
 								<input class="js-select-card" type="radio" data-card="standard" name="card" id="">
 								<div class="select__img js-standard">
 									<img src="img/icons/standard.png" alt="">
-									<div class="select__back select__back--standard"></div>
 								</div>
 								<div class="select__description">
+									<div class="select__circle"></div>
+									<div class="select__t">Пакет CLASSIC</div>
+								</div>
+							</label>
+						</li>
+					</ul>
+					<ul class="select__cards select__cards--min">
+						<li class="select__card select__card--min">
+							<label>
+								<input class="js-select-card" type="radio" data-card="gold" name="card" id="">
+								<div class="select__img select__img--min js-gold">
+									<img src="img/icons/gold.png" alt="">
+								</div>
+								<div class="select__description select__description--min">
+									<div class="select__circle"></div>
+									<div class="select__t">Пакет GOLD</div>
+								</div>
+							</label>
+						</li>
+						<li class="select__card select__card--min">
+							<label>
+								<input class="js-select-card" type="radio" data-card="standard" name="card" id="">
+								<div class="select__img select__img--min js-standard">
+									<img src="img/icons/standard.png" alt="">
+								</div>
+								<div class="select__description select__description--min">
 									<div class="select__circle"></div>
 									<div class="select__t">Пакет CLASSIC</div>
 								</div>
@@ -366,6 +394,14 @@
 					</li>
 				 </ul>
 
+				<div class="compare__wrap compare__wrap--rel">
+					<button class="compare__button compare__button--rel js-checkout">оформить карту</button>
+				</div>
+
+				<div class="compare__wrap compare__wrap--fix">
+					<button class="compare__button compare__button--fix js-checkout">оформить карту</button>
+				</div>
+				
 				<section class="get">
 					<div class="get__container section">
 						<div class="get__text h3">способы</div>
@@ -627,11 +663,6 @@
 					</div>
 				</section>
 			 </div>
-
-
-			 <div class="compare__wrap">
-				<button class="compare__button js-checkout">оформить карту</button>
-			</div>
 
 		</section>
 		
