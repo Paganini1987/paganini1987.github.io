@@ -6842,9 +6842,9 @@ ul {
 }
 
 .select--hidden {
-  -webkit-transform: translateY(-200px);
-      -ms-transform: translateY(-200px);
-          transform: translateY(-200px);
+  -webkit-transform: translateY(-300px);
+      -ms-transform: translateY(-300px);
+          transform: translateY(-300px);
 }
 
 .select__container {
@@ -7095,7 +7095,7 @@ ul {
 
 .compare__wrap-l {
   text-align: left;
-  margin-right: 100px;
+  margin-right: 80px;
 }
 
 .compare__right {
@@ -7111,7 +7111,7 @@ ul {
 
 .compare__wrap-r {
   text-align: right;
-  margin-left: 100px;
+  margin-left: 80px;
 }
 
 .compare__icon {
@@ -7656,6 +7656,30 @@ ul {
 }
 
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width: 1400px) {
+  .compare__line1 {
+    font-size: 32px;
+  }
+  .compare__wrap-l {
+    margin-right: 60px;
+  }
+  .compare__wrap-r {
+    margin-left: 60px;
+  }
+}
+
+@media only screen and (max-width: 1310px) {
+  .compare__line1 {
+    font-size: 30px;
+  }
+  .compare__wrap-l {
+    margin-right: 50px;
+  }
+  .compare__wrap-r {
+    margin-left: 50px;
+  }
+}
+
 /* Large Devices, Wide Screens */
 @media only screen and (max-width: 1280px) {
   .section {
@@ -7986,6 +8010,10 @@ ul {
   .compare__wrap-r {
     margin-left: 7vw;
   }
+  .compare__button {
+    font-size: 16px;
+    line-height: 45px;
+  }
   .get {
     padding-top: 100px;
   }
@@ -8218,7 +8246,7 @@ ul {
     font-size: 16px;
     line-height: 45px;
   }
-  .compare__button--small {
+  .compare__button {
     width: 60%;
   }
   .compare__description {
