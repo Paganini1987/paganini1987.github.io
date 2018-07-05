@@ -7515,13 +7515,11 @@ ul {
 .buy__text {
   position: relative;
   color: #293762;
-  opacity: 0;
   z-index: 15;
 }
 
 .buy__title {
   position: relative;
-  opacity: 0;
   z-index: 15;
 }
 
@@ -7597,6 +7595,7 @@ ul {
   position: absolute;
   width: 686px;
   top: 100px;
+  opacity: 0;
   right: 0;
 }
 
