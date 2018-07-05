@@ -7009,6 +7009,13 @@ ul {
   opacity: 0.3;
 }
 
+.sticky {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
 /* Сравнение */
 .compare {
   background-color: #fff;
@@ -7151,6 +7158,10 @@ ul {
   text-align: left;
 }
 
+.compare__line2--center {
+  text-align: center;
+}
+
 .compare__line {
   display: inline-block;
   width: 100px;
@@ -7159,34 +7170,18 @@ ul {
 }
 
 .compare__wrap {
-  position: fixed;
-  bottom: 0;
-  left: 0;
   display: block;
   width: 100%;
+  margin-top: 50px;
   text-align: center;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-transform: translateY(200px);
-      -ms-transform: translateY(200px);
-          transform: translateY(200px);
   z-index: 1000;
-}
-
-.compare__wrap--show {
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
-}
-
-.compare__wrap--rel {
-  position: relative;
-  margin-top: 50px;
 }
 
 .compare__button {
   display: inline-block;
-  width: 100%;
+  width: 30%;
   line-height: 80px;
   text-align: center;
   -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
@@ -7207,10 +7202,6 @@ ul {
           transition-duration: 1s, 0.3s, 0.5s;
 }
 
-.compare__button--small {
-  width: 30%;
-}
-
 .compare__button.button-active {
   background-color: #ff3333;
   color: #fff;
@@ -7218,12 +7209,6 @@ ul {
 
 .compare__button.button-active:hover {
   background-color: #cb221a;
-}
-
-.show-button {
-  -webkit-transform: translateY(0px);
-      -ms-transform: translateY(0px);
-          transform: translateY(0px);
 }
 
 .visible-hidden {

@@ -19,7 +19,7 @@
 </head>
 
 <body>
-	<style>
+	<!-- <style>
 		.loader-default,
 		.loader-active {
 			position: absolute;
@@ -88,7 +88,7 @@
 			<div class="loader-default"></div>
 			<div class="loader-active"></div>
 		</div>
-	</div>
+	</div> -->
 	<div id="fullpage">
 		<header class="header js-section">
 			<div class="header__top">
@@ -150,14 +150,16 @@
 				
 			</div>
 		</header>
-		<section class="select js-section">
+		<section id="select" class="select js-section">
 			<div class="background"></div>
 			<div class="select__container section">
 				<div class="select__center">
 					<div class="select__text h3">Выберите карту</div>
 					<h2 class="select__title h2">Mastercard в пакете GOLD или CLASSIC</h2>
 					<ul class="select__cards">
-						<li class="select__card select__card--gold">
+						<li class="select__card select__card--gold animateme"
+							 data-when="exit" data-from="0" data-to="0.6" data-scale="0.4"
+						>
 							<label>
 								<input class="js-select-card" type="radio" data-card="gold" name="card" id="" checked>
 								<div class="select__img select__img--gold js-gold">
@@ -169,7 +171,9 @@
 								</div>
 							</label>
 						</li>
-						<li class="select__card select__card--standard">
+						<li class="select__card select__card--standard animateme"
+							 data-when="exit" data-from="0" data-to="0.6" data-scale="0.4"
+						>
 							<label>
 								<input class="js-select-card" type="radio" data-card="standard" name="card" id="">
 								<div class="select__img select__img--standard js-standard">
