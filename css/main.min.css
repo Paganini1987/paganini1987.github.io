@@ -6888,6 +6888,7 @@ ul {
 
 .select__card {
   position: relative;
+  width: 100%;
   max-width: 30%;
   -webkit-transform-origin: 0% 0%;
       -ms-transform-origin: 0% 0%;
@@ -7172,7 +7173,7 @@ ul {
 
 .compare__button {
   display: inline-block;
-  width: 19%;
+  width: 285px;
   line-height: 80px;
   text-align: center;
   -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
@@ -7866,8 +7867,11 @@ body.modal-opened {
   .get {
     padding-top: 130px;
   }
+  .get__text {
+    margin-top: 5px;
+  }
   .get__list {
-    margin-top: 80px;
+    margin-top: 86px;
   }
   .get__item {
     padding: 30px;
@@ -7887,11 +7891,14 @@ body.modal-opened {
     line-height: 22px;
   }
   .rates {
-    padding-top: 130px;
+    padding-top: 142px;
     padding-bottom: 70px;
   }
+  .rates__text {
+    margin-bottom: 5px;
+  }
   .rates__list {
-    margin-top: 60px;
+    margin-top: 54px;
   }
   .rate__title {
     font-size: 30px;
@@ -7915,6 +7922,9 @@ body.modal-opened {
     padding-top: 100px;
     padding-bottom: 65px;
   }
+  .buy__text {
+    margin-bottom: 5px;
+  }
   .buy__icon {
     width: 80px;
   }
@@ -7925,11 +7935,12 @@ body.modal-opened {
     margin-right: 33px;
   }
   .buy__icons {
-    margin-top: 60px;
+    margin-top: 70px;
   }
   .buy__note {
     width: 100%;
     font-size: 13px;
+    margin-top: 92px;
   }
   .phone {
     top: -45px;
@@ -7965,9 +7976,6 @@ body.modal-opened {
     max-width: 992px;
     padding: 0 40px;
   }
-  .h1 {
-    font-size: 36px;
-  }
   .h2 {
     font-size: 30px;
     line-height: 32px;
@@ -7993,27 +8001,6 @@ body.modal-opened {
   }
   .header__top {
     padding: 0 20px;
-  }
-  .banner__item {
-    width: 160px;
-    font-size: 15px;
-    line-height: 20px;
-  }
-  .cards {
-    width: 280px;
-    height: 200px;
-    right: 3vw;
-  }
-  .cards__gold {
-    width: 265px;
-  }
-  .cards__standard {
-    width: 200px;
-    top: 105px;
-  }
-  .cards__shadow {
-    top: 45px;
-    width: 227px;
   }
   .select__cards {
     margin-top: 100px;
@@ -8068,6 +8055,7 @@ body.modal-opened {
     margin-left: 7vw;
   }
   .compare__button {
+    width: 40%;
     font-size: 16px;
     line-height: 45px;
   }
@@ -8189,6 +8177,28 @@ body.modal-opened {
   }
 }
 
+@media only screen and (max-width: 940px) {
+  .h1 {
+    font-size: 36px;
+  }
+  .cards {
+    width: 280px;
+    height: 200px;
+    right: 3vw;
+  }
+  .cards__gold {
+    width: 265px;
+  }
+  .cards__standard {
+    width: 200px;
+    top: 105px;
+  }
+  .cards__shadow {
+    top: 45px;
+    width: 227px;
+  }
+}
+
 /* Small Devices, Tablets */
 @media only screen and (max-width: 640px) {
   .section {
@@ -8302,12 +8312,13 @@ body.modal-opened {
             transform: translateY(0);
     font-size: 24px;
   }
+  .compare__wrap {
+    margin-top: 40px;
+  }
   .compare__button {
     font-size: 16px;
     line-height: 45px;
-  }
-  .compare__button {
-    width: 60%;
+    width: 100%;
   }
   .compare__description {
     -webkit-box-orient: vertical;
@@ -8356,6 +8367,7 @@ body.modal-opened {
     display: block;
     margin-left: 0;
     margin-right: 0;
+    margin-top: 32px;
   }
   .get__item {
     display: -webkit-box;
@@ -8383,6 +8395,7 @@ body.modal-opened {
   }
   .rates__list {
     display: block;
+    margin-top: 32px;
   }
   .rate {
     width: 100%;
@@ -8396,7 +8409,7 @@ body.modal-opened {
     padding-bottom: 40px;
   }
   .buy__icons {
-    margin-top: 35px;
+    margin-top: 32px;
     margin-bottom: 30px;
   }
   .buy__icon {
