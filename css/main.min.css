@@ -7161,20 +7161,10 @@ ul {
   background-color: #000;
 }
 
-.compare__wrap {
-  display: block;
-  width: 100%;
-  margin-top: 50px;
-  text-align: center;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  z-index: 1000;
-}
-
 .compare__button {
   display: inline-block;
-  width: 285px;
-  line-height: 80px;
+  width: 100%;
+  line-height: 70px;
   text-align: center;
   -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
           box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
@@ -7186,12 +7176,14 @@ ul {
   color: #d0d0d0;
   font-size: 20px;
   text-transform: uppercase;
-  -webkit-transition-property: background-color, width, -webkit-transform;
-  transition-property: background-color, width, -webkit-transform;
-  transition-property: transform, background-color, width;
-  transition-property: transform, background-color, width, -webkit-transform;
-  -webkit-transition-duration: 1s, 0.3s, 0.5s;
-          transition-duration: 1s, 0.3s, 0.5s;
+  padding: 0;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  z-index: 199;
 }
 
 .compare__button.button-active {
@@ -7218,7 +7210,7 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   position: relative;
-  padding-top: 170px;
+  padding-top: 240px;
 }
 
 .get__text {
@@ -7825,9 +7817,6 @@ body.modal-opened {
             justify-content: space-between;
     padding: 0 25px;
   }
-  .compare__item:first-of-type {
-    margin-top: 50px;
-  }
   .compare__left {
     width: 23%;
     -webkit-box-pack: start;
@@ -7865,7 +7854,7 @@ body.modal-opened {
     margin-left: 70px;
   }
   .get {
-    padding-top: 130px;
+    padding-top: 200px;
   }
   .get__text {
     margin-top: 5px;
@@ -8055,12 +8044,12 @@ body.modal-opened {
     margin-left: 7vw;
   }
   .compare__button {
-    width: 40%;
+    min-width: 250px;
     font-size: 16px;
     line-height: 45px;
   }
   .get {
-    padding-top: 100px;
+    padding-top: 140px;
   }
   .get__list {
     margin-top: 45px;
@@ -8318,7 +8307,6 @@ body.modal-opened {
   .compare__button {
     font-size: 16px;
     line-height: 45px;
-    width: 100%;
   }
   .compare__description {
     -webkit-box-orient: vertical;
@@ -8361,7 +8349,7 @@ body.modal-opened {
     display: none;
   }
   .get {
-    padding-top: 70px;
+    padding-top: 115px;
   }
   .get__list {
     display: block;
