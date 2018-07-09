@@ -6660,7 +6660,7 @@ ul {
   margin: 0;
   width: 100%;
   height: 900vh;
-  background-color: #0f092d;
+  background-color: #17215f;
   overflow: hidden;
 }
 
@@ -6758,6 +6758,7 @@ ul {
 .banner__title {
   display: block;
   margin-bottom: 30px;
+  z-index: 10;
 }
 
 .banner__list {
@@ -7288,12 +7289,12 @@ ul {
   color: #fff;
 }
 
-.get__description a {
+.get__description span {
   color: #cc3333;
   font-weight: 500;
 }
 
-.get__description a.get__link {
+.get__link span {
   font-weight: 500;
   color: #1ab6e3;
   text-decoration: underline;
@@ -7784,14 +7785,19 @@ body.modal-opened {
   .banner__description {
     margin-top: 20px;
   }
+  .cards {
+    right: 20px;
+  }
   .cards__gold {
-    width: 418px;
+    width: 455px;
   }
   .cards__standard {
-    width: 354px;
-    top: 105px;
+    width: 370px;
+    top: 134px;
+    right: -31px;
   }
   .cards__shadow {
+    top: 50px;
     width: 400px;
   }
   .select__cards {
@@ -8168,23 +8174,34 @@ body.modal-opened {
 
 @media only screen and (max-width: 940px) {
   .h1 {
-    font-size: 36px;
+    font-size: 48px;
+  }
+  .header {
+    height: auto;
+  }
+  .banner {
+    padding-top: 100px;
+    padding-bottom: 60px;
+    min-height: 100vh;
+  }
+  .banner__text {
+    font-size: 28px;
+  }
+  .banner__list {
+    margin-top: 40px;
+  }
+  .banner__item:not(:first-of-type) {
+    margin-left: 10vw;
   }
   .cards {
-    width: 280px;
-    height: 200px;
-    right: 3vw;
-  }
-  .cards__gold {
-    width: 265px;
-  }
-  .cards__standard {
-    width: 200px;
-    top: 105px;
-  }
-  .cards__shadow {
-    top: 45px;
-    width: 227px;
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 440px;
+    height: 329px;
+    margin: 0 auto;
+    margin-top: 30px;
   }
 }
 
@@ -8192,7 +8209,8 @@ body.modal-opened {
 @media only screen and (max-width: 640px) {
   .section {
     max-width: 640px;
-    padding: 0 18px;
+    padding-left: 18px;
+    padding-right: 18px;
   }
   .h1 {
     font-size: 32px;
@@ -8207,9 +8225,6 @@ body.modal-opened {
   }
   .h3::before {
     display: none;
-  }
-  .header {
-    height: auto;
   }
   .header__top {
     padding: 0 20px;
@@ -8226,10 +8241,6 @@ body.modal-opened {
   }
   .header__phone {
     display: none;
-  }
-  .banner {
-    padding-top: 100px;
-    padding-bottom: 60px;
   }
   .banner__title {
     margin-bottom: 15px;
@@ -8276,10 +8287,19 @@ body.modal-opened {
     margin: auto;
   }
   .cards {
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
+    width: 255px;
+    height: 200px;
+  }
+  .cards__gold {
+    width: 265px;
+  }
+  .cards__standard {
+    width: 200px;
+    top: 105px;
+  }
+  .cards__shadow {
+    top: 45px;
+    width: 227px;
   }
   .select__cards {
     margin-top: 95px;
