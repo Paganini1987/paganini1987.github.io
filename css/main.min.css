@@ -7508,6 +7508,7 @@ ul {
 }
 
 .buy__title {
+  width: 50%;
   position: relative;
   z-index: 15;
 }
@@ -8415,6 +8416,9 @@ body.modal-opened {
   }
   .buy {
     padding-bottom: 40px;
+  }
+  .buy__title {
+    width: 100%;
   }
   .buy__icons {
     margin-top: 32px;
