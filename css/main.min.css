@@ -6630,6 +6630,10 @@ ul {
   margin: 0;
 }
 
+.h2 span {
+  color: #ff3333;
+}
+
 .h3 {
   position: relative;
   font-size: 18px;
@@ -6791,6 +6795,11 @@ ul {
 
 .banner__description {
   margin-top: 30px;
+}
+
+.banner__description span {
+  color: #ff3333;
+  font-weight: 700;
 }
 
 /* Карты */
@@ -6958,8 +6967,8 @@ ul {
       -ms-flex-align: center;
           align-items: center;
   font-size: 30px;
-  margin-top: 6vh;
-  margin-bottom: 4vh;
+  margin-top: 4vh;
+  margin-bottom: 6vh;
   z-index: 10;
 }
 
@@ -7165,6 +7174,7 @@ ul {
 .compare__button {
   display: inline-block;
   width: 100%;
+  min-width: 250px;
   line-height: 70px;
   text-align: center;
   -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
@@ -8050,11 +8060,6 @@ body.modal-opened {
   .compare__wrap-r {
     margin-left: 7vw;
   }
-  .compare__button {
-    min-width: 250px;
-    font-size: 16px;
-    line-height: 45px;
-  }
   .get {
     padding-top: 140px;
   }
@@ -8325,10 +8330,6 @@ body.modal-opened {
   .compare__wrap {
     margin-top: 40px;
   }
-  .compare__button {
-    font-size: 16px;
-    line-height: 45px;
-  }
   .compare__description {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -8362,6 +8363,10 @@ body.modal-opened {
   }
   .compare__wrap-r, .compare__wrap-l {
     margin: 0 auto;
+  }
+  .compare__button {
+    font-size: 16px;
+    line-height: 45px;
   }
   .selected-gold .compare__right--standard {
     display: none;
