@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Бонусная программа Mastercard Rewards в России с кредитными картами Standard Masterсard или Gold Masterсard ЮниКредит Банка</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<link rel="apple-touch-icon" href="apple-touch-icon.png">
+	<link rel="shortcut icon" href="favicon.ico">
+
+	<link rel="stylesheet" href="css/main.min.css">
+	
+</head>
+<body>
+	<style>
+		.loader-default,
+		.loader-active {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 133px;
+			height: 133px;
+			background: transparent url(img/icons/loader.png) 0 0 no-repeat;
+			-moz-background-size: 133px;
+			-o-background-size: 133px;
+			-webkit-background-size: 133px;
+			background-size: 133px
+		}
+	
+		.loader-active {
+			background-position: 0 100%;
+			top: auto;
+			bottom: 0;
+			max-height: 0;
+			-webkit-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-moz-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+	
+		.loader-wrap {
+			position: absolute;
+			width: 133px;
+			height: 133px;
+			margin-top: -66px;
+			margin-left: -66px;
+			left: 50%;
+			top: 50%
+		}
+	
+		@-webkit-keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@-moz-keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@keyframes loader {
+			0% {
+				max-height: 0
+			}
+			100% {
+				max-height: 100%
+			}
+		}
+	</style>
+	<div class="loader" style="position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #1d1c26;">
+		<div class="loader-wrap">
+			<div class="loader-default"></div>
+			<div class="loader-active"></div>
+		</div>
+	</div>
+	<header class="header">
+		<div class="menu">
+			<div class="menu__logos">
+				<div class="menu__logo-uc">
+					<img src="img/icons/logo-white.svg" alt="">
+				</div>
+				<div class="menu__logo-mc menu__logo-mc--min">
+					<img src="img/icons/mastercard.svg" alt="">
+				</div>
+			</div>
+			<div class="menu__center">
+				<nav class="nav">
+					<ul class="nav__list">
+						<li class="nav__item">
+							<a class="scroll" href="#conditions">условия</a>
+						</li>
+						<li class="nav__item">
+							<a class="scroll" href="#calc">калькулятор</a>
+						</li>
+						<li class="nav__item">
+							<a class="scroll" href="#request">заявка</a>
+						</li>
+					</ul>
+					<div class="nav__phone">+7 (800) 700-79-60</div>
+				</nav>
+				<div class="menu__phone">
+					+7 (800) 700-79-60
+				</div>
+			</div>
+			<div class="menu__logo-mc menu__logo-mc--large">
+				<img src="img/icons/mastercard.svg" alt="">
+			</div>
+			<a href="#" class="hamburger hamburger--spin js-open-menu">
+				<div class="hamburger-box">
+					<div class="hamburger-inner"></div>
+				</div>
+			</a>
+		</div>
+		<div class="wallet">
+			<div class="wallet__lines"></div>
+			<div class="wallet__center section_">
+				<h1 class="wallet__title h1_">Одна карта</h1>
+				<div class="wallet__text">Множество возможностей</div>
+				<a href="#request" class="wallet__button button_ scroll">Заказать карту</a>
+			</div>
+			<div class="wallet__body">
+				<div class="wallet__wrap visibility-hidden">
+					<img src="img/wallet.png" alt="">
+					<div class="wallet__card">
+						<img src="img/card-gold.png" alt="">
+					</div>
+					<div class="wallet__pocket">
+						<img src="img/pocket.png" alt="">
+					</div>
+				</div>
+			</div>
+
+			<div class="wallet__line">
+				<img src="img/red_line.png" alt="">
+			</div>
+
+		</div>
+		<div class="steps section_">
+			<ul class="steps__list">
+				<li class="steps__item steps__item--1 visibility-hidden">
+					<div class="steps__wrap">
+						<div class="steps__number">
+							 01
+						</div>
+						<div class="steps__glow"></div>
+					</div>
+					<div class="steps__text">
+						Получайте до&nbsp;5% от&nbsp;суммы покупок в&nbsp;виде баллов
+					</div>
+				</li>
+				<li class="steps__item delay01 visibility-hidden">
+					<div class="steps__wrap">
+						<div class="steps__number">
+							02
+						</div>
+						<div class="steps__glow"></div>
+					</div>
+					<div class="steps__text">
+						 Обменивайте на денежные сертификаты от&nbsp;партнеров
+					</div>
+				</li>
+				<li class="steps__item delay02 visibility-hidden">
+					<div class="steps__wrap">
+						<div class="steps__number">
+							03
+						</div>
+						<div class="steps__glow"></div>
+					</div>
+					<div class="steps__text">
+						 Выбирайте среди самых популярных магазинов
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div class="advantages section_">
+			<ul class="advantages__list">
+				<li class="advantages__item visibility-hidden">
+					<div class="advantages__img">
+						<img src="img/icons/1year.svg" alt="">
+					</div>
+					<div class="advantages__text">
+						 1-й год <br>
+						 <span>бесплатно</span>
+					</div>
+				</li>
+				<li class="advantages__item visibility-hidden delay01">
+					<div class="advantages__img">
+						<img src="img/icons/Money.svg" alt="">
+					</div>
+					<div class="advantages__text">
+						лимит до <br>600 т. рублей <br>
+					</div>
+				</li>
+				<li class="advantages__item visibility-hidden delay02">
+					<div class="advantages__img">
+						<img src="img/icons/Calendar2.svg" alt="">
+					</div>
+					<div class="advantages__text">
+						 льготный период <br>до 55 дней
+					</div>
+				</li>
+			</ul>
+		</div>
+		<div id="conditions" class="collect section_">
+			<h2 class="collect__title h2_ visibility-hidden">Как накопить баллы</h2>
+			<div class="collect__text visibility-hidden delay01">
+					Получайте баллы за&nbsp;каждую покупку по&nbsp;карте&nbsp;*
+				<br /> Подробнее о&nbsp;накоплении баллов &mdash;
+				<br /> в&nbsp; <a class="collect__rules" href="https://www.unicreditbank.ru/content/dam/cee2020-pws-ru/cards/Files/mc_rewards_rules.pdf" target="_blank">правилах программы</a>
+			</div>
+			<div class="collect__note visibility-hidden">
+				<div class="collect__wrap">
+					 * Сумма баллов, начисленных в&nbsp;течение календарного месяца, не&nbsp;может превышать 1&nbsp;000 баллов в промо-категории
+					и&nbsp;1&nbsp;000 баллов за&nbsp;все остальные покупки. Баллы доступны для использования в&nbsp;течение 36&nbsp;месяцев с&nbsp;момента
+					начисления.
+				</div>
+			</div>
+			<ul class="collect__list">
+				<li class="collect__item visibility-hidden delay01">
+					<div class="collect__img">
+						<img src="img/icons/Money5.svg" alt="">
+					</div>
+					<div class="collect__description">
+						<span>5%</span> &nbsp;от&nbsp;потраченной суммы
+						<br /> в&nbsp;ресторанах и&nbsp;кафе
+					</div>
+				</li>
+				<li class="collect__item visibility-hidden delay02">
+					<div class="collect__img">
+						<img src="img/icons/Money1.svg" alt="">
+					</div>
+					<div class="collect__description">
+						<span>1%</span> &nbsp;за&nbsp;все
+						<br /> остальные покупки
+					</div>
+				</li>
+			</ul>
+		</div>
+	</header>
+
+	<section id="calc" class="spend section_">
+		<div class="spend__line1">
+			<h2 class="spend__title h2_ visibility-hidden">На что потратить баллы</h2>
+			<div class="spend__note visibility-hidden delay01">
+				 Накопленные баллы можно потратить на&nbsp;электронные сертификаты или подарочные карты наших партнеров
+				<br /> из&nbsp;самых разных категорий. Выбирайте&nbsp;то, что вам нужно:
+			</div>
+		</div>
+		<div id="calculator" class="spend__line2">
+			<div class="spend__total">
+				<div class="selector">
+					<div class="selector__text">В месяц я трачу по карте</div>
+					<div class="selector__counter">
+						<div class="selector__img">
+							<img src="img/icons/Card.svg" alt="">
+						</div>
+						<div class="selector__value js-set-total-value">
+							0
+						</div>
+						<div class="selector__rouble">
+							 &#8381;
+						</div>
+					</div>
+					<div class="selector__range">
+						<div id="range"></div>
+					</div>
+				</div>
+			</div>
+			<div class="spend__cafe">
+				<div class="selector">
+					<div class="selector__text">Из них в кафе и ресторанах</div>
+					<div class="selector__counter">
+						<div class="selector__img">
+							<img src="img/icons/Kotel.svg" alt="">
+						</div>
+						<div class="selector__value js-set-cafe-value">
+							0
+						</div>
+						<div class="selector__rouble">
+							&#8381;
+						</div>
+					</div>
+					<div class="selector__range">
+						<div id="range2"></div>
+					</div>
+				</div>
+			</div>
+			<div class="spend__month">
+				<select name="month" id="month">
+					<option value="6">За 6 месяцев</option>
+					<option value="12">За 12 месяцев</option>
+					<option value="24">За 24 месяца</option>
+				</select>
+			</div>
+			<div class="spend__summ">
+				<div class="spend__equally">=</div>
+				<div class="spend__value">{{ result }}</div>
+			</div>
+		</div>
+		<div id="list" class="cards">
+			<ul class="cards__categories">
+				<li>
+					<a class="cards__cat home js-set-active active" href="#/home">
+						<span>Дом и дети</span>
+					</a>
+				</li>
+				<li>
+					<a class="cards__cat beauty js-set-active" href="#/beauty">
+						<span>Красота и здоровье</span>
+					</a>
+				</li>
+				<li>
+					<a class="cards__cat clothes js-set-active" href="#/clothes">
+						<span>Одежда и аксессуары</span>	
+					</a>
+				</li>
+				<li>
+					<a class="cards__cat electronics js-set-active" href="#/electronics">
+						<span>Электроника</span>
+					</a>
+				</li>
+				<li>
+					<a class="cards__cat sport js-set-active" href="#/sport">
+						<span>Спорт и развлечения</span>
+					</a>
+				</li>
+			</ul>
+			<div class="cards__categories-m">
+				<select name="categories" id="categories">
+					<option value="home">Дом и дети</option>
+					<option value="beauty">Красота и здоровье</option>
+					<option value="clothes">Одежда и аксессуары</option>
+					<option value="electronics">Электроника</option>
+					<option value="sport">Спорт и развлечения</option>
+				</select>
+			</div>
+			<transition-group tag="ul" class="cards__list"
+				 v-on:before-enter="beforeEnter"
+				 v-on:enter="enter"
+				 v-on:after-enter="afterEnter"
+				 v-on:leave="leave"
+				 v-on:after-leave="afterLeave"
+			>
+				<li v-for="(card, index) in cardsList" v-bind:data-id="index" v-show="index < items" v-bind:key="index" v-bind:class="{ 
+																		isGiftCard: card.type == 'ПК', 
+																		home: card.category == 'Дом и дети',
+																		beauty: card.category == 'Красота и здоровье',
+																		clothes: card.category == 'Одежда и аксессуары',
+																		electronics: card.category == 'Электроника',
+																		sport: card.category == 'Спорт и развлечения' }" class="cards__card animated">
+					<div>
+						<div class="cards__type">
+							{{ setStatus(card.type) }}
+						</div>
+						<div class="cards__logo">
+							<img v-bind:src="card.logo" alt="">
+						</div>
+						<div class="cards__value">
+							<span>{{ card.value }}</span>
+							<span class="cards__rouble">&#8381;</span>
+						</div>
+						<div class="cards__cost">
+							{{ card.cost }} баллов
+						</div>
+					</div>
+				</li>
+			</transition-group>
+			<button @click="loadMore" v-if="!cardsOver" class="cards__button button_">загрузить еще</button>
+		</div>
+		<div class="spend__line3">
+			<div class="spend__more">
+				 Подробнее об&nbsp;обмене баллов&nbsp;&mdash;
+				<br /> в&nbsp; <a href="https://www.unicreditbank.ru/content/dam/cee2020-pws-ru/cards/Files/mc_rewards_rules.pdf" target="_blank">правилах программы</a>
+			</div>
+			<div class="spend__text">
+				 Смотрите, сколько у&nbsp;вас баллов и&nbsp;на
+				<br /> что их&nbsp;можно обменять, в&nbsp;личном кабинете.
+			</div>
+			<a href="https://loyaltygateway.com/rewards/phoenix/unicreditchampionsrewards_RU" target="_blank" class="spend__button button_"><span>Личный кабинет</span></a>
+		</div>
+	</section>
+	<section id="counter" class="wallet-and-cards">
+		<div class="watched section_">
+			<div class="watched__col1">
+				 Пока вы смотрели эту страницу
+			</div>
+			<div class="watched__col2">
+				<div class="watched__count watched__count--star">
+					{{ nowPoints | pointsFormat }}
+				</div>
+				<div class="watched__text">
+					 бонусных баллов получено
+					<br /> нашими клиентами
+				</div>
+			</div>
+			<div class="watched__col3">
+				<div class="watched__count">
+					{{ nowClients | pointsFormat }}
+				</div>
+				<div class="watched__text">
+					 новых клиентов подключилось
+					<br /> к&nbsp;бонусной программе
+				</div>
+			</div>
+		</div>
+		<h2 class="wallet-and-cards__title h2_ section_">
+			 Выберите карту,
+			<br /> чтобы получать баллы:
+		</h2>
+		<div id="request" class="online section_">
+			<div class="online__title">Кредитное решение онлайн!</div>
+			<ul class="online__cards">
+				<li class="card standard">
+					<a href="#" class="js-show-standard">
+						<div class="card__name">Mastercard Standard</div>
+						<div class="card__limit">Кредитный лимит: до 300 000 ₽</div>
+						<div class="card__rate">Ставка: 27,9 % годовых</div>
+						<div class="card__service">Обслуживание: 0 р. за первый год*</div>
+					</a>
+				</li>
+				<li class="card gold">
+					<a href="#" class="js-show-gold">
+						<div class="card__name">Mastercard Gold</div>
+						<div class="card__limit">Кредитный лимит: до 600 000 ₽</div>
+						<div class="card__rate">Ставка: 26,9 % годовых</div>
+						<div class="card__service">Обслуживание: 0 р. в год**</div>
+					</a>
+				</li>
+			</ul>
+			<button class="button_ online__button js-open-modal" disabled>Выберите карту</button>
+			<div class="online__note">
+				 <span>* Начиная со второго года плата за обслуживание составляет 700 р. в год.</span> <br>
+				<span>** Начиная со второго года плата за обслуживание составляет 2 700 р. в год.</span> 
+			</div>
+			<div class="wallet2">
+				<img src="img/wallet/body.png" alt="">
+				<div class="wallet2__standard">
+					<img src="img/card-standard.png" alt="">
+				</div>
+				<div class="wallet2__gold">
+					<img src="img/card-gold.png" alt="">
+				</div>
+				<div class="wallet2__logo">
+					<img src="img/wallet/logo.png" alt="">
+				</div>
+				<div class="wallet2__pocket1">
+					<img src="img/wallet/pocket1.png" alt="">
+				</div>
+				<div class="wallet2__pocket2">
+					<img src="img/wallet/pocket2.png" alt="">
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__left">
+			<div class="footer__logo">
+				<img src="img/icons/logo-footer.svg" alt="">
+			</div>
+			<div class="footer__text">
+				 &copy;&nbsp;АО&nbsp;ЮниКредит Банк
+				<br /> Генеральная лицензия &#8470;&nbsp;1&nbsp;Банка России
+			</div>
+		</div>
+		<div class="footer__right">
+			<ul class="footer__menu">
+				<li>
+					<a href="https://www.unicreditbank.ru/content/dam/cee2020-pws-ru/cards/Files/mc_rewards_rules.pdf" target="_blank">правила</a>
+				</li>
+				<li>
+					<a href="https://loyaltygateway.com/rewards/phoenix/unicreditchampionsrewards_RU" target="_blank">Личный кабинет</a>
+				</li>
+			</ul>
+			<div class="footer__phone">
+				 +7 (800) 700-79-60
+			</div>
+		</div>
+	</footer>
+	
+	<div class="modal">
+		<a href="#" class="modal__close js-close-modal" title="Закрыть">
+		</a>
+		<iframe id="modal-iframe" class="modal__iframe" frameborder="0" style="width: 100%; height: 100%;"></iframe>
+	</div>
+	
+	<script src="js/scripts.min.js"></script>
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K234GK');</script>
+	<!-- End Google Tag Manager -->
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K234GK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<script>
+		(function (i, s, o, g, r, a, m) {
+			i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+				(i[r].q = i[r].q || []).push(arguments)
+			}, i[r].l = 1 * new Date(); a = s.createElement(o),
+				m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+		})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+		ga('create', 'UA-71193331-24', 'auto');
+		ga('send', 'pageview');
+	</script>
+</body>
+</html>
