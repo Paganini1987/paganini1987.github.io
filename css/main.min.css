@@ -6784,7 +6784,7 @@ ul {
 }
 
 .banner__item:not(:first-of-type) {
-  margin-left: 100px;
+  margin-left: 6vw;
 }
 
 .banner__img {
@@ -6936,9 +6936,9 @@ ul {
 }
 
 .select__card label:hover .select__img {
-  -webkit-transform: scale(1.1);
-      -ms-transform: scale(1.1);
-          transform: scale(1.1);
+  -webkit-transform: scale(1.1) !important;
+      -ms-transform: scale(1.1) !important;
+          transform: scale(1.1) !important;
 }
 
 .select__img {
@@ -7142,6 +7142,10 @@ ul {
   line-height: 24px;
   margin-left: 30px;
   color: #475d96;
+}
+
+.compare__text a {
+  text-decoration: underline;
 }
 
 .compare__line1 {
@@ -7438,6 +7442,10 @@ ul {
   padding-bottom: 60px;
   padding-left: 30px;
   background-color: #fff;
+}
+
+.rate__condition {
+  margin-bottom: 25px;
 }
 
 .rate__title {

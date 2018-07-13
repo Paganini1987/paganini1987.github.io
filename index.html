@@ -158,7 +158,7 @@
 					<h2 class="select__title h2">Mastercard в пакете GOLD или CLASSIC</h2>
 					<ul class="select__cards">
 						<li class="select__card select__card--gold">
-							<label>
+							<label data-card="gold">
 								<input class="js-select-card" type="radio" data-card="gold" name="card" id="" checked>
 								<div class="select__img select__img--gold js-gold">
 									<img src="img/icons/gold.png" alt="">
@@ -170,7 +170,7 @@
 							</label>
 						</li>
 						<li class="select__card select__card--standard">
-							<label>
+							<label data-card="standard">
 								<input class="js-select-card" type="radio" data-card="standard" name="card" id="">
 								<div class="select__img select__img--standard js-standard">
 									<img src="img/icons/standard.png" alt="">
@@ -291,7 +291,7 @@
 							</div>
 							<div class="compare__text">
 								Снятие наличных в банкоматах
-								<br>группы UniCredit и банков партнеров
+								<br><a target="_blank" href="https://www.unicreditbank.ru/ru/personal/banking/remote-service.html?modal_page=L3J1L3BvcHVwZWRpdHBhZ2VzL2RlYml0Y2FyZHMvY2FzaHdpdGhkcmF3YWxzLm1vZGFsLmh0bWw">группы UniCredit</a> и банков партнеров
 							</div>
 						</div>
 						<div class="compare__center">
@@ -358,8 +358,7 @@
 							<img src="img/icons/icon-way-1.svg" alt="">
 						</div>
 						<div class="get__description">
-							Пополнением с карт других банков через
-							<span>Mobile.UniCredit</span> без комиссии
+							Пополнением с карт других банков без комиссии через <span>Mobile.UniCredit</span>
 						</div>
 					</li>
 					<li class="get__item get__item--2">
@@ -425,6 +424,7 @@
 							</div>
 							<div class="rate__right">
 								<ul class="rate__list">
+									<div class="rate__condition">Необходимо выполнить одно из условий:</div>
 									<li class="rate__item">
 										Поступления
 										<span>75 000 руб.</span> в месяц
@@ -447,10 +447,10 @@
 								</ul>
 							</div>
 						</div>
-						<div class="rate__note">
+						<!-- <div class="rate__note">
 							Необходимо выполнить одно из условий.
 							<br>При несоблюдении условий ежемесячная плата составляет 500 руб.
-						</div>
+						</div> -->
 					</li>
 					<li class="rate">
 						<div class="rate__wrap">
@@ -463,6 +463,7 @@
 								</div>
 							</div>
 							<div class="rate__right">
+								<div class="rate__condition">Необходимо выполнить одно из условий:</div>
 								<ul class="rate__list">
 									<li class="rate__item">
 										Поступления
@@ -486,10 +487,10 @@
 								</ul>
 							</div>
 						</div>
-						<div class="rate__note">
+						<!-- <div class="rate__note">
 							Необходимо выполнить одно из условий.
 							<br>При несоблюдении условий ежемесячная плата составляет 150 руб.
-						</div>
+						</div> -->
 					</li>
 				</ul>
 			</div>
