@@ -7007,11 +7007,11 @@ ul {
   white-space: nowrap;
 }
 
-.card-opacity.selected-gold .select__card--standard {
+.selected-gold .select__card--standard {
   opacity: 0.3;
 }
 
-.card-opacity.selected-standard .select__card--gold {
+.selected-standard .select__card--gold {
   opacity: 0.3;
 }
 
@@ -7178,7 +7178,7 @@ ul {
 .compare__button {
   display: inline-block;
   width: 100%;
-  min-width: 250px;
+  min-width: 280px;
   line-height: 70px;
   text-align: center;
   -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
@@ -7192,6 +7192,8 @@ ul {
   font-size: 20px;
   text-transform: uppercase;
   padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .button {
@@ -7392,6 +7394,7 @@ ul {
   width: -webkit-calc(50% - 40px);
   width: calc(50% - 40px);
   opacity: 0;
+  text-align: center;
 }
 
 .rate__wrap {
@@ -7497,6 +7500,31 @@ ul {
   color: #333366;
   font-weight: 300;
   margin-top: 35px;
+}
+
+.rate__button {
+  display: inline-block;
+  min-width: 280px;
+  line-height: 70px;
+  text-align: center;
+  -webkit-box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
+          box-shadow: 0px -9px 30px 0px rgba(25, 42, 92, 0.15);
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  border: none;
+  outline: none;
+  background-color: #ff3333;
+  color: #fff;
+  font-size: 20px;
+  text-transform: uppercase;
+  padding: 0;
+  margin-top: 64px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.rate__button:hover {
+  background-color: #cb221a;
 }
 
 /* Совершайте покупки */
@@ -7679,21 +7707,24 @@ ul {
 .modal__close {
   display: block;
   position: absolute;
-  top: 15px;
-  right: 25px;
-  width: 33px;
-  height: 33px;
+  top: 0px;
+  right: 18px;
+  width: 60px;
+  height: 60px;
+  padding: 10px;
+  background-color: #ff3333;
   z-index: 1001;
 }
 
 .modal__close::before, .modal__close::after {
   content: "";
   position: absolute;
-  left: 0;
+  left: 15px;
   right: 0;
-  top: 11px;
-  height: 3px;
-  background: #e4432d;
+  top: 31px;
+  width: 50%;
+  height: 1px;
+  background: #fff;
   -webkit-transition: background-color 0.15s linear;
   transition: background-color 0.15s linear;
   -webkit-transform: rotate(-45deg);
@@ -8383,7 +8414,7 @@ body.modal-opened {
     display: none;
   }
   .get {
-    padding-top: 115px;
+    padding-top: 150px;
   }
   .get__list {
     display: block;
@@ -8425,6 +8456,11 @@ body.modal-opened {
   }
   .rate:last-of-type {
     margin: 0;
+    margin-top: 40px;
+  }
+  .rate__button {
+    font-size: 16px;
+    line-height: 45px;
     margin-top: 40px;
   }
   .buy {
@@ -8480,6 +8516,14 @@ body.modal-opened {
   }
   .footer__phone {
     margin-bottom: 50px;
+  }
+  .modal__close {
+    width: 40px;
+    height: 40px;
+  }
+  .modal__close::before, .modal__close::after {
+    top: 20px;
+    left: 10px;
   }
 }
 
