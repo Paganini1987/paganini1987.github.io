@@ -1,0 +1,696 @@
+.map .way-chat {
+	position: absolute;
+    top: 40px;
+    right: 40px;
+    max-width: 660px;
+}
+@media (max-width: 1400px) {
+	.map .way-chat {
+		font-size: 14px;
+	    line-height: 20px;
+	    padding: 20px 30px; 
+	}
+}
+@media (max-width: 980px) {
+	.map .way-chat {
+		position: relative;
+	    top: 0;
+	    right: 0;
+	    max-width: 90%;
+	    margin: 20px auto;
+	}
+}
+
+.logo {
+	width: 100%;
+	max-width: 300px;
+}
+.logo img {
+	width: 100%;
+}
+header.from-top .logo {
+	max-width: 300px;
+}
+
+.vacancy {
+	background-color: #f0f0f0;
+}
+.vacancy .simple-block-title {
+	margin-top: 71px;
+	margin-bottom: 49px;
+}
+.vacancy-block {
+	/* width: 1220px; */
+	width: 100%;
+	margin: 0 auto 12px;
+}
+/* .vacancy-block-inner {
+	margin-left: -5px;
+	margin-right: -5px;
+} */
+/* .vacancy-block-inner:after {
+	content: '';
+	display: table;
+	clear: both;
+} */
+.vacancy-block-inner {
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: space-between;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	-ms-flex-pack: justify;
+	flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+}
+.vacancy-card {
+	width: 32.8%;
+	height: 170px;
+	background-color: #fff;
+	margin: 0 0 10px;
+	padding: 20px 29px 32px 45px;
+	box-sizing: border-box;
+	position: relative;
+	transition: color 0.25s ease 0s;
+	cursor: pointer;
+}
+.vacancy-card--hidden {
+	opacity: 0!important;
+	cursor: default!important;
+	z-index: -1!important;
+	height: 0!important;
+	padding: 0!important;
+	margin: 0!important;
+}
+.vacancy-card::after {
+	content: '';
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.25s ease 0s;
+	background: -moz-linear-gradient( 135deg, rgb(38,166,246) 0%, rgb(33,196,244) 100%);
+	background: -webkit-linear-gradient( 135deg, rgb(38,166,246) 0%, rgb(33,196,244) 100%);
+	background: -ms-linear-gradient( 135deg, rgb(38,166,246) 0%, rgb(33,196,244) 100%);
+}
+.vacancy-card:hover::after {
+	opacity: 1;
+}
+.vacancy-card:hover {
+	color: #fff;
+}
+.vacancy-card:hover .vacancy-counter {
+	color: #fff;
+	/* border-color: #c80000; */
+	background-color: #5cc1f8;
+	border-color: #5cc1f8;
+}
+.vacancy-card:hover svg {
+	fill:#fff;
+}
+.vacancy-card-content {
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+	justify-content: space-between;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+}
+.vacancy-theme {
+	font-size: 22px;
+	display: inline-block;
+	margin-right: 20px;
+	max-width: 264px;
+	line-height: 1.2;
+	font-family: 'unicredit_cy';
+	font-weight: 500;
+	font-style: normal;
+	margin-top: 4px;
+	z-index: 3;
+}
+.vacancy-counter {
+	width: 36px;
+	min-width: 36px;
+	height: 36px;
+	display:block;
+	border-radius: 18px;
+	-moz-border-radius: 18px;
+	-webkit-border-radius: 18px;
+	-khtml-border-radius: 18px;
+	font-size: 16px;
+	font-weight: bold; 
+	/* color: #ff0600; */
+	color: #24b5f5;
+	line-height: 34px;
+	text-align: center;
+	/* border: 2px solid #ff0600; */
+	border: 2px solid #24b5f5;
+	transition: border 0.25s ease 0s, color 0.25s ease 0s, background-color 0.25s ease 0s;
+	z-index: 3;
+}
+.vacancy-more {
+	position: absolute;
+	bottom: 31px;
+	left: 51px;
+	width: 26px;
+	height: 14px;
+	z-index: 3;
+}
+.vacancy-more svg {
+	transition: fill 0.25s ease 0s;
+}
+.vacancy-mail {
+	margin-bottom: 35px;
+	display: flex;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	justify-content: flex-start;
+}
+.vacancy-email-img {
+	margin-right: 16px;
+	height: 46px;
+}
+.vacancy-email-text {
+	/* display: inline-block;
+	vertical-align: top; */
+	width: 500px;
+	font-size: 15px;
+	line-height: 18px;
+	position: relative;
+	top: 6px;
+	color: #3e4040;
+}
+/* .vacancy-email-text::before {
+	content: "";
+	display: block;
+	float: left;
+	background-image: url('../upload/mail.png');
+	width: 46px;
+	height: 46px;
+	margin-right: 16px;
+	padding-bottom: 70px;
+	background-repeat: no-repeat;
+} */
+.vacancy-email__link {
+	color: #3e4040;
+}
+.vacancy-email__link:hover {
+	color: inherit;
+	text-decoration: underline;
+}
+.vacancy-modal {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+	background-color: #fff;
+	z-index: 10000;
+	overflow-y: scroll;
+}
+.vacancy-modal-title {
+	background-color: #3e4040;
+	width: 430px;
+	height: 100%;
+	display: inline-block;
+	vertical-align: top;
+	position: fixed;
+	z-index: 1;
+}
+.vacancy-modal-title h2 {
+	color: #fff;
+	font-family: 'unicredit_cy';
+	font-weight: bold;
+	font-size: 40px;
+	line-height: 45px;
+	letter-spacing: -0.1px;
+	padding-left: 30px;
+	padding-top: 100px;
+}
+.vacancy-modal-title h2::before {
+	content: '';
+	display: block;
+	background-color: #ff0000;
+	width: 93px;
+	height: 5px;
+	margin-bottom: 36px;
+}
+.vacancy-modal-content {
+	display: inline-block;
+	padding-left: 488px;
+	padding-right: 10px;
+	max-width: 697px;
+	font-family: 'unicredit_cy';
+	font-weight: 500;
+	margin-top: 88px;
+	box-sizing: content-box;
+}
+.vacancy-modal-arrow {
+	width: 26px;
+	height: 14px;
+	position: absolute;
+	right: -30px;
+	margin-left: 5px;
+	top: inherit;
+}
+.vacancy-modal-arrow svg {
+	transition: fill 0.2s ease 0s;
+}
+.vacancy-modal-list {
+	padding-bottom: 50px;
+}
+.vacancy-modal-item {
+	margin-bottom: 2.5em;
+}
+.vacancy-modal__link {
+	font-size: 24px;
+	line-height: 30px;
+	color: #3e4040;
+	transition: color 0.2s ease 0s;
+	position: relative;
+}
+.vacancy-modal__link:hover {
+	color: #ff0000;
+}
+.vacancy-modal__link:hover .vacancy-modal-arrow svg {
+	fill: #ff0000;
+}
+ .vacancy-modal__link span {
+	display: inline-block;
+}
+.vacancy-modal-counter {
+	color: #b0b0b0;
+	font-size: 18px;
+	letter-spacing: 2.6px;
+	font-weight: 300;	
+	text-transform: uppercase;
+	margin-bottom: 2.2em;
+}
+.vacancy-modal-close {
+	position: fixed;
+	right: 30px;
+	top: 23px;
+	width: 48px;
+	height: 48px;
+	cursor: pointer;
+}
+.vacancy-modal-close:hover::after,
+.vacancy-modal-close:hover::before{
+	background-color: #3f4141;
+}
+.vacancy-modal-close::after {
+	content: '';
+	display: block;
+	position: absolute;
+	transform: rotate(45deg);
+	background-color: #ff0000;
+	width: 2px;
+	border-radius: 2px;
+	height: 100%;
+	left: 50%;
+	top: 0;
+	transition: background-color 0.2s ease 0s;
+}
+.vacancy-modal-close::before {
+	content: '';
+	display: block;
+	position: absolute;
+	transform: rotate(-45deg);
+	background-color: #ff0000;
+	width: 2px;
+	border-radius: 2px;
+	height: 100%;
+	left: 50%;
+	top: 0;
+	transition: background-color 0.2s ease 0s;
+}
+.vacancy-modal-gradient {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	height: 60px;
+	width: 100%;
+	z-index: 0;
+	right: 17px;
+	background: -moz-linear-gradient(to bottom, rgba(240, 240, 240, 0.0), rgba(240, 240, 240));
+  background: -webkit-linear-gradient(to bottom, rgba(240, 240, 240, 0.0), rgba(240, 240, 240));
+  background: -o-linear-gradient(to bottom, rgba(240, 240, 240, 0.0), rgba(240, 240, 240));
+  background: -ms-linear-gradient(to bottom, rgba(240, 240, 240, 0.0), rgba(240, 240, 240));
+  background: linear-gradient(to bottom, rgba(240, 240, 240, 0.0), rgba(240, 240, 240));
+}
+
+@media all and (max-width: 1279px) {
+	.vacancy-card {
+		/* width: 400px; */
+		width: 49.5%;
+	}
+	.vacancy-block {
+		/* width: 810px; */
+	}
+	.vacancy-theme {
+		margin-top: 5px;
+	}
+	.vacancy-modal-content {
+		width: 525px;
+		padding-left: 440px;
+		padding-right: 10px;
+	}
+	.vacancy-modal-title {
+		width: 400px;
+	}
+	.vacancy-modal-item {
+		margin-bottom: 1.5em;
+	}
+}
+
+@media all and (max-width: 1023px) {
+	.vacancy-modal {
+		background-color: #f0f0f0;
+	}
+	.vacancy .simple-block-title {
+		margin-bottom: 48px;
+	}
+	.vacancy-card {
+		/* width: 340px; */
+		width: 49.4%;
+		padding: 17px 21px 20px 30px;
+	}
+	.vacancy-block {
+		/* width: 690px; */
+		margin-bottom: 12px;
+	}
+	.vacancy-mail {
+		margin-bottom: 21px;
+	}
+	.vacancy-theme {
+		font-size: 20px;
+		max-width: 245px;
+		margin-right: 10px;
+		margin-top: 5px;
+	}
+	.vacancy-more {
+		left: 30px;
+		bottom: 25px;
+	}
+	.vacancy-modal {
+		overflow-y: scroll;
+	}
+	.vacancy-modal-item {
+		margin-bottom: 2.2em;
+		width: 560px;
+	}
+	.vacancy-modal-title {
+		width: 100%;
+		height: initial;
+		display: block;
+		position: static;
+	}
+	.vacancy-modal-title h2 {
+		padding: 36px 30px 40px;
+		font-size: 32px;
+	}
+	.vacancy-modal-title h2::before {
+		margin-bottom: 17px;
+		width: 41px;
+		height: 2px;
+	}
+	.vacancy-modal-content {
+		margin-top: 29px;
+		overflow-y: initial;
+		display: block;
+		width: 100%;
+		position: relative;
+		max-width: initial;
+		padding-left: 30px;
+		padding-right: 30px;
+		box-sizing: border-box;
+	}
+	.vacancy-modal-list {
+		width: 680px;
+	}
+	.vacancy-modal-counter {
+		font-size: 16px;
+		line-height: 30px;
+		margin-bottom: 43px;
+		letter-spacing: 3.4px;
+	}
+	.vacancy-modal__link {
+		font-size: 22px;
+		line-height: 20px;
+		margin-bottom: 38px;
+	}
+	.vacancy-modal-close {
+		position: absolute;
+    right: 30px;
+    top: -6px;
+    width: 32px;
+    height: 32px;
+	}
+	.vacancy-modal-fixed {
+		position: fixed!important;
+		top: 10px!important;
+		/* right: 47px!important; */
+		transition: top 0.3s ease 0s;
+	}
+	.vacancy-modal-arrow {
+		width: 24px;
+		height: 12px;
+	}
+	@-moz-document url-prefix() {
+		.vacancy-modal-arrow {
+			top: 5px;
+		}
+	}
+}
+
+@media all and (max-width: 759px) {
+	.vacancy .simple-block-title {
+		margin-bottom: 32px;
+	}
+	.vacancy-card {
+		/* width: 260px; */
+		width: 49.3%;
+		height: 160px;
+		padding: 13px 20px 21px 20px;
+	}
+	.vacancy-block {
+		/* width: 530px; */
+		margin-bottom: 25px;
+	}
+	.vacancy-mail {
+		margin-bottom: 50px;
+	}
+	.vacancy-email-text {
+		top: 0;
+		width: auto;
+	}
+	.vacancy-theme {
+		font-size: 20px;
+		max-width: 170px;
+		margin-right: 10px;
+		margin-top: 5px;
+		line-height: 24px;
+	}
+	.vacancy-more {
+		left: 20px;
+		bottom: 21px;
+	}
+	.vacancy-modal {
+		overflow-y: scroll;
+	}
+	.vacancy-modal-title h2 {
+		font-size: 28px;
+		line-height: 32px;
+		padding: 32px 30px 28px;
+	}
+	.vacancy-modal-title h2::before {
+		margin-bottom: 16px;
+	}
+	.vacancy-modal-content {
+		padding-left: 30px;
+		padding-right: 30px;
+		width: 100%;
+		margin-top: 25px;
+		box-sizing: border-box;
+		overflow-y: initial;
+		position: relative;
+	}
+	.vacancy-modal-list {
+		width: initial;
+		max-width: 630px;
+	}
+	.vacancy-modal-item {
+		width: 90%;
+		margin-bottom: 1.5em;
+	}
+	.vacancy-modal-counter {
+		font-size: 14px;
+		margin-bottom: 38px;
+	}
+	.vacancy-modal__link {
+		font-size: 20px;
+	}
+	.vacancy-modal-close {
+		position: absolute;
+    right: 8px;
+    top: -6px;
+    width: 32px;
+    height: 32px;
+	}
+	.vacancy-modal-fixed {
+		/* right: 25px!important; */
+	}
+	.vacancy-modal-arrow {
+    width: 20px;
+		height: 10px;
+		/* right: -27px; */
+		margin-left: 3px;
+	}
+	.vacancy-mail {
+		align-items: flex-start;
+	}
+	@-moz-document url-prefix() {
+		.vacancy-modal-arrow {
+			top: 3px;
+		}
+	}
+}
+
+@media all and (max-width: 600px) {
+	.vacancy .simple-block-title {
+		margin-bottom: 32px;
+	}
+	.vacancy-card {
+		/* width: 260px; */
+		width: 100%;
+		height: 140px;
+		padding: 13px 20px 21px 20px;
+	}
+	.vacancy-block {
+		/* width: 260px; */
+		margin-bottom: 25px;
+	}
+	.vacancy-counter {
+		width: 32px;
+		height: 32px;
+		min-width: 32px;
+		border-radius: 16px;
+		-moz-border-radius: 16px;
+		-webkit-border-radius: 16px;
+		-khtml-border-radius: 16px;
+		line-height: 30px;
+	}
+	.vacancy-theme {
+		font-size: 20px;
+		max-width: 170px;
+		margin-right: 10px;
+		margin-top: 5px;
+		line-height: 20px;
+	}
+	.vacancy-more {
+		left: 20px;
+		bottom: 21px;
+	}
+	.vacancy-modal-close {
+		/* background-color: #fff; */
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+	}
+	.vacancy-modal-close::before {
+		height: 80%;
+    left: 48%;
+    top: 4px;
+	}
+	.vacancy-modal-close::after {
+		height: 80%;
+    left: 48%;
+    top: 4px;
+	}
+	.vacancy-modal-item {
+		width: 100%;
+	}
+	.vacancy-modal-fixed {
+		background-color: #fff;
+	}
+	.vacancy-email-text {
+		font-size: 13px;
+	}
+	.vacancy-mail {
+		margin-bottom: 50px;
+		align-items: flex-start;
+	}
+	.vacancy-email-text::before {
+
+	}
+}
+
+.career-block {
+	cursor: pointer;
+}
+
+.home-slide-hash {
+	display: inline-block;
+	padding: 0 14px;
+	font-family: 'unicredit_cy';
+	font-size: 34px;
+	line-height: 1.3;
+    font-weight: bold;
+	color: #ffffff;
+	background-color: rgba(170,170,170,0.3);
+	margin-top: 18px;
+	margin-bottom: 10px;
+	opacity: 0;
+}
+
+.section.fp-completely .home-slide-hash {
+  -webkit-animation: homeSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: homeSlide 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-animation-delay: 0.2s;
+  -moz-animation-delay: 0.2s;
+  animation-delay: 0.2s;
+  opacity: 1;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both; }
+
+.section--overlay::after {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #000;
+	opacity: 0.4;
+}
+.section--overlay .home-slide {
+	position: relative;
+	z-index: 10;
+}
+
+@media only screen and (max-width : 1198px) {
+	.home-slide-hash {
+		margin-top: 10px;
+		margin-bottom: 0;
+	}
+}
+
+@media only screen and (max-width : 767px) {
+	.home-slide-hash {
+		font-size: 28px;
+		opacity: 1;
+	}
+	.section.fp-completely .home-slide-hash {
+    -webkit-animation: none;
+    animation: none; }
+}

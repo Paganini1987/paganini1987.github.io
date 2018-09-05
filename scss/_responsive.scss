@@ -1,0 +1,793 @@
+/* responsive */
+@media screen and (min-width: 1600px) {
+    .home-slide-title {
+        font-size: 85px;
+        max-width: 1300px;
+    }
+    .home-menu li a {
+        font-size: 14px;
+        width: 190px;
+    }
+	.puzzle-item-text {
+		max-width: 220px;
+		font-size: 23px;
+		line-height: 27px;
+	}
+	.intro-text p {
+		font-size: 20px;
+	}
+	.career-drop {
+		font-size: 17px;
+		line-height: 1;
+	}
+	.pride-content {
+		font-size: 20px;
+		max-width: 500px;
+		line-height: 1.5;
+	}
+	.pride-note {
+		font-size: 16px;
+		line-height: 1.5;
+		max-width: 500px;
+	}
+	.evolution-text-block-column {
+		font-size: 19px;
+		line-height: 26px;
+	}
+	.way-block-text {
+		font-size: 16px;
+	}
+	.scope-item-description {
+		font-size: 18px;
+		line-height: 1.3;
+	}
+	.steps-note {
+		max-width: 280px;
+		font-size: 15px;
+		line-height: 21px;
+	}
+	.point-text {
+		font-size: 15px;
+	}
+	.dragg-title {
+		font-size: 17px;
+	}
+	.hobbie-person {
+		max-width: 540px;
+	}
+	.hobbie-person-position {
+		font-size: 19px;
+		line-height: 1.5;
+	}
+	.wysiwyg p {
+		font-size: 18px;
+	}
+	.wysiwyg p strong {
+		font-size: 19px;
+	}
+    .hobbie-text {
+        max-width: 600px;
+    }
+
+}
+@include media-breakpoint-down(xl) { //default
+}
+@include media-breakpoint-down(lg) {
+}
+@include media-breakpoint-down(md) {
+    .section-mobile-bg-sright {
+        background-position: 70% 50%;
+    }
+    .section-mobile-bg-xsright {
+        background-position: 65% 50%;
+    }
+    .section-mobile-bg-xxsleft {
+        background-position: 40% 50%;
+    }
+    .section-mobile-bg-xsleft {
+        background-position: 35% 50%;
+    }
+    .visibility-hidden {
+        visibility: visible !important;
+        -webkit-animation-duration: 0 !important;
+        animation-duration: 0 !important;
+        -webkit-animation: none !important;
+        animation: none !important;
+    }
+    header {
+        &.from-top {
+            padding-top: 44px;
+            position: absolute;
+            background: $tr;
+            box-shadow: none;
+            .logo {
+                max-width: 230px;
+            }
+        }
+    }
+    .navigation-toggle {
+        display: block;
+    }
+    .navigation {
+        top: -44px;
+        right: -10px;
+        display: block;
+        position: absolute;
+        background: #3e4040;
+        width: 330px;
+        min-height: 616px;
+        padding: 96px 20px 20px 45px;
+        @include transition(transform 0.4s $f);
+        @include transform(translate3d(101%, 0, 0));
+    }
+    .template-hobbie {
+        .navigation {
+            min-height: 520px;
+        }
+    }
+    .navigation-open {
+        .navigation {
+            @include transform(translate3d(0, 0, 0));
+        }
+    }
+    .menu {
+        @include display(block);
+        & > li {
+            margin-bottom: 28px;
+            & > a {
+                color: $w !important;
+                padding: 5px 0 7px !important;
+            }
+        }
+    }
+    .hobbie-cell,
+    .hobbie-photo {
+        height: 469px;
+    }
+    .hobbie-text {
+        min-height: 210px;
+    }
+    .hobbie-single {
+        .hobbie-text {
+            min-height: 180px;
+        }
+    }
+    .hobbie-revert {
+        .hobbie-icon {
+            right: -10px;
+        }
+    }
+    .intro-text {
+        hr {
+            display: none;
+        }
+        h2 {
+            font-size: 58px;
+            line-height: (70/58);
+        }
+        p {
+            margin-top: 40px;
+        }
+    }
+    .intro-hr {
+        display: block;
+    }
+    .title-cell,
+    .intro-text-cell {
+        height: 616px;
+    }
+    .home-slide-title {
+        font-size: 50px;
+    }
+    .puzzle-background {
+        //height: 689px;
+        background-image: url('../upload/puzzle-tablet.png');
+    }
+    .puzzle-item-cell {
+        height: 22.5vw;
+    }
+    .scope-item-wrap {
+        &.last-child-md {
+            border: 0;
+        }
+    }
+    .scope-item-wrap {
+        min-height: 0;
+        padding-bottom: 75px;
+    }
+    .pride {
+        padding-bottom: 80px;
+    }
+    .evolution-inline {
+        .evolution-sidebar-title {
+            float: left;
+            width: 50%;
+            margin-bottom: 59px;
+        }
+        .evolution-sidebar-description {
+            overflow: hidden;
+            font-size: 32px;
+            line-height: 37px;
+            margin-bottom: 0;
+            padding-top: 0;
+            margin-top: -21px;
+        }
+        .evolution-sidebar {
+        }
+    }
+    .way-chat {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .way-block-step {
+        top: 0;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        @include transform(translate3d(0, 0, 0));
+        .way-block-cell {
+            height: 273px;
+        }
+    }
+    .way-block-step-1 {
+        padding-right: 27%;
+        top: 21px;
+    }
+    .way-block-step-2 {
+        padding-left: 27%;
+        top: 294px;
+    }
+    .way-block-step-3 {
+        padding-right: 27%;
+        top: 567px;
+    }
+    .way-block-step-4 {
+        padding-left: 27%;
+        top: 840px;
+    }
+    .way-block-step-5 {
+        padding-right: 27%;
+        top: 1113px;
+        .way-block-text {
+            max-width: 240px;
+        }
+    }
+    .way-block-final {
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -145px;
+        margin-left: -98px;
+        width: 196px;
+        .way-block-cell {
+            height: 196px;
+            padding-bottom: 12px;
+        }
+    }
+    .way {
+        padding-bottom: 23px;
+    }
+    .way-block-text {
+        font-size: 19px;
+        max-width: 320px;
+    }
+    .way-block-final-title {
+        font-size: 21px;
+        font-weight: bold;
+        margin-bottom: 14px;
+    }
+    .way-block-final-text {
+        font-size: 17px;
+    }
+    .evolution-custom-content {
+        width: 50%;
+    }
+    .evolution-custom-sidebar {
+        width: 50%;
+    }
+    .steps-note {
+        position: relative;
+        bottom: auto;
+        margin-top: -30px;
+        margin-bottom: 30px;
+    }
+    .steps {
+        .simple-block-title {
+            top: -55px;
+        }
+    }
+}
+@media (max-width: 885px) {
+    .dragg-background {
+        display: none;
+    }
+    .steps-note {
+        margin-top: 0;
+    }
+    .mobile-steps {
+        display: block;
+    }
+    .steps {
+        .simple-block-title {
+            top: -35px;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+	.hobbies.inside {
+		margin-top: 0px;
+	}
+}
+
+
+
+@include media-breakpoint-down(sm) {
+	.evolution-sidebar {
+		padding-top: 35px;
+	}
+	.evolution-sidebar-description {
+		padding-top: 95px;
+		font-size: 28px;
+		line-height: 30px;
+	}
+	.steps {
+		padding-top: 63px;
+	}
+    .home-menu {
+        display: none !important;
+    }
+    .hobbie-photo {
+        &:before {
+            display: none;
+        }
+    }
+    .scope-item-wrap {
+        border-right: 0;
+		margin-right: 0px;
+    }
+    .wysiwyg {
+        h1 {
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .hobbie-single-content {
+        padding-top: 48px;
+        padding-bottom: 28px;
+    }
+    .title {
+        display: none;
+    }
+    .hobbie-single {
+        .hobbie-photo {
+            margin-top: 97px;
+            height: 198px;
+        }
+        .hobbie-cell {
+            height: auto;
+        }
+        .hobbie-icon {
+            right: 9px;
+            top: 32px;
+        }
+        .hobbie-person {
+            top: auto;
+        }
+    }
+    .navigation-toggle-white {
+        .navigation-toggle-icon {
+            background-color: $black;
+            &:before,
+            &:after {
+                background-color: $black;
+            }
+        }
+    }
+    .hobbie-photo {
+        margin-right: -30px;
+        margin-left: -30px;
+    }
+    .hobbie-revert {
+        .hobbie-photo {
+            margin-right: -30px;
+        }
+        .hobbie-content {
+            margin-left: 0;
+        }
+        .hobbie-icon {
+            right: 0;
+        }
+    }
+    .hobbie-photo {
+        height: 188px;
+    }
+    .hobbie-cell {
+        height: auto;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+    .hobbie-text {
+        min-height: 0 !important;
+    }
+    .hobbie-person {
+        padding-right: 90px;
+        position: relative;
+        top: auto;
+        padding-top: 32px;
+        margin-bottom: 30px;
+    }
+    .hobbie-table {
+        margin-bottom: 23px;
+    }
+    .hobbie-city {
+        margin-bottom: 38px;
+    }
+    .hobbie-person-position {
+        min-height: 60px;
+        margin-bottom: 30px;
+    }
+    .hobbie-icon {
+        top: 36px;
+    }
+    .hobbie-city {
+        position: relative;
+        bottom: auto;
+    }
+	.scope-item-description {
+		max-width: 100%;
+	}
+
+    .intro-text {
+        h2 {
+            font-size: 34px;
+            line-height: (37/34);
+        }
+        p {
+            margin-top: 46px;
+        }
+    }
+    .intro-text-cell {
+        height: auto;
+        padding-bottom: 54px;
+    }
+    .navigation {
+        width: 280px;
+        min-height: 542px;
+    }
+    .main {
+        min-height: 0;
+        padding-bottom: 0;
+    }
+    footer {
+        height: auto;
+        margin-top: 0;
+    }
+    .top-employer-list {
+        padding-bottom: 16px;
+        li {
+            float: none;
+            padding-left: 0;
+            padding-right: 0;
+            width: auto;
+            margin-bottom: 15px;
+        }
+        a {
+            max-width: 203px;
+        }
+    }
+    .footer-copyright-text {
+        padding-top: 12px;
+        letter-spacing: 0.5px;
+    }
+    .home-slide-title {
+        //width: auto;
+        width: 95%;
+        font-size: 34px;
+        line-height: 40px;
+    }
+    .home-slide-navigation,
+    .home-slide-title,
+    .home-slide-hr {
+        opacity: 1;
+    }
+    .home-slide-hr {
+        margin-bottom: 24px;
+    }
+    .home-slide-navigation {
+        padding-bottom: 0;
+        a.button {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+    }
+    .section {
+        &.fp-completely {
+            .home-slide-hr {
+                -webkit-animation: none;
+                animation: none;
+            }
+            .home-slide-title {
+                -webkit-animation: none;
+                animation: none;
+            }
+            .home-slide-navigation {
+                -webkit-animation: none;
+                animation: none;
+            }
+        }
+    }
+    .template-home {
+        header {
+            padding-top: 30px;
+            padding-bottom: 22px;
+        }
+        footer {
+            padding-top: 37px;
+            padding-bottom: 30px;
+            position: relative;
+            height: auto;
+            background: #343434;
+        }
+        header {
+            position: fixed;
+            &.from-top {
+                position: fixed;
+                background-color: rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+    .top-employer-list {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .home-menu {
+        margin-top: 0;
+        z-index: 3000;
+        top: 0;
+        right: 0;
+        left: auto;
+        display: block;
+        position: fixed;
+        background: #3e4040;
+        width: 330px;
+        min-height: 100%;
+        max-height: 100%;
+        overflow: auto;
+        padding: 96px 20px 20px 45px;
+        @include transition(transform 0.4s $f);
+        @include transform(translate3d(101%, 0, 0));
+        li {
+            a {
+                display: block;
+                max-width: 170px;
+                border-bottom: 2px solid $tr;
+            }
+            &.active {
+                a {
+                    border-bottom-color: $p;
+                }
+            }
+        }
+    }
+    .puzzle-background {
+        height: auto;
+        background-image: none;
+        padding-top: 50px;
+        padding-bottom: 35px;
+    }
+    .puzzle-item-cell {
+        height: auto;
+    }
+    .scope-title-bg {
+        display: none;
+    }
+    .scope {
+        padding-top: 40px;
+    }
+    .scope-title {
+        margin-bottom: 30px;
+    }
+    .scope-item-icon {
+        margin-bottom: 35px;
+    }
+	.scope-item-hr {
+        margin-bottom: 30px;
+	}
+    .puzzle-item-text {
+        max-width: 260px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .puzzle-item {
+        position: relative;
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 1px;
+            background: $w;
+        }
+    }
+    .puzzle-background {
+        .col-lg-3:first-child {
+            .puzzle-item {
+                &:before {
+                    display: none;
+                }
+            }
+        }
+    }
+    .col-evolution-img {
+        position: absolute;
+        width: 100%;
+        display: block;
+        height: auto;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    .evolution {
+        position: relative;
+        min-height: 480px;
+    }
+    .evolution-image {
+		height: 500px;
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+    .pride-right {
+        float: none;
+        width: auto;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .pride-left {
+        float: left;
+        width: auto;
+    }
+    .career-image {
+        height: 250px;
+    }
+    .career-drop {
+        @include transform(translate3d(0, 0, 0));
+        position: relative;
+        height: auto;
+        display: none;
+        &.active {
+            display: block;
+        }
+    }
+    .career-drop-overflow {
+        padding-top: 37px;
+        padding-bottom: 28px;
+    }
+    .careers {
+        background: $w;
+        .simple-block-title {
+            margin-top: 65px;
+            margin-bottom: 30px;
+        }
+    }
+    .career-image-title {
+        min-height: 0;
+        bottom: auto;
+        top: -150px;
+        z-index: 2;
+    }
+    .career-image {
+        &:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background: $black;
+            opacity: 0.3;
+        }
+    }
+    .pride {
+        padding-bottom: 56px;
+        .simple-block-title {
+            margin-top: 66px;
+            margin-bottom: 52px;
+        }
+    }
+    .pride-title {
+        font-size: 36px;
+        min-height: 0;
+        margin-bottom: 44px;
+    }
+    .pride-content {
+        min-height: 0;
+        margin-bottom: 30px;
+    }
+    .pride-note {
+        font-size: 14px;
+        line-height: 22px;
+    }
+    .evolution-inline {
+        .evolution-sidebar-title {
+            float: none;
+            width: auto;
+            margin-bottom: 59px;
+        }
+        .evolution-sidebar-description {
+            margin-top: -40px;
+            br {
+                display: none;
+            }
+        }
+    }
+    .evolution-text-block-column {
+        float: none;
+        width: auto;
+        padding-bottom: 30px;
+    }
+    .way-block-text {
+        font-size: 15px;
+    }
+    .way-block-final {
+        right: auto;
+        left: 50%;
+        top: auto;
+        bottom: -120px;
+        margin-left: -77px;
+        width: 154px;
+        .way-block-cell {
+            height: 154px;
+            padding-bottom: 6px;
+        }
+    }
+    .way-block-final-title {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+    .way-block-final-text {
+        font-size: 14px;
+    }
+    .way-chat {
+        font-size: 16px;
+        line-height: 24px;
+        padding: 18px 21px 17px;
+    }
+    .row-custom {
+        position: relative;
+    }
+    .evolution-custom-content {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0.65;
+    }
+    .extend-slider-wrap {
+        margin-left: -30px;
+    }
+    .evolution-custom-sidebar {
+        width: 100%;
+		height: 480px;
+        position: relative;
+        z-index: 2;
+    }
+    .evolution-white {
+        background: #333;
+        .evolution-sidebar {
+            color: $w;
+        }
+    }
+	.footer-social-list {
+		li {
+			margin-left: 0px;
+			margin-right: 18px;
+		}
+	}
+}
+@include media-breakpoint-down(xs) {
+}

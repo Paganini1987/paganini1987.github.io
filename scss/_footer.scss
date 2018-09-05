@@ -1,0 +1,100 @@
+/* footer */
+footer {
+    padding-top: 33px;
+    padding-bottom: 30px;
+    margin-top: -$footer;
+    height: $footer;
+    background: #343434;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #aaaaaa;
+    font-family: $fu;
+    a {
+        color: #aaaaaa;
+        &:hover {
+            color: $p;
+        }
+    }
+}
+.footer-copyright {
+    .footer-social-list {
+        display: block;
+        border: 0;
+        padding-top: 20px;
+    }
+}
+.footer-copyright-text {
+    letter-spacing: 1px;
+    line-height: 1.2;
+    display: inline-block;
+    border-top: 1px solid $p;
+    padding-top: 6px;
+}
+.top-employer {
+}
+.top-employer-list {
+    max-width: 382px;
+    margin: 0 auto;
+    li {
+        float: left;
+        width: 50%;
+        padding: 0 5px;
+    }
+    a {
+        display: block;
+        max-width: 181px;
+        @include transition(opacity $d $f);
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+    img {
+        display: block;
+        margin: 0 auto;
+    }
+}
+.footer-social {
+    text-align: right;
+}
+.footer-social-list {
+    display: inline-block;
+    border-top: 1px solid $p;
+    li {
+        float: left;
+        margin-left: 18px;
+        padding-top: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+    a {
+        display: inline-block;
+        letter-spacing: 1px;
+    }
+}
+.footer-scroll-down {
+    margin-top: -13px;
+    position: relative;
+    display: inline-block;
+    width: 56px;
+    height: 56px;
+    border: 1px solid #9a9a9a;
+    border-radius: 50%;
+    background: $tr;
+    &:before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -13px;
+        margin-top: -7px;
+        width: 26px;
+        height: 14px;
+        background: transparent url('../upload/arrow.png') left top no-repeat;
+        @include bgsize(100%);
+        @include transform(rotate(90deg));
+    }
+    &:hover {
+        border-color: $p;
+    }
+}

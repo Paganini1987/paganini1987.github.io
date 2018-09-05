@@ -1,0 +1,100 @@
+/* forms */
+.error {
+    color: $red !important;
+    border-color: $red !important;
+}
+.success {
+    color: $green !important;
+    border-color: $green !important;
+}
+.disabled {
+    color: $gray !important;
+    border-color: $gray !important;
+    cursor: default !important;
+}
+input.input-text {
+    width: 100%;
+    float: left;
+    @include border-radius(0);
+    @include transition(color $d $f, background-color $d $f, border-color $d $f);
+}
+textarea.textarea {
+    @extend input.input-text;
+    font-family: $fontFamily;
+    overflow: auto;
+    height: auto;
+}
+select.select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    @include border-radius(0);
+}
+select.select::-ms-expand {
+    display: none;
+}
+.checkbox,
+.radio {
+    display: block;
+    input {
+        display: none;
+        &:checked + label {
+        }
+        &:disabled + label {
+        }
+    }
+    label {
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+a.button,
+input.button,
+button.button {
+    height: 74px;
+    border: 0;
+    background: $p;
+    display: inline-block;
+    padding: 16px 35px 10px;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    color: $w;
+    font-size: 22px;
+    line-height: 35px;
+    font-family: $fu;
+    @include transition(color $d $f, background-color $d $f, border-color $d $f);
+    &:hover {
+        background-color: lighten($p, 10%);
+    }
+    &-small {
+        height: 49px;
+        font-size: 18px;
+        line-height: 20px;
+        padding-top: 12px;
+        padding-bottom: 17px;
+        font-weight: normal;
+    }
+}
+input.button,
+button.button {
+    line-height: normal;
+}
+.ripple {
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    transform: scale(0);
+    position: absolute;
+    background: $w;
+    opacity: 0.3;
+}
+.rippleEffect {
+    -webkit-animation: rippleDrop 0.6s $f;
+    animation: rippleDrop 0.6s $f;
+}
