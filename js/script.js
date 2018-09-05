@@ -342,7 +342,7 @@ $(document).ready(function(){
 $(window).load(function() {
 
     //load
-        $("#fittext1").fitText(0.56);
+        $("#fittext1").fitText(0.85);
         $("#fittext2").fitText(0.50);
         $("#fittext3").fitText(0.69);
         $("#fittext4").fitText(0.63);
