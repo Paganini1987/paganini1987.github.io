@@ -114,35 +114,43 @@
   transition: 0.5s;
 }
 
+.main-video {
+  max-width: 1150px;
+  padding: 0 30px;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.main-video::after {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-top: 55.5%;
+}
+
+.main-video iframe {
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main-wrapper {
+  background-color: #fff;
+}
+
 .main-content {
   max-width: 1150px;
   padding: 0 30px;
   width: 100%;
   margin: 0 auto;
   font-family: 'unicredit_cy';
-}
-
-.main-content__video {
-  position: relative;
-  width: 100%;
-  margin-top: 40px;
-}
-
-.main-content__video::after {
-  content: '';
-  display: block;
-  top: 0;
-  left: 0;
-  right: 0;
-  padding-top: 56.5%;
-}
-
-.main-content__video iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .main-content__what {
@@ -180,14 +188,19 @@
 
 .main-content__what:hover .main-content__hash::after {
   width: 100%;
-  -webkit-transition: 2s linear;
-  transition: 2s linear;
+  -webkit-transition: 1s linear;
+  transition: 1s linear;
 }
 
 .main-content__hash {
   position: relative;
   display: inline-block;
   color: #58c7f8;
+}
+
+.main-content__hash span {
+  position: relative;
+  z-index: 5;
 }
 
 .main-content__hash::after {
@@ -199,9 +212,8 @@
   height: 110%;
   width: 0;
   background-color: #eeeeee;
-  -webkit-transition: 1s linear;
-  transition: 1s linear;
-  z-index: -1;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .main-content__list {
@@ -453,8 +465,13 @@
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 1198px) {
-  .main-content {
+  .main-content, .main-video {
     max-width: 100%;
+  }
+  .main-video iframe {
+    left: 30px;
+    width: -webkit-calc(100% - 60px);
+    width: calc(100% - 60px);
   }
   .main-content__what {
     margin-top: 85px;
@@ -502,6 +519,10 @@
 @media only screen and (max-width: 767px) {
   .intro-text--small p:first-of-type {
     margin-top: 44px;
+  }
+  .main-video iframe {
+    left: 0;
+    width: 100%;
   }
   .main-content {
     padding-left: 0;
