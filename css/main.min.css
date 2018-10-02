@@ -6616,6 +6616,10 @@ ul {
   margin: 0 auto;
 }
 
+.section--1660 {
+  max-width: 1660px;
+}
+
 .h1 {
   font-size: 48px;
   font-weight: 700;
@@ -6702,7 +6706,9 @@ ul {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  max-width: 1170px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
   margin: 0 auto;
   height: 100px;
 }
