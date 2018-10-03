@@ -6668,7 +6668,10 @@ ul {
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #17215f;
+  background-image: url("../img/icons/background_1920.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
   overflow: hidden;
 }
 
@@ -6868,7 +6871,7 @@ ul {
   right: 0;
   bottom: 0;
   margin: auto;
-  max-width: 422px;
+  max-width: 423px;
   height: auto;
   z-index: 10;
 }
