@@ -7492,25 +7492,27 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .spend__button {
+  margin-left: auto;
   font-size: 18px;
   font-weight: 500;
-  border: 3px solid #fde414;
   padding-left: 40px;
   padding-right: 40px;
   -webkit-flex-shrink: 0;
       -ms-flex-negative: 0;
           flex-shrink: 0;
+  background-color: #fde414;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .spend__button span {
+  color: #0c39e2;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .spend__button:hover {
-  background-color: #fde414;
+  background-color: #fddf14;
 }
 
 .spend__button:hover span {
@@ -7883,14 +7885,16 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: 16px;
   font-weight: 700;
   text-transform: uppercase;
-  color: #0c39e2;
-  background-color: #fde414;
+  color: #fff;
+  border: 3px solid #fde414;
+  background-color: transparent;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
 .cards__button:hover {
   background-color: #fddf14;
+  color: #0c39e2;
 }
 
 .show-all .other {
@@ -7899,6 +7903,16 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .show-all .cards__cat.home, .show-all .cards__cat.beauty, .show-all .cards__cat.clothes, .show-all .cards__cat.electronics, .show-all .cards__cat.sport {
   display: block;
+}
+
+.ikea-style {
+  background-color: #fde414 !important;
+  color: #0c39e2;
+}
+
+.ikea-style::after {
+  border-right: 2px solid #0c39e2 !important;
+  border-bottom: 2px solid #0c39e2 !important;
 }
 
 .isGiftCard .cards__type {
@@ -8089,7 +8103,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .cls-111 {
-  stroke-dasharray: 100;
+  stroke-dasharray: 100%, 100%;
   stroke-dashoffset: -100;
   -webkit-animation: stroke 3s;
           animation: stroke 3s;
@@ -8180,6 +8194,10 @@ a, a:hover, a:active, a:visited, a:focus {
   background-color: #fff;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+
+.card__title--gold::after {
+  background-color: #fae114;
 }
 
 .card__description {
@@ -9132,12 +9150,7 @@ body.modal-opened {
 @media only screen and (max-width: 500px) {
   /**/
   .cards__categories {
-    margin-left: 0;
-    margin-right: 0;
-  }
-  .cards__categories li {
-    width: 100%;
-    margin: 0;
+    display: none;
   }
   .show-all.cards__categories li {
     width: 100%;
@@ -9157,7 +9170,7 @@ body.modal-opened {
   .show-all .cards__cat.home, .show-all .cards__cat.beauty, .show-all .cards__cat.clothes, .show-all .cards__cat.electronics, .show-all .cards__cat.sport {
     display: none;
   }
-  .show-all + .cards__categories-m {
+  .cards__categories-m {
     display: block;
     margin-top: 20px;
   }
