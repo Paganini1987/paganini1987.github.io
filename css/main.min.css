@@ -7558,6 +7558,20 @@ a, a:hover, a:active, a:visited, a:focus {
   display: none !important;
 }
 
+.cards__categories-m .selectize-dropdown-content {
+  max-height: 100%;
+}
+
+.cards__categories-m .selectize-dropdown-content .option.active {
+  background-color: #3c63f7;
+  color: #fff;
+}
+
+.cards__categories-m .selectize-dropdown-content .option[data-value='ikea'] {
+  background-color: #fde414;
+  color: #0c39e2;
+}
+
 .selectize-dropdown {
   background-color: #3c63f7;
   border: none;
