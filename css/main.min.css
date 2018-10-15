@@ -7856,7 +7856,12 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .show-all .cards__cat.ikea {
+  background-color: transparent;
   border: 2px solid #fde414;
+}
+
+.show-all .cards__cat.ikea:hover span, .show-all .cards__cat.ikea:active span {
+  color: #fff;
 }
 
 .isGiftCard .cards__type {
@@ -8040,6 +8045,15 @@ a, a:hover, a:active, a:visited, a:focus {
           transform: rotate(-16deg);
 }
 
+.select__smoke {
+  position: absolute;
+  left: 80px;
+  top: 28px;
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
 /* Card */
 .card {
   position: relative;
@@ -8078,8 +8092,12 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .card:hover .card__title {
-  font-size: 18px;
-  margin-bottom: 12px;
+  -webkit-transform: scale(0.75) translateY(130%);
+      -ms-transform: scale(0.75) translateY(130%);
+          transform: scale(0.75) translateY(130%);
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 .card:hover .card__title::after {
@@ -8087,11 +8105,12 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .card:hover .card__description {
-  font-size: 13px;
-}
-
-.card:hover .card__description p:not(:last-of-type) {
-  margin-bottom: 0px;
+  -webkit-transform: scale(0.81);
+      -ms-transform: scale(0.81);
+          transform: scale(0.81);
+  -webkit-transform-origin: 0 100%;
+      -ms-transform-origin: 0 100%;
+          transform-origin: 0 100%;
 }
 
 .card__card {
@@ -8115,8 +8134,11 @@ a, a:hover, a:active, a:visited, a:focus {
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 28px;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .card__title::after {
@@ -8136,8 +8158,11 @@ a, a:hover, a:active, a:visited, a:focus {
   font-family: Circle;
   font-size: 16px;
   font-weight: 500;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  will-change: transform;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 .card__description p {
@@ -8837,6 +8862,13 @@ body.modal-opened {
     right: -29px;
     bottom: -438px;
     width: 319px;
+  }
+  .select__smoke {
+    left: 36px;
+    top: -12px;
+    -webkit-transform: rotate(180deg) scale(0.7);
+        -ms-transform: rotate(180deg) scale(0.7);
+            transform: rotate(180deg) scale(0.7);
   }
   .spend__summ {
     font-size: 47px;
