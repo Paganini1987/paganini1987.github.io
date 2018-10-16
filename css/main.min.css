@@ -6623,7 +6623,7 @@ a, a:hover, a:active, a:visited, a:focus {
 }
 
 .menu__item:not(:last-of-type) {
-  margin-right: 35px;
+  margin-right: 2vw;
 }
 
 .menu__item a {
@@ -7599,6 +7599,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .selector__text {
   font-size: 16px;
   margin-bottom: 10px;
+  white-space: nowrap;
 }
 
 .selector__counter {
@@ -7965,6 +7966,10 @@ a, a:hover, a:active, a:visited, a:focus {
   background-color: #fde414;
 }
 
+.isGiftCard.ikea .cards__type {
+  color: #3d3d3d;
+}
+
 .isGiftCard.ikea .cards__value {
   color: #0c39e2;
 }
@@ -8249,8 +8254,8 @@ a, a:hover, a:active, a:visited, a:focus {
           justify-content: space-between;
   height: 105px;
   padding: 0 50px;
-  background-color: #ffc70d;
-  color: #fff;
+  background-color: #fde414;
+  color: #3d3d3d;
   /* PopUp */
 }
 
@@ -8272,7 +8277,7 @@ a, a:hover, a:active, a:visited, a:focus {
 
 .footer__text {
   font-size: 12px;
-  color: #ffe99f;
+  color: #3d3d3d;
   line-height: 18px;
   margin-right: 5px;
 }
@@ -8311,7 +8316,7 @@ a, a:hover, a:active, a:visited, a:focus {
   left: 0;
   width: 100%;
   height: 2px;
-  background-color: #fff;
+  background-color: #3d3d3d;
   -webkit-transform: scale(0);
       -ms-transform: scale(0);
           transform: scale(0);
@@ -8328,7 +8333,7 @@ a, a:hover, a:active, a:visited, a:focus {
 .footer__phone {
   padding-left: 4vw;
   letter-spacing: 0.1em;
-  border-left: 1px solid #fff;
+  border-left: 1px solid #3d3d3d;
   white-space: nowrap;
 }
 
@@ -8392,7 +8397,20 @@ body.modal-opened {
   overflow: hidden;
 }
 
+.modal__iframe {
+  display: block;
+  border: 0;
+  width: 100%;
+  height: 100vh;
+}
+
 /*==========  Desktop First  ==========*/
+@media only screen and (max-width: 1100px) {
+  .menu__list {
+    margin-left: 2vw;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .card__card {
     opacity: 1;
@@ -8438,11 +8456,11 @@ body.modal-opened {
     top: 0;
     left: 0;
     right: 0;
-    min-height: 100vh;
+    height: 100vh;
     background-color: #ffc70b;
     z-index: 100;
     margin: 0;
-    padding-top: 200px;
+    padding-top: 150px;
     padding-left: 100px;
     overflow: auto;
     -webkit-transform: translateY(-100%);
@@ -8957,6 +8975,24 @@ body.modal-opened {
   .online__note {
     width: 40%;
   }
+  .footer {
+    height: auto;
+    padding: 25px 20px;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .footer__left, .footer__right {
+    width: 100%;
+  }
+  .footer__right {
+    padding-bottom: 20px;
+  }
 }
 
 /* Extra Small Devices, Phones */
@@ -9139,24 +9175,6 @@ body.modal-opened {
   }
   .card__service {
     white-space: nowrap;
-  }
-  .footer {
-    height: auto;
-    padding: 25px 20px;
-    -webkit-flex-wrap: wrap;
-        -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-  }
-  .footer__left, .footer__right {
-    width: 100%;
-  }
-  .footer__right {
-    padding-bottom: 20px;
   }
 }
 
