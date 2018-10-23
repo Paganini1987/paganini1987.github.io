@@ -8189,6 +8189,32 @@ a, a:hover, a:active, a:visited, a:focus {
   transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
+.card__button {
+  display: block;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0 19px;
+  line-height: 32px;
+  background-color: #fde414;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-transform: translateY(-30%);
+      -ms-transform: translateY(-30%);
+          transform: translateY(-30%);
+  opacity: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.card__button span {
+  color: #0c39e2;
+}
+
+.card__button:hover {
+  background-color: #fddf14;
+}
+
 .card__title {
   display: inline-block;
   position: relative;
@@ -8362,6 +8388,12 @@ a, a:hover, a:active, a:visited, a:focus {
   }
   .card__description p:not(:last-of-type) {
     margin-bottom: 0px;
+  }
+  .card__button {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
 
@@ -9102,9 +9134,6 @@ a, a:hover, a:active, a:visited, a:focus {
   .online__note {
     width: 80%;
   }
-  .card a {
-    padding: 18px;
-  }
   .card__service {
     white-space: nowrap;
   }
@@ -9137,6 +9166,19 @@ a, a:hover, a:active, a:visited, a:focus {
   .cards__categories-m {
     display: block;
     margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .card {
+    padding-left: 20px;
+  }
+  .card__card {
+    left: 20px;
+  }
+  .card__button {
+    right: 20px;
+    padding: 0 8px;
   }
 }
 
@@ -9187,5 +9229,11 @@ a, a:hover, a:active, a:visited, a:focus {
     -webkit-transform-origin: 0 100%;
         -ms-transform-origin: 0 100%;
             transform-origin: 0 100%;
+  }
+  .card:hover .card__button {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+        -ms-transform: translateY(0);
+            transform: translateY(0);
   }
 }
