@@ -359,7 +359,7 @@
 			</div>
 		</section>
 
-		<section id="rules" class="change">
+		<section id="change" class="change">
 			<div class="change__stick">
 				<img src="img/Palka.png" alt="">
 			</div>
@@ -395,7 +395,7 @@
 						</div>
 					</li>
 				</ul>
-				<div class="change__wrap">
+				<div id="rules" class="change__wrap">
 					<div class="change__book">
 						<img src="img/Book.png" alt="">
 					</div>
@@ -431,14 +431,26 @@
 
 	<div class="popup start isOpened">
 		<div class="popup__wrap">
-			<div class="popup__center">
-				<a href="#" class="popup__close js-close-start-popup">Закрыть</a>
-				<div class="coin">
-					<div class="coin__hint">
-						<span>Перетащите Желудь - коин</span>
-						<br>в шар с предсказаниями,
-						<br>чтобы узнать свою судьбу
+			<div class="popup__center start__center">
+				<div class="start__content">
+					<div class="start__light">
+						<img src="img/light_popup.png" alt="">
 					</div>
+					<div class="coin">
+						<div class="coin__hint">
+							<span>Перетащите Желудь - коин</span>
+							<br>в шар с предсказаниями,
+							<br>чтобы узнать свою судьбу
+						</div>
+					</div>
+					<div class="start__title">
+						Вам дается желудь-коин!
+					</div>
+					<div class="start__text">
+						Чтобы поулчить за него предсказание
+						от Юняши, перетащите его в шар предсказаний
+					</div>
+					<a href="#" class="start__close js-close-start-popup">всё понятно</a>
 				</div>
 			</div>
 		</div>
@@ -449,11 +461,17 @@
 			<div class="p-prediction__center">
 				<a href="#" class="popup__close js-close-prediction-popup">Закрыть</a>
 				<div class="p-prediction__text"></div>
-				<button class="js-set-social" data-title="" data-description="" data-image="" data-social="vkontakte">Share this to VK</button>
+				<div class="social-likes" data-counters="no">
+					<div class="facebook" title="Поделиться ссылкой на Фейсбуке">Facebook</div>
+					<div class="vkontakte" title="Поделиться ссылкой во Вконтакте">Вконтакте</div>
+					<div class="odnoklassniki" title="Поделиться ссылкой в Одноклассниках">Одноклассники</div>
+				</div>
 			</div>
 		</div>
 	</div>
 	
 	<script src="js/scripts.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes_flat.css">
+	<script src="https://cdn.jsdelivr.net/npm/social-likes/dist/social-likes.min.js"></script>
 </body>
 </html>
