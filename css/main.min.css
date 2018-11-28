@@ -2168,6 +2168,34 @@ img {
           animation-fill-mode: forwards;
 }
 
+.banner__line {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 110%;
+  margin-top: -2px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: -webkit-calc(100vw - 170px);
+  width: calc(100vw - 170px);
+  overflow: hidden;
+}
+
+.banner__dot {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+      -ms-flex: none;
+          flex: none;
+  width: 5px;
+  height: 5px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background-color: #fbbd17;
+  margin-right: 5px;
+}
+
 .banner__note {
   display: none;
   position: relative;
@@ -2836,7 +2864,7 @@ img {
   right: 0;
   bottom: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(32, 20, 13, 0.9);
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
@@ -2916,7 +2944,7 @@ img {
   right: 0;
   bottom: 0;
   opacity: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(32, 20, 13, 0.9);
   -webkit-perspective: 500px;
           perspective: 500px;
   -webkit-transition: 0.5s;
@@ -2982,6 +3010,10 @@ img {
   width: 500px;
   height: 500px;
   background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-background-size: cover;
+          background-size: cover;
   opacity: 0;
   -webkit-transform: rotateX(-40deg) scale(0.8) translateY(100px) translateZ(-100px);
           transform: rotateX(-40deg) scale(0.8) translateY(100px) translateZ(-100px);
@@ -3416,6 +3448,9 @@ img {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .coin__hint {
+    display: none;
+  }
   .nav {
     height: 65px;
     padding-left: 20px;
@@ -3470,7 +3505,7 @@ img {
   }
   .banner__table {
     right: -56px;
-    bottom: 213px;
+    bottom: 160px;
     width: 240px;
   }
   .banner__ball {
@@ -3478,6 +3513,12 @@ img {
     left: 81px;
     width: 62px;
     height: 62px;
+  }
+  .banner__line {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
   }
   .banner__note {
     display: block;
