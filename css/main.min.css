@@ -3060,6 +3060,11 @@ img {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 500px;
   height: 500px;
   background-color: #fff;
@@ -3073,6 +3078,14 @@ img {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+
+.p-prediction__text {
+  margin-bottom: 20px;
+  font-weight: 700;
+  color: #fff;
+  background-color: #9c9c9c;
+  padding: 0 10px;
 }
 
 .coin {
