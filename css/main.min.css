@@ -3047,31 +3047,13 @@ img {
 }
 
 .p-prediction__center {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 500px;
-  height: 500px;
-  background-color: #fff;
+  background-image: url("../../img/pop_up_Svinka.png");
   background-repeat: no-repeat;
   background-position: 50%;
   -webkit-background-size: cover;
           background-size: cover;
+  max-width: 816px;
+  width: 100%;
   opacity: 0;
   -webkit-transform: rotateX(-40deg) scale(0.8) translateY(100px) translateZ(-100px);
           transform: rotateX(-40deg) scale(0.8) translateY(100px) translateZ(-100px);
@@ -3080,12 +3062,50 @@ img {
   transition: 0.5s;
 }
 
-.p-prediction__text {
-  margin-bottom: 20px;
+.p-prediction__center::after {
+  content: '';
+  display: block;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 90%;
+}
+
+.p-prediction__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 352px 0px 180px 0px;
   font-weight: 700;
-  color: #fff;
-  background-color: #9c9c9c;
-  padding: 0 10px;
+  color: #211509;
+  text-align: center;
+}
+
+.p-prediction__text {
+  font-size: 22px;
+  line-height: 24px;
+  font-weight: 700;
+  color: #211509;
+}
+
+.p-prediction__close {
+  display: block;
+  width: 237px;
+  line-height: 67px;
+  text-align: center;
+  font-size: 16px;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: #ebedf3;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-image: url("../../img/Pravila_btn.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  -webkit-background-size: cover;
+          background-size: cover;
 }
 
 .coin {
