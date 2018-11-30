@@ -3,180 +3,180 @@
 		"id": "0",
 		"category": "Богатая в золоте/Красивая",
 		"text": "Вы в сливки общества войдете. Возможно, спонсора найдете!",
-		"img": "/img/prediction/Bogataya_1.png"
+		"img": "img/prediction/Bogataya_1.png"
 	},
 	{
 		"id": "1",
 		"category": "Богатая в золоте/Красивая",
 		"text": "Пусть в жизни все проходит мимо, кроме здоровья, денег и интима!",
-		"img": "/img/prediction/Bogataya_2.png"
+		"img": "img/prediction/Bogataya_2.png"
 	},
 	{
 		"id": "2",
 		"category": "Деньги",
 		"text": "Держи пятачок в тепле, а монетки на 'Клике'!",
-		"img": "/img/prediction/Dengi_1.png"
+		"img": "img/prediction/Dengi_1.png"
 	},
 	{
 		"id": "3",
 		"category": "Деньги",
 		"text": "Охрюнеть сколько кешбэка ждет тебя в новом году!",
-		"img": "/img/prediction/Dengi_2.png"
+		"img": "img/prediction/Dengi_2.png"
 	},
 	{
 		"id": "4",
 		"category": "Дети/Семья",
 		"text": "Я желаю вам везенья! Ждет в семье вас прибавленье!",
-		"img": "/img/prediction/Deti_1.png"
+		"img": "img/prediction/Deti_1.png"
 	},
 	{
 		"id": "5",
 		"category": "Еда",
 		"text": "В этом году кушать будешь ты, а полнеть Я!",
-		"img": "/img/prediction/eda_1.png"
+		"img": "img/prediction/eda_1.png"
 	},
 	{
 		"id": "6",
 		"category": "Еда",
 		"text": "В этот новый год простительно нахрюкаться!",
-		"img": "/img/prediction/eda_2.png"
+		"img": "img/prediction/eda_2.png"
 	},
 	{
 		"id": "7",
 		"category": "Еда",
 		"text": "В новом году ты совершишь невозможное. Я вот уже записалась на кулинарные курсы!",
-		"img": "/img/prediction/eda_3.png"
+		"img": "img/prediction/eda_3.png"
 	},
 	{
 		"id": "8",
 		"category": "Еда",
 		"text": "На праздничный стол выбирай не порося, а карася!",
-		"img": "/img/prediction/eda_4.png"
+		"img": "img/prediction/eda_4.png"
 	},
 	{
 		"id": "9",
 		"category": "Карьера/Зарплата",
 		"text": "За здоровье ваше тост! Будет вам карьерный рост!",
-		"img": "/img/prediction/Karera_1.png"
+		"img": "img/prediction/Karera_1.png"
 	},
 	{
 		"id": "10",
 		"category": "Карьера/Зарплата",
 		"text": "Судьба позолотит Вам ручку, пошлет солидную получку!",
-		"img": "/img/prediction/Karera_2.png"
+		"img": "img/prediction/Karera_2.png"
 	},
 	{
 		"id": "11",
 		"category": "Карьера/Зарплата",
 		"text": "Для сердца ожидает Вас услада — большое повышение оклада!",
-		"img": "/img/prediction/Karera_3.png"
+		"img": "img/prediction/Karera_3.png"
 	},
 	{
 		"id": "12",
 		"category": "Кредит авто/квартира/дача",
 		"text": "Вам удачи, счастья, мира! Будет вам своя квартира!",
-		"img": "/img/prediction/kredit_1.png"
+		"img": "img/prediction/kredit_1.png"
 	},
 	{
 		"id": "13",
 		"category": "Кредит авто/квартира/дача",
 		"text": "Сохранить желаю стиль! Будет вам автомобиль!",
-		"img": "/img/prediction/kredit_2.png"
+		"img": "img/prediction/kredit_2.png"
 	},
 	{
 		"id": "14",
 		"category": "Кредит авто/квартира/дача",
 		"text": "Не покинет вас удача! Будет новая вам дача!",
-		"img": "/img/prediction/kredit_3.png"
+		"img": "img/prediction/kredit_3.png"
 	},
 	{
 		"id": "15",
 		"category": "Любовь",
 		"text": "Летом на нудистском пляже ваше счастье рядом ляжет!",
-		"img": "/img/prediction/Love_1.png"
+		"img": "img/prediction/Love_1.png"
 	},
 	{
 		"id": "16",
 		"category": "Любовь",
 		"text": "Если в неделю по разу влюбляться – помолодеете лет на пятнадцать!",
-		"img": "/img/prediction/Love_2.png"
+		"img": "img/prediction/Love_2.png"
 	},
 	{
 		"id": "17",
 		"category": "Любовь",
 		"text": "В год Свиньи ты без опаски окунешься в море ласки!",
-		"img": "/img/prediction/Love_3.png"
+		"img": "img/prediction/Love_3.png"
 	},
 	{
 		"id": "18",
 		"category": "Любовь",
 		"text": "Год пройдет особо ярко, от романов станет жарко!",
-		"img": "/img/prediction/Love_4.png"
+		"img": "img/prediction/Love_4.png"
 	},
 	{
 		"id": "19",
 		"category": "Мечты/Романтика",
 		"text": "Каждый день и каждый час кто-то думает о вас!",
-		"img": "/img/prediction/Mechtu_1.png"
+		"img": "img/prediction/Mechtu_1.png"
 	},
 	{
 		"id": "20",
 		"category": "Мечты/Романтика",
 		"text": "Если будешь улыбаться, все мечты начнут сбываться!",
-		"img": "/img/prediction/Mechtu_2.png"
+		"img": "img/prediction/Mechtu_2.png"
 	},
 	{
 		"id": "21",
 		"category": "Путешествие",
 		"text": "Путешествие вас ждет и билет на самолет!",
-		"img": "/img/prediction/pyteshestvie_1.png"
+		"img": "img/prediction/pyteshestvie_1.png"
 	},
 	{
 		"id": "22",
 		"category": "Путешествие",
 		"text": "Ждите рост семейного дохода и отпуск в любимое время года!",
-		"img": "/img/prediction/pyteshestvie_2.png"
+		"img": "img/prediction/pyteshestvie_2.png"
 	},
 	{
 		"id": "23",
 		"category": "Работа",
 		"text": "Не тревожит пусть забота! Ждет вас новая работа!",
-		"img": "/img/prediction/rabota_1.png"
+		"img": "img/prediction/rabota_1.png"
 	},
 	{
 		"id": "24",
 		"category": "Работа",
 		"text": "Как и всегда, вы в гуще дел, кипеть в работе – ваш удел!",
-		"img": "/img/prediction/rabota_2.png"
+		"img": "img/prediction/rabota_2.png"
 	},
 	{
 		"id": "25",
 		"category": "Смех",
 		"text": "В новом году можно хрюкать, когда смеешься.",
-		"img": "/img/prediction/smeh_1.png"
+		"img": "img/prediction/smeh_1.png"
 	},
 	{
 		"id": "26",
 		"category": "Смех",
 		"text": "Будет Ваш счастливый смех и в светском обществе успех!",
-		"img": "/img/prediction/smeh_2.png"
+		"img": "img/prediction/smeh_2.png"
 	},
 	{
 		"id": "27",
 		"category": "Спорт",
 		"text": "Чтоб обрести шикарную фигуру придется вспомнить физкультуру!",
-		"img": "/img/prediction/sport_1.png"
+		"img": "img/prediction/sport_1.png"
 	},
 	{
 		"id": "28",
 		"category": "Спорт",
 		"text": "Скинуть пару сантиметров помогут 20 километров!",
-		"img": "/img/prediction/sport_2.png"
+		"img": "img/prediction/sport_2.png"
 	},
 	{
 		"id": "29",
 		"category": "Спорт",
 		"text": "В год Свиньи тебя ожидает кабанье здоровье!",
-		"img": "/img/prediction/sport_3.png"
+		"img": "img/prediction/sport_3.png"
 	}
 ]
