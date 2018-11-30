@@ -1,1 +1,46 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="59" height="59"><circle data-name="Ellipse 1 copy" cx="29.5" cy="29.5" r="28.5" fill="none" stroke="#4267b2" stroke-width="2"/><path d="M31.092 42h-4.961V30.585H22v-4.446h4.128v-3.211a7.581 7.581 0 0 1 .2-1.836 4.989 4.989 0 0 1 2.363-3.211 6.387 6.387 0 0 1 3.3-.881c1.119-.007 2.239.056 3.358.1.218.007.434.047.65.071v3.972h-2.484a7.367 7.367 0 0 0-.891.061 1.51 1.51 0 0 0-1.421 1.213 4.5 4.5 0 0 0-.107.909c-.013.894 0 1.787 0 2.68v.142h4.757a6781.64 6781.64 0 0 0-.634 4.448h-4.123V42z" fill="#4267b2" fill-rule="evenodd"/></svg>
+<svg id="Fb" xmlns="http://www.w3.org/2000/svg" width="59" height="59" viewBox="0 0 59 59">
+  <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+<x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c138 79.159824, 2016/09/14-01:09:01        ">
+   <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+      <rdf:Description rdf:about=""/>
+   </rdf:RDF>
+</x:xmpmeta>
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                                                                                                    
+                           
+<?xpacket end="w"?></metadata>
+<defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #4267b2;
+        stroke-width: 2px;
+      }
+
+      .cls-2 {
+        fill: #4267b2;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <circle id="Ellipse_1_copy" data-name="Ellipse 1 copy" class="cls-1" cx="29.5" cy="29.5" r="28.5"/>
+  <path class="cls-2" d="M413.092,487h-4.961c0-.055,0-0.11,0-0.166V475.585H404v-4.446h4.128v-0.161c0-1.016,0-2.033,0-3.05a7.581,7.581,0,0,1,.2-1.836,4.989,4.989,0,0,1,2.363-3.211,6.387,6.387,0,0,1,3.3-.881c1.119-.007,2.239.056,3.358,0.1,0.218,0.007.434,0.047,0.65,0.071v3.972h-0.169c-0.772,0-1.543,0-2.315,0a7.367,7.367,0,0,0-.891.061,1.51,1.51,0,0,0-1.421,1.213,4.5,4.5,0,0,0-.107.909c-0.013.894,0,1.787,0,2.68v0.142h4.757c-0.213,1.491-.423,2.964-0.634,4.448h-4.123V487Z" transform="translate(-382 -445)"/>
+</svg>

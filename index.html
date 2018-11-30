@@ -2,6 +2,26 @@
 <html lang="ru">
 
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-71193331-27"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'UA-71193331-27');
+	</script>
+	
+	<!-- Google Tag Manager -->
+	<script>(function (w, d, s, l, i) {
+			w[l] = w[l] || []; w[l].push({
+				'gtm.start':
+					new Date().getTime(), event: 'gtm.js'
+			}); var f = d.getElementsByTagName(s)[0],
+				j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+					'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+		})(window, document, 'script', 'dataLayer', 'GTM-K234GK');</script>
+	<!-- End Google Tag Manager -->
 
 	<meta charset="utf-8">
 
@@ -51,6 +71,87 @@
 </head>
 
 <body>
+	<!-- Google Tag Manager (noscript) -->
+	<noscript>
+		<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K234GK" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+	</noscript>
+	<!-- End Google Tag Manager (noscript) -->
+	<style>
+		.loader-default,
+		.loader-active {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 133px;
+			height: 133px;
+			background: transparent url(img/loader.png) 0 0 no-repeat;
+			-moz-background-size: 133px;
+			-o-background-size: 133px;
+			-webkit-background-size: 133px;
+			background-size: 133px
+		}
+	
+		.loader-active {
+			background-position: 0 100%;
+			top: auto;
+			bottom: 0;
+			max-height: 0;
+			-webkit-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-moz-animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			animation: loader 1.2s cubic-bezier(1, 1, 0.6, 1);
+			-webkit-animation-fill-mode: forwards;
+			animation-fill-mode: forwards;
+		}
+	
+		.loader-wrap {
+			position: absolute;
+			width: 133px;
+			height: 133px;
+			margin-top: -66px;
+			margin-left: -66px;
+			left: 50%;
+			top: 50%
+		}
+	
+		@-webkit-keyframes loader {
+			0% {
+				max-height: 0
+			}
+	
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@-moz-keyframes loader {
+			0% {
+				max-height: 0
+			}
+	
+			100% {
+				max-height: 100%
+			}
+		}
+	
+		@keyframes loader {
+			0% {
+				max-height: 0
+			}
+	
+			100% {
+				max-height: 100%
+			}
+		}
+	</style>
+
+	<div class="loader" style="position: fixed; z-index: 99999; left: 0; top: 0; right: 0; bottom: 0; background: #1d1c26;">
+		<div class="loader-wrap">
+			<div class="loader-default"></div>
+			<div class="loader-active"></div>
+		</div>
+	</div>
+
+
 	<section id="overlay" class="banner">
 		<nav class="nav">
 			<div class="nav__logo">
@@ -382,7 +483,7 @@
 		</section>
 
 		<section id="change" class="change">
-			<div class="change__stick">
+			<div class="change__stick rellax" data-rellax-speed="-2">
 				<img src="img/Palka.png" alt="">
 			</div>
 			<div class="change__center section">
@@ -418,7 +519,7 @@
 					</li>
 				</ul>
 				<div id="rules" class="change__wrap">
-					<div class="change__book">
+					<div class="change__book rellax" data-rellax-speed="-3">
 						<img src="img/Book.png" alt="">
 					</div>
 					<div class="change__paper">
