@@ -5,7 +5,7 @@
 
 	<meta charset="utf-8">
 
-	<title>OptimizedHTML 5</title>
+	<title>Color check</title>
 	<meta name="description" content="Startup HTML template OptimizedHTML 5">
 
 	<meta name="viewport" content="width=device-width">
@@ -26,16 +26,23 @@
 	<div class="select">
         <label for="videoSource">Video source: </label><select id="videoSource"></select>
 	</div>
-	
-	<div class="video">
-		<video  id="video" playsinline autoplay></video>
-		<div class="video__marker">
-			<div class="video__center"></div>
-		</div>
-		<button class="video__capture js-capture">Capture!</button>
-		<div class="video__example js-set-color"></div>
-	</div>
 
+	<a href="#" class="open js-open-video"></a>
+	
+	<div class="wrapper">
+		<div class="video">
+			<a href="#" class="video__close js-close-video">
+				<svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><rect y="14.5454" width="20.5702" height="2.05702" transform="rotate(-45 0 14.5454)"></rect> <rect x="1.45459" width="20.5702" height="2.05702" transform="rotate(45 1.45459 0)"></rect></svg>
+			</a>
+			<video  id="video" playsinline autoplay></video>
+			<div class="video__marker">
+				<div class="video__center"></div>
+			</div>
+			<button class="video__capture js-capture">Capture!</button>
+			<div class="video__example js-set-color"></div>
+		</div>
+	</div>
+	
 	<div class="colors">
 		<input type="color" name="color" id="color">
 	</div>

@@ -9,7 +9,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		height = window.innerHeight,
 		video = document.querySelector('#video'),
 		videoContainer = document.querySelector('.video'),
-		width2, height2;
+		videoContainerWrapper = document.querySelector('.wrapper'),
+		width2, height2, aRed, aGreen, aBlue,
+		process = false;
                  
 	var img = new Image();
 	var img2 = new Image();
@@ -140,9 +142,9 @@ document.addEventListener("DOMContentLoaded", function() {
 		}
 
 		let length = colors.red.length;
-		let aRed = colors.red.reduce((prev, current)=>prev + current) / length;
-		let aGreen = colors.green.reduce((prev, current)=>prev + current) / length;
-		let aBlue = colors.blue.reduce((prev, current)=>prev + current) / length;
+		aRed = colors.red.reduce((prev, current)=>prev + current) / length;
+		aGreen = colors.green.reduce((prev, current)=>prev + current) / length;
+		aBlue = colors.blue.reduce((prev, current)=>prev + current) / length;
 
 		setExample (aRed, aGreen, aBlue);
 	}
@@ -150,19 +152,41 @@ document.addEventListener("DOMContentLoaded", function() {
 	function realTime () {
 		takeSnapshot();
 
+		if (!process) return null;
+
 		requestAnimationFrame(realTime)
 	}
 
 	realTime();
 
-	document.querySelector('.js-capture').addEventListener('click', takeSnapshot);
+	document.querySelector('.js-capture').addEventListener('click', ()=>{
+		setColor([aRed, aGreen, aBlue]);
+		document.querySelector('.js-open-video').style.backgroundColor = 'rgb(' + aRed + ',' + aGreen + ',' + aBlue + ')';
+	});
 
 	function setExample (r, g, b) {
 		let obj = document.querySelector('.js-set-color');
 
 		obj.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
 	}
-	
+
+	//Events
+	document.querySelector('.js-close-video').addEventListener('click', (e)=>{
+		e.preventDefault();
+
+		process = false;
+		
+		videoContainerWrapper.classList.remove('isOpened');
+	})
+
+	document.querySelector('.js-open-video').addEventListener('click', (e)=>{
+		e.preventDefault();
+
+		process = true;
+		realTime();
+
+		videoContainerWrapper.classList.add('isOpened');
+	})
 });
 
 
