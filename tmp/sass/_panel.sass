@@ -1,0 +1,47 @@
+.s-panel
+	position: fixed
+	display: block
+	top: 50%
+	right: 0
+	width: 0px
+	&__list
+		position: absolute
+		top: 0
+		left: 0
+		list-style: none
+		margin: 0
+		padding: 0
+		transform: translateX(-57px)
+		transition: 0.3s
+		&:hover
+			transform: translateX(-100%)
+	&__item
+		display: flex
+		align-items: center
+		background-color: $accent
+		padding-right: 25px
+		cursor: pointer
+		transition: 0.3s
+		&:hover
+			opacity: 0.9
+		&:not(:last-of-type)
+			border-bottom: 2px solid #e16e00
+	&__icon
+		flex: none
+		position: relative
+		width: 57px
+		height: 57px
+		img
+			position: absolute
+			display: block
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			width: 22px
+			margin: auto
+	&__text
+		flex: none
+		color: #fff
+		font-weight: 500
+		white-space: nowrap
