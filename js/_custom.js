@@ -1,10 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
 	var canvas = document.getElementById("canvas"),
 		canvas2 = document.getElementById("canvas2"),
+		hidden_canvas = document.querySelector('#canvas3'),
 		context = canvas.getContext("2d"),
 		context2 = canvas2.getContext("2d"),
+		context3 = hidden_canvas.getContext("2d"),
 		width = window.innerWidth,
-		height = window.innerHeight;
+		height = window.innerHeight,
+		video = document.querySelector('#video'),
+		videoContainer = document.querySelector('.video'),
+		width2, height2;
                  
 	var img = new Image();
 	var img2 = new Image();
@@ -85,6 +90,78 @@ document.addEventListener("DOMContentLoaded", function() {
 		return context2.getImageData(0,0, width, height);
 	}
 
+	(function initCamera() {
+		// Получаем размер видео элемента.
+		width2 = videoContainer.clientWidth,
+		height2 = videoContainer.clientHeight,
+	
+		// Установка размеров canvas идентичных с video.
+		hidden_canvas.width = width2;
+		hidden_canvas.height = height2;
+	})()
+
+	function getVideoData(){
+		// Отрисовка текущего кадра с video в canvas.
+		context3.drawImage(video, 0, 0, width2, height2);
+
+		var rectWidth = width2 * 0.1,
+			rectHeight = height2 * 0.1,
+			fromX = (width2 / 2) - (rectWidth / 2),
+			fromY = (height2 / 2) - (rectHeight / 2);
+
+		// console.log(fromX, fromY, toX, toY);
+		// context3.beginPath();
+		// context3.rect(fromX - 15, fromY - 15, rectWidth + 15, rectHeight + 15);
+		// context3.closePath();
+		// context3.strokeStyle = "white";
+		// context3.stroke();
+
+		return context3.getImageData(fromX + 5, fromY + 5, rectWidth - 5, rectHeight - 5);
+	}
+
+	function takeSnapshot() {
+		var imageData = getVideoData(),
+			colors = {
+				red: [],
+				green: [],
+				blue: []
+			};
+
+		//Получим усреднённый цвет из центральной области
+		for (var i = 0; i < imageData.data.length; i += 4) {
+			let red = imageData.data[i]; // получаем компоненту красного цвета
+			let green = imageData.data[i + 1];  // получаем компоненту зеленого цвета
+			let blue = imageData.data[i + 2];   // получаем компоненту синего цвета
+
+
+			colors.red.push(red)
+			colors.green.push(green)
+			colors.blue.push(blue)
+		}
+
+		let length = colors.red.length;
+		let aRed = colors.red.reduce((prev, current)=>prev + current) / length;
+		let aGreen = colors.green.reduce((prev, current)=>prev + current) / length;
+		let aBlue = colors.blue.reduce((prev, current)=>prev + current) / length;
+
+		setExample (aRed, aGreen, aBlue);
+	}
+
+	function realTime () {
+		takeSnapshot();
+
+		requestAnimationFrame(realTime)
+	}
+
+	realTime();
+
+	document.querySelector('.js-capture').addEventListener('click', takeSnapshot);
+
+	function setExample (r, g, b) {
+		let obj = document.querySelector('.js-set-color');
+
+		obj.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
+	}
 	
 });
 
