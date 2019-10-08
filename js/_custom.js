@@ -1,263 +1,456 @@
+// Определяет сенсорные экраны
+/*! modernizr 3.6.0 (Custom Build) | MIT *
+ * https://modernizr.com/download/?-touchevents-setclasses !*/
+ !function(e,n,t){function o(e,n){return typeof e===n}function s(){var e,n,t,s,a,i,r;for(var l in c)if(c.hasOwnProperty(l)){if(e=[],n=c[l],n.name&&(e.push(n.name.toLowerCase()),n.options&&n.options.aliases&&n.options.aliases.length))for(t=0;t<n.options.aliases.length;t++)e.push(n.options.aliases[t].toLowerCase());for(s=o(n.fn,"function")?n.fn():n.fn,a=0;a<e.length;a++)i=e[a],r=i.split("."),1===r.length?Modernizr[r[0]]=s:(!Modernizr[r[0]]||Modernizr[r[0]]instanceof Boolean||(Modernizr[r[0]]=new Boolean(Modernizr[r[0]])),Modernizr[r[0]][r[1]]=s),f.push((s?"":"no-")+r.join("-"))}}function a(e){var n=u.className,t=Modernizr._config.classPrefix||"";if(p&&(n=n.baseVal),Modernizr._config.enableJSClass){var o=new RegExp("(^|\\s)"+t+"no-js(\\s|$)");n=n.replace(o,"$1"+t+"js$2")}Modernizr._config.enableClasses&&(n+=" "+t+e.join(" "+t),p?u.className.baseVal=n:u.className=n)}function i(){return"function"!=typeof n.createElement?n.createElement(arguments[0]):p?n.createElementNS.call(n,"http://www.w3.org/2000/svg",arguments[0]):n.createElement.apply(n,arguments)}function r(){var e=n.body;return e||(e=i(p?"svg":"body"),e.fake=!0),e}function l(e,t,o,s){var a,l,f,c,d="modernizr",p=i("div"),h=r();if(parseInt(o,10))for(;o--;)f=i("div"),f.id=s?s[o]:d+(o+1),p.appendChild(f);return a=i("style"),a.type="text/css",a.id="s"+d,(h.fake?h:p).appendChild(a),h.appendChild(p),a.styleSheet?a.styleSheet.cssText=e:a.appendChild(n.createTextNode(e)),p.id=d,h.fake&&(h.style.background="",h.style.overflow="hidden",c=u.style.overflow,u.style.overflow="hidden",u.appendChild(h)),l=t(p,e),h.fake?(h.parentNode.removeChild(h),u.style.overflow=c,u.offsetHeight):p.parentNode.removeChild(p),!!l}var f=[],c=[],d={_version:"3.6.0",_config:{classPrefix:"",enableClasses:!0,enableJSClass:!0,usePrefixes:!0},_q:[],on:function(e,n){var t=this;setTimeout(function(){n(t[e])},0)},addTest:function(e,n,t){c.push({name:e,fn:n,options:t})},addAsyncTest:function(e){c.push({name:null,fn:e})}},Modernizr=function(){};Modernizr.prototype=d,Modernizr=new Modernizr;var u=n.documentElement,p="svg"===u.nodeName.toLowerCase(),h=d._config.usePrefixes?" -webkit- -moz- -o- -ms- ".split(" "):["",""];d._prefixes=h;var m=d.testStyles=l;Modernizr.addTest("touchevents",function(){var t;if("ontouchstart"in e||e.DocumentTouch&&n instanceof DocumentTouch)t=!0;else{var o=["@media (",h.join("touch-enabled),("),"heartz",")","{#modernizr{top:9px;position:absolute}}"].join("");m(o,function(e){t=9===e.offsetTop})}return t}),s(),a(f),delete d.addTest,delete d.addAsyncTest;for(var v=0;v<Modernizr._q.length;v++)Modernizr._q[v]();e.Modernizr=Modernizr}(window,document);
+ 
 document.addEventListener("DOMContentLoaded", function() {
-	var canvas = document.getElementById("canvas"),
-		canvas2 = document.getElementById("canvas2"),
-		hidden_canvas = document.querySelector('#canvas3'),
-		context = canvas.getContext("2d"),
-		context2 = canvas2.getContext("2d"),
-		context3 = hidden_canvas.getContext("2d"),
-		width = window.innerWidth,
-		height = window.innerHeight,
-		video = document.querySelector('#video'),
-		videoContainer = document.querySelector('.video'),
-		videoContainerWrapper = document.querySelector('.wrapper'),
-		width2, height2, aRed, aGreen, aBlue,
-		process = false;
-                 
-	var img = new Image();
-	var img2 = new Image();
-	img.src = "/img/@2x/209.jpg";
-	img2.src = "/img/@2x/209.png";
+	var form = {
+		elCalc: document.querySelector('.js-calc'),
+		elForm: document.querySelector('.js-form'),
+		elSuccess: document.querySelector('.js-success'),
+		currentStep: 0,
+		currentRoute: 'Диван',
+		steps: null,
+		routes: {
+			'Диван': ['Что выбираете?', 'Какая комплектация дивана вас интересует?', 'Выберите расположение спального места', 'Выберите тип материала', 'Где планируете поставить?', 'finish', 'success'],
+			'Кресло': ['Что выбираете?', 'Какой тип кресла вас интересует?', 'Выберите тип материала', 'Где планируете поставить?', 'finish', 'success'],
+			'Кровать': ['Что выбираете?', 'Наличие подъемного механизма?', 'Выберите тип материала', 'Выберите размер спального места', 'finish', 'success'],
+			'Матрас': ['Что выбираете?', 'Выберите жесткость матраса', 'Выберите размер спального места', 'finish', 'success']
+		},
+		data: {
+			'Что выбираете?': ['Диван']
+		},
+		phone: '',
+		phoneMask: null,
+		phoneMask2: null,
+		calc: {
+			accept: false,
+			number: false
+		},
+		form: {
+			accept: false,
+			number: false
+		},
+		controller () {
+			var step = this.routes[this.currentRoute][this.currentStep];
 
-	canvas.width = width;
-	canvas.height =height;
+			[].forEach.call(this.steps, (s, index)=>{
+				if (step == s.dataset.step) {
+					this.showStep(index)
+					this.setProgress()
+					this.checkButtons()
+					this.validation()
+				}
+			})
+		},
+		validation () {
+			var step = this.routes[this.currentRoute][this.currentStep];
 
-	canvas2.width = width;
-	canvas2.height =height;
+			if (step in this.data) {
+				if (this.data[step].length > 0) {
+					this.statusNext(true);
+					return true
+				}
+			}
 
-	img.onload = function() {
-		
-		context.drawImage(img, 0, 0, width, height);
-		
-	};
+			this.statusNext(false);
+			return false
+		},
+		validationCalc () {
+			var submit = document.querySelector('.js-submit');
 
-	img2.onload = function() {
+			if (this.calc.accept && this.calc.number) {
+				submit.classList.remove('invalid');
+			} else {
+				submit.classList.add('invalid')
+			}
+		},
+		validationForm () {
+			var submit = document.querySelector('.js-submit-2');
 
-		reset();
+			if (this.form.accept && this.form.number) {
+				submit.classList.remove('invalid');
+			} else {
+				submit.classList.add('invalid')
+			}
+		},
+		statusNext (status) {
+			var next = document.querySelector('.js-next-step');
 
-	}
+			if (!status) {
+				next.classList.add('invalid')
+			} else {
+				next.classList.remove('invalid')
+			}
+		},
+		progress () {
+			return Math.round((this.currentStep / (this.routes[this.currentRoute].length - 2)) * 100)
+		},
+		setProgress () {
+			var output = document.querySelector('.js-set-progress'),
+				indicator = document.querySelector('.js-set-indicator'),
+				p = document.querySelector('.w-progress');
 
-	window.addEventListener('resize', function () {
-		width = window.innerWidth,
-		height = window.innerHeight;
+			output.innerHTML = this.progress();
+			indicator.style.width = this.progress() + '%';
 
-		canvas.width = width;
-		canvas.height =height;
+			if (this.progress() === 0) {
+				p.classList.add('null')
+			} else {
+				p.classList.remove('null')
+			}
+		},
+		showStep (index) {
+			var stepsContainer = document.querySelector('.js-steps');
 
-		canvas2.width = width;
-		canvas2.height =height;
+			stepsContainer.style.transform = 'translateX(' + (-index * (100/11)) + '%)';
+		},
+		getDataStep (el) {
+			return el.closest('.js-step').dataset.step
+		},
+		checkButtons () {
+			var prev = document.querySelector('.js-prev-step'),
+				next = document.querySelector('.js-next-step'),
+				footer = document.querySelector('.w__footer');
 
-		context.clearRect(0,0,width,height);
-		context.drawImage(img, 0, 0, width, height);
-		reset();
-	})
+			if (this.currentStep >= this.routes[this.currentRoute].length - 2) {
+				footer.style.opacity = '0';
+				footer.style.visibility = 'hidden';
+			} else {
+				footer.style.opacity = '1';
+				footer.style.visibility = 'visible';
+			}
 
-	document.getElementById('color').addEventListener('change', function(e) {
-		var value = e.target.value;
+			if (this.currentStep === 0) {
+				prev.hidden = true;
+			} else {
+				prev.hidden = false;
+			}
+		},
+		openCalc () {
+			this.elCalc.classList.add('isOpened');
+		},
+		closeCalc () {
+			this.elCalc.classList.remove('isOpened');
+			this.refreshCalc();
+		},
+		openForm () {
+			this.elForm.classList.add('isOpened');
+		},
+		closeForm () {
+			var stepsContainer = document.querySelector('.js-steps-form');
 
-		// #XXXXXX -> ["XX", "XX", "XX"]
-		var res = value.match(/[A-Za-z0-9]{2}/g);
+			stepsContainer.style.transform = 'translateX(' + 0 + '%)';
+			this.elForm.classList.remove('isOpened');
+		},
+		openFormSuccess () {
+			var stepsContainer = document.querySelector('.js-steps-form');
 
-		// ["XX", "XX", "XX"] -> [n, n, n]
-		res = res.map(function(v) { return parseInt(v, 16) });
+			stepsContainer.style.transform = 'translateX(' + (-(100/2)) + '%)';
+		},
+		refreshCalc () {
+			this.currentStep = 0;
+			this.currentRoute = 'Диван';
+			this.data = {
+				'Что выбираете?': ['Диван']
+			}
+			var inputs = document.querySelectorAll('.js-input');
 
-		setColor(res);
-	})
+			[].forEach.call(inputs, (s)=>{
+				s.checked = false;
+				if (s.value === 'Диван') {
+					s.checked = true;
+				}
+			})
 
-	function setColor([red1, green1, blue1]) {
-		let imageData = reset();
+			document.querySelector('.js-input-input').value = '';
+			document.querySelector('.js-calc-accept').checked = false;
+			this.phoneMask.typedValue = ''
 
-		for (var i = 0; i < imageData.data.length; i += 4) {
-			let red = imageData.data[i]; // получаем компоненту красного цвета
-			let green = imageData.data[i + 1];  // получаем компоненту зеленого цвета
-			let blue = imageData.data[i + 2];   // получаем компоненту синего цвета
-			let alpha = imageData.data[i + 3];   // получаем компоненту синего цвета
+			this.controller();
+		},
+		clearInputs () {
+			var inputs = document.querySelectorAll('.js-input');
 
-			let delta = ((red + green + blue) / 3) / 255;
+			[].forEach.call(inputs, (s)=>{
+				if (s.name !== 'firststep') {
+					s.checked = false;
+				}
+			})
 
-			// imageData.data[i] = (red1 + red/1.2) / 2;
-			// imageData.data[i + 1] = (green1 + green/1.2) / 2;
-			// imageData.data[i + 2] = (blue1 + blue/1.2) / 2;
-			imageData.data[i] = red1 * delta;
-			imageData.data[i + 1] = green1 * delta;
-			imageData.data[i + 2] = blue1 * delta;
-		}
+			document.querySelector('.js-input-input').value = '';
+		},
+		sendData (data) {
+			return fetch('/ajax/widgetSend.php', {
+				method: 'POST',
+				headers: {
+				  'Content-Type': 'application/json;charset=utf-8'
+				},
+				body: JSON.stringify(data)
+			})
+		},
+		init () {
+			//Определим шаги формы
+			this.steps = document.querySelectorAll('.js-step');
+			//Кнопка далее
+			document.querySelector('.js-next-step').addEventListener('click', ()=>{
+				var length = this.routes[this.currentRoute].length;
+
+				if (!this.validation()) {
+					alert('Пожалуйста, заполните необходимые поля')
+					return null;
+				}
+
+				if (this.currentStep < length - 1) {
+					this.currentStep++;
+				}
+
+				this.controller();
+			})
+			//Кнопка назад
+			document.querySelector('.js-prev-step').addEventListener('click', (e)=>{
+				if (this.currentStep > 0) {
+					this.currentStep--;
+				}
+
+				this.controller();
+			})
+			//Галочка согласен на форме получить расчёт
+			document.querySelector('.js-calc-accept').addEventListener('change', (e)=>{
+				if (e.target.checked) {
+					this.calc.accept = true;
+				} else {
+					this.calc.accept = false;
+				}
+
+				this.validationCalc();
+			})
+			//Кнопка Получить расчет
+			document.querySelector('.js-submit').addEventListener('click', (e)=>{
+				var accept = document.querySelector('.js-calc-accept');
+
+				if (accept.checked && 'Телефон' in this.data && this.data['Телефон'] !== '') {
+					this.sendData(this.data)
+						.then((response)=>{
+							if (response.ok) { //response.ok
+								this.currentStep++
+								this.controller();
+							} else {
+								throw new Error();
+							}
+						})
+						.catch((e)=>{
+							alert('Произошла ошибка отправки формы, повторите попытку позднее.')
+							console.log(e);
+						})
+					
+				} else {
+					alert('Пожалуйста, заполните необходимые поля')
+				}
+			})
+			//Галочка согласен на форме Заказать
+			document.querySelector('.js-form-accept-2').addEventListener('change', (e)=>{
+				if (e.target.checked) {
+					this.form.accept = true;
+				} else {
+					this.form.accept = false;
+				}
+
+				this.validationForm();
+			})
+			//Кнопка Заказать
+			document.querySelector('.js-submit-2').addEventListener('click', (e)=>{
+				var accept = document.querySelector('.js-form-accept-2');
+
+				if (accept.checked && this.phone !== '') {
+					this.sendData(this.phone)
+						.then((response)=>{
+							if (response.ok) { //response.ok
+								this.openFormSuccess()
+							} else {
+								throw new Error();
+							}
+						})
+						.catch((e)=>{
+							alert('Произошла ошибка отправки формы, повторите попытку позднее.')
+							console.log(e);
+						})
+				} else {
+					alert('Пожалуйста, заполните необходимые поля')
+				}
+			})
+			//События на инпутах
+			document.addEventListener('change', (e)=>{
+				if (e.target.classList.contains('js-input')) {
+					var el = e.target,
+						step = this.getDataStep(el),
+						checked = e.target.checked;
+
+					if (step === 'Что выбираете?') {
+						this.clearInputs();
+						this.currentRoute = el.value;
+						this.data = {};
+						this.data[step] = [el.value];
+					} else if (step in this.data) {
+						if (el.type === 'checkbox') {
+							if (checked) {
+								this.data[step].push(el.value)
+							} else {
+								this.data[step].splice(this.data[step].indexOf(el.value),1)
+							}
+						} else if (el.type === 'radio') {
+							if (checked) {
+								this.data[step] = [];
+								this.data[step].push(el.value);
+							}
+						} else {
+							this.data[step] = [el.value];
+						}
+					} else {
+						this.data[step] = [];
+
+						if (el.type === 'checkbox' || el.type === 'radio') {
+							if (checked) {
+								this.data[step].push(el.value)
+							}
+						}
+					}
+				}
+				
+				this.validation();
+			})
+			document.addEventListener('input', (e)=>{
+				if (e.target.classList.contains('js-input-input')) {
+					var el = e.target,
+						step = this.getDataStep(el);
+
+					if (el.value !== '') {
+						this.data[step] = [el.value];
+					} else {
+						this.data[step] = [];
+					}
+				}
+				
+				this.validation();
+			})
+			//Кнопки на панели
+			document.addEventListener('click', (e)=>{
+				var el = e.target.closest('.s-panel__item'),
+					item = '';
+
+				if (el && el.classList.contains('s-panel__item')) {
+					item = el.dataset.item;
+
+					if (item == 'calc') {
+						this.openCalc()
+					}
+					if (item == 'form') {
+						this.openForm()
+					}
+					if (item == 'bonus') {
+						window.location = 'https://formula-divana.ru/bonus/'
+					}
+				}
+			})
 			
-		context2.putImageData(imageData, 0,0);
-	}
+			document.addEventListener('click', (e)=>{
+				//Закрыть калькулятор
+				if (e.target.classList.contains('js-calc-close')) {
+					e.preventDefault();
 
-	function reset () {
-		context2.clearRect(0,0,width,height);
-		context2.drawImage(img2, 0, 0, width, height);
+					this.closeCalc();
+				}
+				//Закрыть форму
+				if (e.target.classList.contains('js-form-close')) {
+					e.preventDefault();
 
-		return context2.getImageData(0,0, width, height);
-	}
+					this.closeForm();
+				}
+			})
+			
+			//Закрыть success
+			document.querySelector('.js-success-close').addEventListener('click', (e)=>{
+				e.preventDefault();
 
-	(function initCamera() {
-		// Получаем размер видео элемента.
-		width2 = videoContainer.clientWidth,
-		height2 = videoContainer.clientHeight,
-	
-		// Установка размеров canvas идентичных с video.
-		hidden_canvas.width = width2;
-		hidden_canvas.height = height2;
-	})()
+				this.closeSuccess();
+			})
+			//Маска
+			this.phoneMask = IMask(document.getElementById('tel'), {
+				mask: '+{7 }(000)000-00-00',
+				lazy: false,  // make placeholder always visible
+				placeholderChar: '_'     // defaults to '_'
+			});
 
-	function getVideoData(){
-		// Отрисовка текущего кадра с video в canvas.
-		context3.drawImage(video, 0, 0, width2, height2);
+			this.phoneMask.on("accept", ()=>{
+				this.data['Телефон'] = ''
+				this.calc.number = false;
+				this.validationCalc();
+			});
 
-		var rectWidth = width2 * 0.1,
-			rectHeight = height2 * 0.1,
-			fromX = (width2 / 2) - (rectWidth / 2),
-			fromY = (height2 / 2) - (rectHeight / 2);
+			this.phoneMask.on("complete", ()=>{
+				this.data['Телефон'] = this.phoneMask.value
+				this.calc.number = true;
+				this.validationCalc();
+			});
 
-		// console.log(fromX, fromY, toX, toY);
-		// context3.beginPath();
-		// context3.rect(fromX - 15, fromY - 15, rectWidth + 15, rectHeight + 15);
-		// context3.closePath();
-		// context3.strokeStyle = "white";
-		// context3.stroke();
+			//Маска 2
+			this.phoneMask2 = IMask(document.getElementById('tel2'), {
+				mask: '+{7 }(000)000-00-00',
+				lazy: false,  // make placeholder always visible
+				placeholderChar: '_'     // defaults to '_'
+			});
 
-		return context3.getImageData(fromX + 5, fromY + 5, rectWidth - 5, rectHeight - 5);
-	}
+			this.phoneMask2.on("accept", ()=>{
+				this.phone = '';
+				this.form.number = false;
+				this.validationForm();
+			});
 
-	function takeSnapshot() {
-		var imageData = getVideoData(),
-			colors = {
-				red: [],
-				green: [],
-				blue: []
-			};
+			this.phoneMask2.on("complete", ()=>{
+				this.phone = this.phoneMask2.value
+				this.form.number = true;
+				this.validationForm();
+			});
 
-		//Получим усреднённый цвет из центральной области
-		for (var i = 0; i < imageData.data.length; i += 4) {
-			let red = imageData.data[i]; // получаем компоненту красного цвета
-			let green = imageData.data[i + 1];  // получаем компоненту зеленого цвета
-			let blue = imageData.data[i + 2];   // получаем компоненту синего цвета
-
-
-			colors.red.push(red)
-			colors.green.push(green)
-			colors.blue.push(blue)
+			//Установм первый шаг
+			this.controller();
 		}
-
-		let length = colors.red.length;
-		aRed = colors.red.reduce((prev, current)=>prev + current) / length;
-		aGreen = colors.green.reduce((prev, current)=>prev + current) / length;
-		aBlue = colors.blue.reduce((prev, current)=>prev + current) / length;
-
-		setExample (aRed, aGreen, aBlue);
 	}
 
-	function realTime () {
-		takeSnapshot();
+	form.init();
 
-		if (!process) return null;
-
-		requestAnimationFrame(realTime)
-	}
-
-	realTime();
-
-	document.querySelector('.js-capture').addEventListener('click', ()=>{
-		setColor([aRed, aGreen, aBlue]);
-		document.querySelector('.js-open-video').style.backgroundColor = 'rgb(' + aRed + ',' + aGreen + ',' + aBlue + ')';
-	});
-
-	function setExample (r, g, b) {
-		let obj = document.querySelector('.js-set-color');
-
-		obj.style.backgroundColor = 'rgb(' + r + ',' + g + ',' + b + ')';
-	}
-
-	//Events
-	document.querySelector('.js-close-video').addEventListener('click', (e)=>{
-		e.preventDefault();
-
-		process = false;
-		
-		videoContainerWrapper.classList.remove('isOpened');
-	})
-
-	document.querySelector('.js-open-video').addEventListener('click', (e)=>{
-		e.preventDefault();
-
-		process = true;
-		realTime();
-
-		videoContainerWrapper.classList.add('isOpened');
-	})
+	window.form = form;
 });
 
+//Полифилл для closest и matches IE
+(function () {
 
-/*
-*  Copyright (c) 2015 The WebRTC project authors. All Rights Reserved.
-*
-*  Use of this source code is governed by a BSD-style license
-*  that can be found in the LICENSE file in the root of the source
-*  tree.
-*/
+	// проверяем поддержку
+	if (!Element.prototype.matches) {
 
-const videoElement = document.querySelector('video');
-const videoSelect = document.querySelector('select#videoSource');
-const selectors = [videoSelect];
+		// определяем свойство
+		Element.prototype.matches = Element.prototype.matchesSelector ||
+			Element.prototype.webkitMatchesSelector ||
+			Element.prototype.mozMatchesSelector ||
+			Element.prototype.msMatchesSelector;
 
-function gotDevices(deviceInfos) {
-  // Handles being called several times to update labels. Preserve values.
-  const values = selectors.map(select => select.value);
-  selectors.forEach(select => {
-    while (select.firstChild) {
-      select.removeChild(select.firstChild);
-    }
-  });
-  for (let i = 0; i !== deviceInfos.length; ++i) {
-    const deviceInfo = deviceInfos[i];
-    const option = document.createElement('option');
-	option.value = deviceInfo.deviceId;
-	
-   if (deviceInfo.kind === 'videoinput') {
-      option.text = deviceInfo.label || `camera ${videoSelect.length + 1}`;
-      videoSelect.appendChild(option);
-    } else {
-      console.log('Some other kind of source/device: ', deviceInfo);
-    }
-  }
+	}
 
-  selectors.forEach((select, selectorIndex) => {
-    if (Array.prototype.slice.call(select.childNodes).some(n => n.value === values[selectorIndex])) {
-      select.value = values[selectorIndex];
-    }
-  });
-}
+})();
+(function () {
 
-navigator.mediaDevices.enumerateDevices().then(gotDevices).catch(handleError);
+	// проверяем поддержку
+	if (!Element.prototype.closest) {
 
+		// реализуем
+		Element.prototype.closest = function (css) {
+			var node = this;
 
-function gotStream(stream) {
-  window.stream = stream; // make stream available to console
-  videoElement.srcObject = stream;
-  // Refresh button list in case labels have become available
-  return navigator.mediaDevices.enumerateDevices();
-}
-
-function handleError(error) {
-  console.log('navigator.MediaDevices.getUserMedia error: ', error.message, error.name);
-}
-
-function start() {
-  if (window.stream) {
-    window.stream.getTracks().forEach(track => {
-      track.stop();
-    });
-  }
-
-  const videoSource = videoSelect.value;
-  const constraints = {
-    video: {deviceId: videoSource ? {exact: videoSource} : undefined}
-  };
-  navigator.mediaDevices.getUserMedia(constraints).then(gotStream).then(gotDevices).catch(handleError);
-}
-
-videoSelect.onchange = start;
-
-start();
+			while (node) {
+				if (node.matches(css)) return node;
+				else node = node.parentElement;
+			}
+			return null;
+		};
+	}
+})();
