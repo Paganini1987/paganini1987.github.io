@@ -30,6 +30,7 @@ html, body
 	height: 100%
 
 .slides
+	position: relative
 	width: 100%
 	height: 100%
 	list-style: none
@@ -43,10 +44,14 @@ html, body
 	width: 100vw
 	height: 100%
 	min-height: 900px
-	background-image: url('/img/@2x/gradient.jpg')
+	// background-image: url('/img/@2x/gradient.jpg')
 	background-repeat: no-repeat
 	background-position: 50%
 	background-size: cover
+	&[data-slide="0"]
+		.grid
+			& > *:not(.grid__svg)
+				visibility: hidden
 	&.active
 		display: block
 	&__logo
@@ -60,6 +65,14 @@ html, body
 		top: 50%
 		left: 50%
 		transform: translate(-50%,-50%)
+
+.loaded
+	.slide
+		&[data-slide="0"]
+			.grid
+				*
+					visibility: visible
+
 
 .top-line
 	position: absolute
@@ -152,6 +165,8 @@ html, body
 .star
 	display: block
 	position: absolute
+	&.animation
+		animation: star 29s linear infinite
 	&--1
 		width: 200px
 		top: 48.5%
@@ -188,6 +203,12 @@ html, body
 		width: 100px
 		top: 1400px
 		left: 2700px
+
+@keyframes star
+	0%
+		transform: rotate(0deg)
+	100%
+		transform: rotate(360deg)
 
 .glasses
 	display: block
@@ -356,7 +377,9 @@ html, body
 		&:hover
 			animation: button-spinning .7s linear infinite
 			.button__text
-				animation: text-spinning 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite
+				animation: text-spinning 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite
+			.button__arrow, .button__push
+				animation: button-spinning .7s linear infinite
 
 	.share
 		&__insta, &__fb
@@ -390,7 +413,7 @@ html, body
 @keyframes text-spinning
 	50%
 		transform: rotate(0deg)
-	65%
+	75%
 		transform: rotate(360deg)
 	100%
 		transform: rotate(360deg)
@@ -414,7 +437,7 @@ html, body
 	background-repeat: no-repeat
 	background-position: 50%
 	background-size: cover
-	clip-path: url(#mask-video)
+	clip-path: polygon(0px 0px, 0px 500px, 200px 500px, 200px 700px, 1300px 700px, 1300px 0px)
 
 .more
 	position: absolute
@@ -436,6 +459,16 @@ html, body
 		padding: 0
 		margin: 0
 	&__star
+		animation: star linear
+		&:nth-of-type(1)
+			animation-delay: 3s
+			animation-duration: 2s
+		&:nth-of-type(2)
+			animation-delay: 8s
+			animation-duration: 1s
+		&:nth-of-type(3)
+			animation-delay: 12s
+			animation-duration: 4s
 		&:not(:last-of-type)
 			margin-right: 14px
 		svg
@@ -466,7 +499,7 @@ html, body
 .help
 	display: block
 	position: absolute
-	top: 1935px
+	top: 2038px
 	left: 2862px
 	font-family: Fugue
 	font-size: 16px
@@ -661,6 +694,26 @@ html, body
 			color: #FC3F27
 
 
+
+
+@media only screen and (min-width : 1920px)
+	.video
+		top: 1100px
+		left: 1300px
+		width: 1700px
+		height: 900px
+		clip-path: polygon(0px 0px, 0px 700px, 200px 700px, 200px 900px, 1700px 900px, 1700px 0px)
+
+	.top-line
+		&--video
+			top: 33.5%
+
+	.time
+		top: 1030px
+
+	.button
+		&--1
+			left: 64%
 
 
 @media only screen and (max-width : 1599px)
@@ -1095,7 +1148,7 @@ html, body
 		&__logo
 			width: 9%
 			bottom: auto
-			top: 125vw
+			top: 115vw
 			left: 4%
 
 	.top-line
@@ -1125,7 +1178,7 @@ html, body
 			left: 47%
 			width: 50%
 		&--2
-			top: 118vw
+			top: 109vw
 			left: 19%
 			width: 27%
 
@@ -1150,7 +1203,7 @@ html, body
 
 	.button
 		width: 36%
-		top: 113vw
+		top: 112vw
 		left: 55.5%
 
 	

@@ -407,6 +407,7 @@ html, body {
 }
 
 .slides {
+  position: relative;
   width: 100%;
   height: 100%;
   list-style: none;
@@ -421,10 +422,13 @@ html, body {
   width: 100vw;
   height: 100%;
   min-height: 900px;
-  background-image: url("/img/@2x/gradient.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
+}
+
+.slide[data-slide="0"] .grid > *:not(.grid__svg) {
+  visibility: hidden;
 }
 
 .slide.active {
@@ -446,6 +450,10 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.loaded .slide[data-slide="0"] .grid * {
+  visibility: visible;
 }
 
 .top-line {
@@ -584,6 +592,11 @@ html, body {
   position: absolute;
 }
 
+.star.animation {
+  -webkit-animation: star 29s linear infinite;
+          animation: star 29s linear infinite;
+}
+
 .star--1 {
   width: 200px;
   top: 48.5%;
@@ -636,6 +649,28 @@ html, body {
   width: 100px;
   top: 1400px;
   left: 2700px;
+}
+
+@-webkit-keyframes star {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes star {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
 }
 
 .glasses {
@@ -914,8 +949,13 @@ html, body {
 }
 
 .no-touchevents .button:hover .button__text {
-  -webkit-animation: text-spinning 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
-          animation: text-spinning 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  -webkit-animation: text-spinning 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+          animation: text-spinning 5s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+}
+
+.no-touchevents .button:hover .button__arrow, .no-touchevents .button:hover .button__push {
+  -webkit-animation: button-spinning .7s linear infinite;
+          animation: button-spinning .7s linear infinite;
 }
 
 .no-touchevents .share__insta:hover svg, .no-touchevents .share__fb:hover svg {
@@ -975,7 +1015,7 @@ html, body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  65% {
+  75% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -990,7 +1030,7 @@ html, body {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
   }
-  65% {
+  75% {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
@@ -1020,8 +1060,8 @@ html, body {
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
-  -webkit-clip-path: url(#mask-video);
-          clip-path: url(#mask-video);
+  -webkit-clip-path: polygon(0px 0px, 0px 500px, 200px 500px, 200px 700px, 1300px 700px, 1300px 0px);
+          clip-path: polygon(0px 0px, 0px 500px, 200px 500px, 200px 700px, 1300px 700px, 1300px 0px);
 }
 
 .more {
@@ -1064,6 +1104,32 @@ html, body {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+.more__star {
+  -webkit-animation: star linear;
+          animation: star linear;
+}
+
+.more__star:nth-of-type(1) {
+  -webkit-animation-delay: 3s;
+          animation-delay: 3s;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+.more__star:nth-of-type(2) {
+  -webkit-animation-delay: 8s;
+          animation-delay: 8s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+
+.more__star:nth-of-type(3) {
+  -webkit-animation-delay: 12s;
+          animation-delay: 12s;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
 }
 
 .more__star:not(:last-of-type) {
@@ -1109,7 +1175,7 @@ html, body {
 .help {
   display: block;
   position: absolute;
-  top: 1935px;
+  top: 2038px;
   left: 2862px;
   font-family: Fugue;
   font-size: 16px;
@@ -1405,6 +1471,26 @@ html, body {
 
 .rotate__text span {
   color: #FC3F27;
+}
+
+@media only screen and (min-width: 1920px) {
+  .video {
+    top: 1100px;
+    left: 1300px;
+    width: 1700px;
+    height: 900px;
+    -webkit-clip-path: polygon(0px 0px, 0px 700px, 200px 700px, 200px 900px, 1700px 900px, 1700px 0px);
+            clip-path: polygon(0px 0px, 0px 700px, 200px 700px, 200px 900px, 1700px 900px, 1700px 0px);
+  }
+  .top-line--video {
+    top: 33.5%;
+  }
+  .time {
+    top: 1030px;
+  }
+  .button--1 {
+    left: 64%;
+  }
 }
 
 @media only screen and (max-width: 1599px) {
@@ -1898,7 +1984,7 @@ html, body {
   .slide__logo {
     width: 9%;
     bottom: auto;
-    top: 125vw;
+    top: 115vw;
     left: 4%;
   }
   .top-line {
@@ -1928,7 +2014,7 @@ html, body {
     width: 50%;
   }
   .cube--2 {
-    top: 118vw;
+    top: 109vw;
     left: 19%;
     width: 27%;
   }
@@ -1954,7 +2040,7 @@ html, body {
   }
   .button {
     width: 36%;
-    top: 113vw;
+    top: 112vw;
     left: 55.5%;
   }
 }
