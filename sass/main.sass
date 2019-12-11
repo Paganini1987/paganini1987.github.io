@@ -715,6 +715,24 @@ html, body
 		&--1
 			left: 64%
 
+@media only screen and (min-width : 1920px) and (min-aspect-ratio : 16/9)
+	.video
+		top: 1200px
+		left: 1300px
+		width: 1700px
+		height: 800px
+		clip-path: polygon(0px 0px, 0px 600px, 200px 600px, 200px 900px, 1700px 900px, 1700px 0px)
+
+	.top-line
+		&--video
+			top: 36.5%
+
+	.time
+		top: 1125px
+
+	.help
+		top: 1935px
+		left: 3042px
 
 @media only screen and (max-width : 1599px)
 	.slide
@@ -723,10 +741,10 @@ html, body
 		&::before
 			content: ''
 			display: block
-			padding-top: 56%
+			padding-top: 53%
 		&__logo
 			width: 4%
-			top: 44vw
+			top: 42vw
 			left: 1%
 
 
@@ -773,9 +791,9 @@ html, body
 
 	.cube
 		&--1
-			width: 31%
-			top: 19vw
-			left: 19%
+			width: 28%
+			top: 18.5vw
+			left: 20%
 		&--2
 			width: 16%
 			top: 0vw
@@ -794,7 +812,7 @@ html, body
 			left: 6%
 		&--2
 			width: 6%
-			top: 44vw
+			top: 37.5vw
 			left: 56.2%
 		&--3
 			width: 6%
@@ -826,9 +844,9 @@ html, body
 			left: 81.5%
 
 	.button
-		width: 19%
+		width: 17%
 		top: 36vw
-		left: 66.5%
+		left: 69.5%
 		&--1
 			top: 28.5vw
 			left: 74.5%
@@ -842,11 +860,11 @@ html, body
 		left: 54.5%
 
 	.text
-		width: 31%
+		width: 40%
 		top: 20vw
 		left: 52.7%
-		font-size: 24px
-		line-height: 28px
+		font-size: 28px
+		line-height: 34px
 		&--1
 			width: 35%
 			top: 27vw
@@ -863,8 +881,8 @@ html, body
 
 	.help
 		font-size: 14px
-		top: 52.3vw
-		left: 91%
+		top: 46.3vw
+		left: 91.5%
 
 	.more
 		top: 0
@@ -911,7 +929,7 @@ html, body
 			left: 5.6%
 		&--2
 			width: 7%
-			top: 49.8vw
+			top: 46.8vw
 			left: 11.9%
 		&--3
 			width: 5%
@@ -973,6 +991,43 @@ html, body
 		left: 19%
 		&__text
 			font-size: 54px
+
+@media only screen and (max-width : 1599px) and (min-width : 1280px) and (min-aspect-ratio : 16/9)
+	.slide
+		&::before
+			padding-top: 47%
+		&__logo
+			top: 35vw
+
+	.cube
+		&--1
+			width: 25%
+		&--3
+			width: 19%
+
+	.text
+		top: 18vw
+		font-size: 24px
+		line-height: 29px
+		&--1
+			top: 23vw
+			left: 56.7%
+			width: 39%
+			font-size: 19px
+			line-height: 23px
+
+	.button
+		top: 30vw
+
+	.video
+		height: 37.4vw
+		clip-path: polygon(0% 0%, 0% 66.5%, 15.5% 66.5%, 15.5% 100%, 100% 100%, 100% 0%)
+
+	.help
+		top: 44.3vw
+
+	.share
+		top: 37.6vw
 
 
 @media only screen and (max-width : 1279px)
