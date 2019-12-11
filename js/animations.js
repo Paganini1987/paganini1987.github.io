@@ -45,17 +45,20 @@ function init () {
 	}, 5000)
 
 	slide0
-		.from('[data-slide="0"] .title, [data-slide="0"] .text', 0.6, {
-			y: 50,
-			opacity: 0
+		.from('[data-slide="0"] .title svg, [data-slide="0"] .text span', 0.6, {
+			y: '100%',
+			opacity: 0,
+			ease: 'power2.out'
 		})
 		.from('[data-slide="0"] .cube', 0.3, {
-			y: 50,
-			opacity: 0
+			y: 80,
+			opacity: 0,
+			ease: 'power2.out'
 		})
 		.from('[data-slide="0"] .ellips', 0.3, {
-			y: 50,
-			opacity: 0
+			y: 80,
+			opacity: 0,
+			ease: 'power2.out'
 		})
 		.from('[data-slide="0"] .star', {
 			duration: 1.5,
@@ -75,7 +78,8 @@ function init () {
 		})
 		.from('[data-slide="0"] .top-line', 0.3, {
 			y: -150,
-			opacity: 0
+			opacity: 0,
+			ease: 'power2.out'
 		},'-=1')
 		.from('[data-slide="0"] .button', 1, {
 			scale: 0.5, 
@@ -85,7 +89,8 @@ function init () {
 		}, '-=0.5')
 		.from('[data-slide="0"] .slide__logo', 0.3, {
 			x: -50,
-			opacity: 0
+			opacity: 0,
+			ease: 'power2.out'
 		})
 		
 

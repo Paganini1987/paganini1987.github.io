@@ -583,6 +583,11 @@ html, body {
   top: 38.5%;
   left: 36.2%;
   width: 594px;
+  overflow: hidden;
+}
+
+.title svg {
+  width: 100%;
 }
 
 .title--1 {
@@ -798,6 +803,11 @@ html, body {
   color: #fff;
   font-size: 33px;
   line-height: 38px;
+  overflow: hidden;
+}
+
+.text span {
+  display: block;
 }
 
 .text--1 {
@@ -1518,9 +1528,17 @@ html, body {
   .button--1 {
     left: 64%;
   }
+  .help {
+    top: 2038px;
+  }
 }
 
 @media only screen and (min-width: 1920px) and (min-aspect-ratio: 16 / 9) {
+  .grid {
+    -webkit-transform: translate(-50%, -51%);
+        -ms-transform: translate(-50%, -51%);
+            transform: translate(-50%, -51%);
+  }
   .video {
     top: 1200px;
     left: 1300px;
@@ -1541,12 +1559,9 @@ html, body {
   }
 }
 
-@media only screen and (min-width: 1600px) and (min-aspect-ratio: 16 / 9) {
+@media only screen and (min-width: 1600px) and (max-width: 1919px) and (min-aspect-ratio: 16 / 9) {
   .slide {
     min-height: 850px;
-  }
-  .top-line {
-    top: 37%;
   }
   .button {
     top: 53.4%;
@@ -1562,9 +1577,6 @@ html, body {
   }
   .cube--2 {
     top: 36.5%;
-  }
-  .time {
-    top: 1138px;
   }
   .help {
     top: 1926px;
@@ -1901,7 +1913,7 @@ html, body {
             clip-path: polygon(0% 0%, 0% 66.5%, 15.5% 66.5%, 15.5% 100%, 100% 100%, 100% 0%);
   }
   .help {
-    top: 44.3vw;
+    top: 46.3vw;
   }
   .share {
     top: 37.6vw;

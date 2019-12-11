@@ -147,6 +147,9 @@ html, body
 	top: 38.5%
 	left: 36.2%
 	width: 594px
+	overflow: hidden
+	svg
+		width: 100%
 	&--1
 		top: 39%
 		left: 36.7%
@@ -279,6 +282,9 @@ html, body
 	color: #fff
 	font-size: 33px
 	line-height: 38px
+	overflow: hidden
+	span
+		display: block
 	&--1
 		width: 570px
 		top: 49.3%
@@ -722,7 +728,13 @@ html, body
 		&--1
 			left: 64%
 
+	.help
+		top: 2038px
+
 @media only screen and (min-width : 1920px) and (min-aspect-ratio : 16/9)
+	.grid
+		transform: translate(-50%, -51%)
+
 	.video
 		top: 1200px
 		left: 1300px
@@ -741,12 +753,12 @@ html, body
 		top: 1935px
 		left: 3042px
 
-@media only screen and (min-width : 1600px) and (min-aspect-ratio : 16/9)
+@media only screen and (min-width : 1600px) and (max-width : 1919px) and (min-aspect-ratio : 16/9)
 	.slide
 		min-height: 850px
 
 	.top-line
-		top: 37%
+		// top: 37%
 
 	.button
 		top: 53.4%
@@ -763,7 +775,7 @@ html, body
 			top: 36.5%
 
 	.time
-		top: 1138px
+		// top: 1138px
 
 	.help
 		top: 1926px
@@ -1058,7 +1070,7 @@ html, body
 		clip-path: polygon(0% 0%, 0% 66.5%, 15.5% 66.5%, 15.5% 100%, 100% 100%, 100% 0%)
 
 	.help
-		top: 44.3vw
+		top: 46.3vw
 
 	.share
 		top: 37.6vw
