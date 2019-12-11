@@ -422,9 +422,12 @@ html, body {
   width: 100vw;
   height: 100%;
   min-height: 900px;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;
+  background: -webkit-gradient(linear, right top, left top, from(#5f0bbc), color-stop(#2a17a0), to(#07145b));
+  background: -o-linear-gradient(right, #5f0bbc, #2a17a0, #07145b);
+  background: linear-gradient(270deg, #5f0bbc, #2a17a0, #07145b);
+  background-size: 600% 600%;
+  -webkit-animation: gradient 12s ease infinite;
+          animation: gradient 12s ease infinite;
 }
 
 .slide[data-slide="0"] .grid > *:not(.grid__svg) {
@@ -450,6 +453,30 @@ html, body {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+@-webkit-keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .loaded .slide[data-slide="0"] .grid * {

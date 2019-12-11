@@ -91,38 +91,38 @@ function init () {
 
 
 	//Gradient только на десктопе
-	if (window.innerWidth > 1024) {
-		var grad = gsap.timeline({
-			repeatDelay:1, 
-			repeat:-1, 
-			yoyo:true
-		});
+	// if (window.innerWidth > 1024) {
+	// 	var grad = gsap.timeline({
+	// 		repeatDelay:1, 
+	// 		repeat:-1, 
+	// 		yoyo:true
+	// 	});
 			
-		grad
-			.to('#gradient-stop-1', 5, {
-				stopColor:'#2A17A0'
-			})
-			.to('#gradient-stop-2', 5, {
-				stopColor:'#780BBC'
-			})
-			.to('#gradient-stop-3', 5, {
-				stopColor:'#07145B'
-			})
+	// 	grad
+	// 		.to('#gradient-stop-1', 5, {
+	// 			stopColor:'#2A17A0'
+	// 		})
+	// 		.to('#gradient-stop-2', 5, {
+	// 			stopColor:'#780BBC'
+	// 		})
+	// 		.to('#gradient-stop-3', 5, {
+	// 			stopColor:'#07145B'
+	// 		})
 
-		var grad1 = gsap.timeline({
-			repeatDelay:1, 
-			repeat:-1, 
-			yoyo:true
-		});
+	// 	var grad1 = gsap.timeline({
+	// 		repeatDelay:1, 
+	// 		repeat:-1, 
+	// 		yoyo:true
+	// 	});
 			
-		grad1
-			.to('#paint0_linear > stop', 5, {
-				stopColor:'#06D1EE'
-			})
-			.to('#paint1_linear > stop', 5, {
-				stopColor:'#06D1EE'
-			})
-	}
+	// 	grad1
+	// 		.to('#paint0_linear > stop', 5, {
+	// 			stopColor:'#06D1EE'
+	// 		})
+	// 		.to('#paint1_linear > stop', 5, {
+	// 			stopColor:'#06D1EE'
+	// 		})
+	// }
 }
 
 slide1
