@@ -2110,12 +2110,12 @@ html, body {
 
 @media only screen and (max-width: 1023px) {
   .slide::before {
-    padding-top: 162%;
+    padding-top: 142%;
   }
   .slide__logo {
     width: 9%;
     bottom: auto;
-    top: 115vw;
+    top: 99vw;
     left: 4%;
   }
   .top-line {
@@ -2133,7 +2133,7 @@ html, body {
     width: 53%;
   }
   .text {
-    top: 76vw;
+    top: 72vw;
     left: 11.7%;
     width: 75%;
     font-size: 14px;
@@ -2141,11 +2141,11 @@ html, body {
   }
   .cube--1 {
     top: 28vw;
-    left: 47%;
-    width: 50%;
+    left: 50%;
+    width: 45%;
   }
   .cube--2 {
-    top: 109vw;
+    top: 105vw;
     left: 19%;
     width: 27%;
   }
@@ -2170,8 +2170,8 @@ html, body {
     width: 9%;
   }
   .button {
-    width: 36%;
-    top: 112vw;
+    width: 34%;
+    top: 105vw;
     left: 55.5%;
   }
 }

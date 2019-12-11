@@ -133,7 +133,8 @@ function init () {
 slide1
 	.from('[data-slide="1"] .top-line', 0.3, {
 		y: -150,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="1"] .button', 1, {
 		scale: 0.5, 
@@ -143,26 +144,31 @@ slide1
 	}, 0)
 	.from('[data-slide="1"] .slide__logo', 0.3, {
 		x: -50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	}, 0)
 
 
 slide2
-	.from('[data-slide="2"] .title, [data-slide="2"] .text', 0.6, {
-		y: 50,
-		opacity: 0
+	.from('[data-slide="2"] .title svg, [data-slide="2"] .text span', 0.6, {
+		y: '100%',
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="2"] .cube', 0.3, {
-		y: 50,
-		opacity: 0
+		y: 80,
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="2"] .ellips', 0.3, {
-		y: 50,
-		opacity: 0
+		y: 80,
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="2"] .top-line', 0.3, {
 		y: -150,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="2"] .share', 1, {
 		scale: 0.5, 
@@ -172,7 +178,8 @@ slide2
 	}, '-=0.5')
 	.from('[data-slide="2"] .slide__logo', 0.3, {
 		x: -50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="2"] .star', {
 		duration: 2,
@@ -206,9 +213,10 @@ fallingGlasses
 	});
 
 slide3
-	.from('[data-slide="3"] .rules', 1.5, {
+	.from('[data-slide="3"] .rules', 0.6, {
 		y: 50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="3"] .number', 1, {
 		scale: 0.5, 
@@ -227,13 +235,15 @@ slide3
 	})
 	.from('[data-slide="3"] .slide__logo', 0.3, {
 		x: -50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	}, 0)
 
 slide4
-	.from('[data-slide="4"] .standart', 1.5, {
+	.from('[data-slide="4"] .standart', 0.6, {
 		y: 50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	})
 	.from('[data-slide="4"] .star', 1, {
 		scale: 0.5, 
@@ -249,7 +259,8 @@ slide4
 	},0)
 	.from('[data-slide="4"] .slide__logo', 0.3, {
 		x: -50,
-		opacity: 0
+		opacity: 0,
+		ease: 'power2.out'
 	}, 0)
 	
 function slide1Play() {
