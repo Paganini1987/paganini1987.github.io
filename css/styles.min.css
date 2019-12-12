@@ -2059,6 +2059,9 @@ html, body {
     top: 48.5vw;
     left: 63.5%;
   }
+  .button--2 {
+    top: 40vw;
+  }
   .star--1 {
     top: 31vw;
   }
@@ -2078,7 +2081,7 @@ html, body {
     top: 18.7vw;
   }
   .text {
-    top: 36%;
+    top: 26vw;
     font-size: 20px;
     line-height: 25px;
   }
