@@ -1526,10 +1526,6 @@ html, body {
 }
 
 @media only screen and (min-width: 1920px) {
-  .grid__svg--1 path {
-    -webkit-mask: url(#mask-11);
-            mask: url(#mask-11);
-  }
   .video {
     top: 1100px;
     left: 1300px;
@@ -1553,6 +1549,10 @@ html, body {
 }
 
 @media only screen and (min-width: 1920px) and (min-aspect-ratio: 16 / 9) {
+  .grid__svg--1 path {
+    -webkit-mask: url(#mask-11);
+            mask: url(#mask-11);
+  }
   .grid {
     -webkit-transform: translate(-50%, -51%);
         -ms-transform: translate(-50%, -51%);
