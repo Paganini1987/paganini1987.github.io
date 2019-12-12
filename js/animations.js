@@ -131,7 +131,7 @@ function init () {
 }
 
 slide1
-	.from('[data-slide="1"] .top-line', 0.3, {
+	.from('[data-slide="1"] .top-line, [data-slide="1"] .time', 0.3, {
 		y: -150,
 		opacity: 0,
 		ease: 'power2.out'

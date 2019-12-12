@@ -567,6 +567,11 @@ html, body {
   stroke-width: 1px;
 }
 
+.grid__svg--0 path {
+  -webkit-mask: url(#mask-0);
+          mask: url(#mask-0);
+}
+
 .grid__svg--1 path {
   -webkit-mask: url(#mask-1);
           mask: url(#mask-1);
@@ -575,6 +580,16 @@ html, body {
 .grid__svg--2 path {
   -webkit-mask: url(#mask-2);
           mask: url(#mask-2);
+}
+
+.grid__svg--3 path {
+  -webkit-mask: url(#mask-3);
+          mask: url(#mask-3);
+}
+
+.grid__svg--4 path {
+  -webkit-mask: url(#mask-4);
+          mask: url(#mask-4);
 }
 
 .title {
@@ -797,7 +812,7 @@ html, body {
 .text {
   position: absolute;
   width: 526px;
-  top: 46%;
+  top: 45.5%;
   left: 50.7%;
   font-family: Formular;
   color: #fff;
@@ -1511,6 +1526,10 @@ html, body {
 }
 
 @media only screen and (min-width: 1920px) {
+  .grid__svg--1 path {
+    -webkit-mask: url(#mask-11);
+            mask: url(#mask-11);
+  }
   .video {
     top: 1100px;
     left: 1300px;
@@ -1570,13 +1589,13 @@ html, body {
     top: 50.4%;
   }
   .text {
-    top: 45%;
+    top: 45.5%;
   }
   .text--1 {
     top: 49.3%;
   }
   .cube--2 {
-    top: 36.5%;
+    top: 35.5%;
   }
   .help {
     top: 1926px;
@@ -1610,13 +1629,25 @@ html, body {
         -ms-transform: translate(0, 0);
             transform: translate(0, 0);
   }
+  .grid__svg--0 path {
+    -webkit-mask: url(#mask-01);
+            mask: url(#mask-01);
+  }
   .grid__svg--1 path {
-    -webkit-mask: url(#mask-11);
-            mask: url(#mask-11);
+    -webkit-mask: url(#mask-12);
+            mask: url(#mask-12);
   }
   .grid__svg--2 path {
     -webkit-mask: url(#mask-21);
             mask: url(#mask-21);
+  }
+  .grid__svg--3 path {
+    -webkit-mask: url(#mask-31);
+            mask: url(#mask-31);
+  }
+  .grid__svg--4 path {
+    -webkit-mask: url(#mask-41);
+            mask: url(#mask-41);
   }
   .top-line {
     width: 64%;
@@ -1725,11 +1756,11 @@ html, body {
     left: 54.5%;
   }
   .text {
-    width: 40%;
+    width: 35%;
     top: 20vw;
     left: 52.7%;
-    font-size: 28px;
-    line-height: 34px;
+    font-size: 24px;
+    line-height: 28px;
   }
   .text--1 {
     width: 35%;
@@ -1888,21 +1919,23 @@ html, body {
   }
   .cube--1 {
     width: 25%;
+    left: 22%;
   }
   .cube--3 {
+    left: 21.7%;
     width: 19%;
   }
   .text {
-    top: 18vw;
-    font-size: 24px;
-    line-height: 29px;
+    top: 19vw;
+    font-size: 20px;
+    line-height: 24px;
   }
   .text--1 {
-    top: 23vw;
-    left: 56.7%;
+    top: 25.5vw;
+    left: 51.7%;
     width: 39%;
     font-size: 19px;
-    line-height: 23px;
+    line-height: 20px;
   }
   .button {
     top: 30vw;
@@ -1978,6 +2011,18 @@ html, body {
 }
 
 @media only screen and (max-width: 1024px) {
+  .grid__svg--0 path {
+    -webkit-mask: url(#mask-02);
+            mask: url(#mask-02);
+  }
+  .grid__svg--1 path {
+    -webkit-mask: url(#mask-13);
+            mask: url(#mask-13);
+  }
+  .grid__svg--2 path {
+    -webkit-mask: url(#mask-22);
+            mask: url(#mask-22);
+  }
   .slide__logo {
     top: auto;
     bottom: -18px;
@@ -2065,7 +2110,7 @@ html, body {
   .time {
     font-size: 34px;
     top: 1.5vw;
-    left: 39.2vw;
+    left: 33.2vw;
   }
   .gift__button {
     line-height: 85px;
@@ -2109,6 +2154,10 @@ html, body {
 }
 
 @media only screen and (max-width: 1023px) {
+  .grid__svg--0 path {
+    -webkit-mask: url(#mask-03);
+            mask: url(#mask-03);
+  }
   .slide::before {
     padding-top: 142%;
   }
@@ -2120,7 +2169,7 @@ html, body {
   }
   .top-line {
     width: 80%;
-    top: 3.5vw;
+    top: 2vw;
     left: 10%;
     font-size: 10px;
   }
@@ -2133,11 +2182,11 @@ html, body {
     width: 53%;
   }
   .text {
-    top: 72vw;
+    top: 74vw;
     left: 11.7%;
     width: 75%;
-    font-size: 14px;
-    line-height: 18px;
+    font-size: 3.5vw;
+    line-height: 1.4;
   }
   .cube--1 {
     top: 28vw;
@@ -2200,21 +2249,29 @@ html, body {
   .slide__logo--landscape {
     width: 5%;
     bottom: auto;
-    top: 35vw;
+    top: 36vw;
     left: 2%;
   }
   .grid__svg--1 path {
-    -webkit-mask: url(#mask-12);
-            mask: url(#mask-12);
+    -webkit-mask: url(#mask-14);
+            mask: url(#mask-14);
   }
   .grid__svg--2 path {
-    -webkit-mask: url(#mask-21);
-            mask: url(#mask-21);
+    -webkit-mask: url(#mask-23);
+            mask: url(#mask-23);
+  }
+  .grid__svg--3 path {
+    -webkit-mask: url(#mask-32);
+            mask: url(#mask-32);
+  }
+  .grid__svg--4 path {
+    -webkit-mask: url(#mask-41);
+            mask: url(#mask-41);
   }
   .top-line--landscape {
     width: 77%;
     top: 0.5vw;
-    left: 5%;
+    left: 6%;
   }
   .top-line--landscape:not(:last-of-type) {
     margin-right: 14px;
@@ -2316,7 +2373,7 @@ html, body {
   .text--1 {
     top: 16vw;
     left: 46.7%;
-    width: 35%;
+    width: 33%;
     font-size: 14px;
     line-height: 18px;
   }
@@ -2423,9 +2480,6 @@ html, body {
   }
   .cube--2 {
     top: 101vw;
-  }
-  .text {
-    top: 88vw;
   }
   .text--1 {
     top: 16vw;

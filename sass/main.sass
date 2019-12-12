@@ -132,6 +132,9 @@ html, body
 		display: block
 		path
 			stroke-width: 1px
+		&--0
+			path
+				mask: url(#mask-0)
 		&--1
 			// clip-path: polygon(1400px 1100px,1400px 1700px,1600px 1700px,1600px 1800px,1900px 1800px,1900px 2000px, 2800px 2000px, 2800px 1900px,2900px 1900px, 2900px 1600px, 3000px 1600px, 3000px 1400px, 2700px 1400px, 2700px 1200px, 2000px 1200px, 2000px 1100px)
 			path
@@ -140,6 +143,12 @@ html, body
 			// clip-path: polygon(1400px 1100px,1400px 1700px,1600px 1700px,1600px 1800px,1900px 1800px,1900px 2000px, 2800px 2000px, 2800px 1900px,2900px 1900px, 2900px 1600px, 3000px 1600px, 3000px 1400px, 2700px 1400px, 2700px 1200px, 2000px 1200px, 2000px 1100px)
 			path
 				mask: url(#mask-2)
+		&--3
+			path
+				mask: url(#mask-3)
+		&--4
+			path
+				mask: url(#mask-4)
 
 .title
 	display: block
@@ -276,7 +285,7 @@ html, body
 .text
 	position: absolute
 	width: 526px
-	top: 46%
+	top: 45.5%
 	left: 50.7%
 	font-family: Formular
 	color: #fff
@@ -710,6 +719,12 @@ html, body
 
 
 @media only screen and (min-width : 1920px)
+	.grid
+		&__svg
+			&--1
+				path
+					mask: url(#mask-11)
+
 	.video
 		top: 1100px
 		left: 1300px
@@ -766,13 +781,13 @@ html, body
 			top: 50.4%
 
 	.text
-		top: 45%
+		top: 45.5%
 		&--1
 			top: 49.3%
 
 	.cube
 		&--2
-			top: 36.5%
+			top: 35.5%
 
 	.time
 		// top: 1138px
@@ -804,14 +819,23 @@ html, body
 		height: 100%
 		transform: translate(0, 0)
 		&__svg
-			&--1
-				// clip-path: polygon(0 0,0 37.6vw,12.4% 37.6vw,12.4% 43.8vw,31.3% 43.8vw,31% 100vw,87.6% 100vw,87.6% 50.1vw,93.9% 50.1vw,93.9% 31.4vw,100% 31.4vw,100% 18.7vw,81.3% 18.7vw,81.3% 6.1vw,37.6% 6.1vw,37.6% 0)
+			&--0
 				path
-					mask: url(#mask-11)
+					mask: url(#mask-01)
+			&--1
+				path
+					mask: url(#mask-12)
 			&--2
-				// clip-path: polygon(0 0,0 37.6vw,12.4% 37.6vw,12.4% 43.8vw,31.3% 43.8vw,31% 100vw,87.6% 100vw,87.6% 50.1vw,93.9% 50.1vw,93.9% 31.4vw,100% 31.4vw,100% 18.7vw,81.3% 18.7vw,81.3% 6.1vw,37.6% 6.1vw,37.6% 0)
 				path
 					mask: url(#mask-21)
+			&--3
+				// clip-path: polygon(0 0,0 37.6vw,12.4% 37.6vw,12.4% 43.8vw,31.3% 43.8vw,31% 100vw,87.6% 100vw,87.6% 50.1vw,93.9% 50.1vw,93.9% 31.4vw,100% 31.4vw,100% 18.7vw,81.3% 18.7vw,81.3% 6.1vw,37.6% 6.1vw,37.6% 0)
+				path
+					mask: url(#mask-31)
+			&--4
+				// clip-path: polygon(0 0,0 37.6vw,12.4% 37.6vw,12.4% 43.8vw,31.3% 43.8vw,31% 100vw,87.6% 100vw,87.6% 50.1vw,93.9% 50.1vw,93.9% 31.4vw,100% 31.4vw,100% 18.7vw,81.3% 18.7vw,81.3% 6.1vw,37.6% 6.1vw,37.6% 0)
+				path
+					mask: url(#mask-41)
 
 	.top-line
 		width: 64%
@@ -906,11 +930,11 @@ html, body
 		left: 54.5%
 
 	.text
-		width: 40%
+		width: 35%
 		top: 20vw
 		left: 52.7%
-		font-size: 28px
-		line-height: 34px
+		font-size: 24px
+		line-height: 28px
 		&--1
 			width: 35%
 			top: 27vw
@@ -1048,19 +1072,21 @@ html, body
 	.cube
 		&--1
 			width: 25%
+			left: 22%
 		&--3
+			left: 21.7%
 			width: 19%
 
 	.text
-		top: 18vw
-		font-size: 24px
-		line-height: 29px
+		top: 19vw
+		font-size: 20px
+		line-height: 24px
 		&--1
-			top: 23vw
-			left: 56.7%
+			top: 25.5vw
+			left: 51.7%
 			width: 39%
 			font-size: 19px
-			line-height: 23px
+			line-height: 20px
 
 	.button
 		top: 30vw
@@ -1126,6 +1152,17 @@ html, body
 			width: 50%
 
 @media only screen and (max-width : 1024px)
+	.grid
+		&__svg
+			&--0
+				path
+					mask: url(#mask-02)
+			&--1
+				path
+					mask: url(#mask-13)
+			&--2
+				path
+					mask: url(#mask-22)
 	.slide
 		&__logo
 			top: auto
@@ -1204,7 +1241,7 @@ html, body
 	.time
 		font-size: 34px
 		top: 1.5vw
-		left: 39.2vw
+		left: 33.2vw
 
 	.gift
 		&__button
@@ -1243,6 +1280,12 @@ html, body
 			top: 50vw
 
 @media only screen and (max-width : 1023px)
+	.grid
+		&__svg
+			&--0
+				path
+					mask: url(#mask-03)
+			
 	.slide
 		&::before
 			padding-top: 142%
@@ -1254,7 +1297,7 @@ html, body
 
 	.top-line
 		width: 80%
-		top: 3.5vw
+		top: 2vw
 		left: 10%
 		font-size: 10px
 		&__link
@@ -1267,11 +1310,11 @@ html, body
 		width: 53%
 
 	.text
-		top: 72vw
+		top: 74vw
 		left: 11.7%
 		width: 75%
-		font-size: 14px
-		line-height: 18px
+		font-size: 3.5vw
+		line-height: 1.4
 
 	.cube
 		&--1
@@ -1319,7 +1362,7 @@ html, body
 			
 				& ~ .slide--portrait
 					display: block
-		
+
 
 @media only screen and (max-width : 1023px) and (orientation: landscape)
 	.slide
@@ -1334,25 +1377,31 @@ html, body
 			&--landscape
 				width: 5%
 				bottom: auto
-				top: 35vw
+				top: 36vw
 				left: 2%
 
 	.grid
 		&__svg
 			&--1
-				// clip-path: polygon(0 0, 0 40vw, 12.4% 40vw, 15.4% 45.6vw, 29.6% 45.6vw, 31% 100vw, 90% 100vw, 90% 50.1vw, 95.1% 50.1vw, 95.1% 39.4vw, 100% 35.4vw, 100% 24.7vw, 80.3% 24.7vw, 80.3% 5vw, 35.6% 4.5vw, 35.6% 0)
 				path
-					mask: url(#mask-12)
+					mask: url(#mask-14)
 			&--2
+				path
+					mask: url(#mask-23)
+			&--3
 				// clip-path: polygon(0 0, 0 40vw, 12.4% 40vw, 15.4% 45.6vw, 29.6% 45.6vw, 31% 100vw, 90% 100vw, 90% 50.1vw, 95.1% 50.1vw, 95.1% 39.4vw, 100% 35.4vw, 100% 24.7vw, 80.3% 24.7vw, 80.3% 5vw, 35.6% 4.5vw, 35.6% 0)
 				path
-					mask: url(#mask-21)
+					mask: url(#mask-32)
+			&--4
+				// clip-path: polygon(0 0, 0 40vw, 12.4% 40vw, 15.4% 45.6vw, 29.6% 45.6vw, 31% 100vw, 90% 100vw, 90% 50.1vw, 95.1% 50.1vw, 95.1% 39.4vw, 100% 35.4vw, 100% 24.7vw, 80.3% 24.7vw, 80.3% 5vw, 35.6% 4.5vw, 35.6% 0)
+				path
+					mask: url(#mask-41)
 		
 	.top-line
 		&--landscape
 			width: 77%
 			top: 0.5vw
-			left: 5%
+			left: 6%
 			&:not(:last-of-type)
 				margin-right: 14px
 
@@ -1452,7 +1501,7 @@ html, body
 		&--1
 			top: 16vw
 			left: 46.7%
-			width: 35%
+			width: 33%
 			font-size: 14px
 			line-height: 18px
 
@@ -1550,7 +1599,7 @@ html, body
 			top: 101vw
 
 	.text
-		top: 88vw
+		// top: 88vw
 		&--1
 			top: 16vw
 
