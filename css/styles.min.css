@@ -2674,7 +2674,7 @@ html, body {
 
 @media only screen and (max-width: 768px) and (min-width: 768px) {
   .slide::before {
-    padding-top: 1024px;
+    padding-top: 160%;
   }
   .slide--landscape::before {
     padding-top: 56%;
@@ -2682,22 +2682,13 @@ html, body {
 }
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
-  .slide__logo {
-    top: 109vw;
-  }
   .slide__logo--landscape {
     width: 5%;
     top: 35vw;
     left: 2%;
   }
-  .cube--2 {
-    top: 101vw;
-  }
   .text--1 {
     top: 16vw;
-  }
-  .button {
-    top: 97vw;
   }
   .button--1 {
     width: 20%;
