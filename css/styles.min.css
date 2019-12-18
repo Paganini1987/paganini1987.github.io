@@ -1182,7 +1182,7 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/img/@2x/video.png);
+  background-image: url(/img/@2x/zaglushka-1.jpg);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -1783,8 +1783,13 @@ html, body {
 }
 
 .placeholder__star {
+  width: 100%;
   -webkit-animation: star 29s linear infinite;
           animation: star 29s linear infinite;
+}
+
+.placeholder__face {
+  width: 36%;
 }
 
 .placeholder__text {
@@ -2554,6 +2559,28 @@ html, body {
     width: 15vw;
     height: 5vw;
     font-size: 16px;
+  }
+  .placeholder__composition {
+    padding: 15px;
+    max-width: 400px;
+  }
+  .placeholder__img {
+    position: relative;
+    width: 140px;
+    height: 160px;
+    margin-bottom: 0px;
+  }
+  .placeholder__star {
+    -webkit-animation: star 29s linear infinite;
+            animation: star 29s linear infinite;
+  }
+  .placeholder__text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .placeholder__title {
+    font-size: 20px;
+    line-height: 30px;
   }
 }
 
