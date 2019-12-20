@@ -1162,7 +1162,6 @@ html, body {
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: url(/img/@2x/video.png);
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -1814,11 +1813,24 @@ html, body {
   color: #fff;
 }
 
+.instruction__box {
+  position: absolute;
+  display: block;
+  top: -130%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
 .instruction__top {
   position: absolute;
   display: block;
   top: -60%;
   left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 
 .instruction__text {
@@ -2323,6 +2335,10 @@ html, body {
   .instruction {
     font-size: 18px;
     line-height: 22px;
+  }
+  .instruction__box {
+    width: 4vw;
+    top: -100px;
   }
   .instruction__top {
     top: -40px;

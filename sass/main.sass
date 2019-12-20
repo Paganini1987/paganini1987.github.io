@@ -486,7 +486,7 @@ html, body
 		left: 0
 		right: 0
 		bottom: 0
-		background-image: url(/img/@2x/video.png)
+		// background-image: url(/img/@2x/video.png)
 		background-repeat: no-repeat
 		background-position: 50%
 		background-size: cover
@@ -917,11 +917,18 @@ html, body
 	font-size: 22px
 	line-height: 27px
 	color: #fff
+	&__box
+		position: absolute
+		display: block
+		top: -130%
+		left: 50%
+		transform: translateX(-50%)
 	&__top
 		position: absolute
 		display: block
 		top: -60%
 		left: 50%
+		transform: translateX(-50%)
 	&__text
 		max-width: 492px
 		text-align: center
@@ -1384,6 +1391,9 @@ html, body
 	.instruction
 		font-size: 18px
 		line-height: 22px
+		&__box
+			width: 4vw
+			top: -100px
 		&__top
 			top: -40px
 			height: 4vw
