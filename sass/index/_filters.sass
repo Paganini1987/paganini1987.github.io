@@ -1,0 +1,63 @@
+.filters
+	position: relative
+	font-family: $df-font
+	color: #000
+	background-color: #fff
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05), 0px 0.5px 1px rgba(0, 0, 0, 0.1)
+	z-index: 100
+	&.fixed
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+	&__inner
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__list
+		display: flex
+		align-items: center
+		list-style: none
+		margin: 0
+		padding: 0
+	&__item
+		font-size: 0
+	&__link
+		position: relative
+		display: inline-block
+		white-space: nowrap
+		font-size: 18px
+		line-height: 80px
+		padding: 0 16px
+		overflow: hidden
+		transition: color 0.3s
+		&:not(.active):hover
+			color: $gray-text
+		&::after
+			content: ''
+			display: block
+			position: absolute
+			bottom: 0
+			left: 0
+			right: 0
+			height: 4px
+			border-radius: 4px 4px 0 0
+			background-color: $main-blue
+			transform: translateY(100%)
+			transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+		&.active
+			font-weight: 500
+			letter-spacing: -0.02em
+			&::after
+				transform: translateY(0)
+	&__button
+		flex: none
+		min-width: calc((100% + 20px)/3 - 20px)
+		z-index: 50
+	&__group
+		display: flex
+		align-items: center
+		div:not(:last-of-type)
+			margin-right: 8px
+	&__dish-dd
+		display: none

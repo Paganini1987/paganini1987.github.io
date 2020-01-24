@@ -1,0 +1,385 @@
+@import vars
+
+a, button
+	&:focus
+		outline: none
+
+a
+	@include reset-link
+
+.h2
+	font-family: $df-font-1
+	font-size: 40px
+	line-height: 48px
+	font-weight: 400
+	
+.df-btn
+	position: relative
+	font-family: $df-font
+	letter-spacing: -0.02em
+	white-space: nowrap
+	border: none
+	border-radius: 6px
+	box-shadow: none
+	-webkit-appearance: none
+	text-decoration: none!important
+	transition: 0.3s
+	&--med
+		padding: 12px 24px
+		font-size: 16px
+		line-height: 19px
+	&--bordered
+		background-color: #fff
+		border: 1px solid $main-blue
+		color: $main-blue
+		&:hover
+			color: $main-blue
+	&--ca
+		background-color: $main-blue
+		color: #fff
+		font-size: 20px
+		line-height: 24px
+		text-align: center
+		padding: 14px 5px
+		box-shadow: 0 14px 20px -15px rgba($main-blue, 0.5)
+		transition: 0.3s
+		span
+			display: inline-block
+			max-width: 100%
+			overflow: hidden
+			text-overflow: ellipsis
+		&:disabled
+			background-color: $gray-text
+			box-shadow: 0 14px 20px -15px rgba($gray-text, 0.5)
+
+.df-dropdown
+	display: block
+	position: relative
+	font-family: $df-font
+	color: $black
+	margin-top: 0.5em
+	z-index: 10
+	&--large
+		min-width: 191px
+	&--small
+		min-width: 68px
+	&.isOpened
+		.df-dropdown__dd
+			visibility: visible
+			transform: translateY(0)
+			opacity: 1
+			transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.3s
+			& > *
+				opacity: 1
+				transition: 0.6s
+	&__head
+		position: relative
+		display: block
+		@include reset-link
+		font-size: 16px
+		line-height: 19px
+		background-color: $gray-light
+		padding: 22px 42px 15px 16px
+		border-radius: 4px 4px 6px 6px
+		overflow: hidden
+		transition: 0.3s
+		&--large
+			padding-right: 68px
+		&:hover
+			background-color: $light-gray-hover
+	&__arrow
+		position: absolute
+		display: block
+		top: 25px
+		right: 16px
+	&__holder
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+	&__label
+		position: absolute
+		bottom: -8px
+		left: 9px
+		background-color: #fff
+		font-size: 10px
+		line-height: 12px
+		color: $gray-text
+		border-radius: 5px
+		padding: 3px 11px
+		text-align: center
+		z-index: 1
+		&--small
+			min-width: 48px
+			padding-left: 0
+			padding-right: 0
+		&::before, &::after
+			content: ''
+			position: absolute
+			display: block
+			background-color: $gray-light
+			width: 5px
+			height: 8px
+			bottom: 0
+		&::before
+			left: -3px
+			border-radius: 0px 4px 0 0
+		&::after
+			right: -3px
+			border-radius: 4px 0px 0 0
+	&__list
+		list-style: none
+		margin: 0
+		padding: 0
+	&__dd
+		visibility: hidden
+		position: absolute
+		right: 0
+		left: 0
+		top: calc(100% + 6px)
+		padding: 8px 0
+		border: 1px solid $light-gray-border
+		border-radius: 6px
+		background-color: #fff
+		box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1)
+		transform-origin: 50% 0
+		transform: translateY(-20%)
+		opacity: 0
+		transition: 0.3s
+		& > *
+			opacity: 0
+			transition: 0.1s
+	&__item
+		label
+			display: block
+			position: relative
+			padding: 10px 15px
+			font-size: 16px
+			line-height: 19px
+			transition: 0.3s
+			&:hover
+				background-color: rgba(241, 242, 244, 0.5)
+				cursor: pointer
+		input
+			display: none
+			&:checked
+				& ~ .df-dropdown__check
+					transform: scale(1)
+	&__description
+		width: 100%
+		overflow: hidden
+		text-overflow: ellipsis
+	&__check
+		display: block
+		position: absolute
+		top: 50%
+		right: 16px
+		margin-top: -5px
+		transform: scale(0)
+		transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+.df-switch
+	flex: none
+	position: relative
+	border-radius: 33px
+	letter-spacing: -0.02em
+	background-color: $gray-light
+	white-space: nowrap
+	overflow: hidden
+	transition: 0.3s
+	cursor: pointer
+	&--small
+		width: 143px
+		height: 44px
+		line-height: 44px
+		font-size: 18px
+	&--large
+		width: 182px
+		height: 56px
+		line-height: 56px
+		font-size: 20px
+	&.selected
+		background-color: $main-blue
+		.df-switch__holder
+				transform: translateX(0)
+	&__holder
+		position: absolute
+		display: flex
+		align-items: center
+		width: 200%
+		top: 0
+		left: 0
+		transform: translateX(-50%)
+		transition: 0.3s
+	&__selected
+		display: flex
+		align-items: center
+		width: 50%
+		color: #fff
+		padding-left: 20px
+		padding-right: 4px
+		span
+			display: inline-block
+			margin-right: 8px
+		&--large
+			padding-left: 32px
+			padding-right: 5px
+			span
+				margin-right: 16px
+	&__select
+		display: flex
+		align-items: center
+		width: 50%
+		color: $gray-text
+		padding-right: 20px
+		padding-left: 4px
+		span
+			display: inline-block
+			margin-left: 8px
+		&--large
+			padding-left: 5px
+			padding-right: 32px
+			span
+				margin-right: 16px
+	&__circle
+		flex: none
+		width: 36px
+		height: 36px
+		border-radius: 50%
+		&--large
+			width: 46px
+			height: 46px
+		&--selected
+			background: linear-gradient(158.2deg, #68A1F6 16.27%, #4C88E2 85.32%)
+			box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+			background-image: url('/img/svg/switch-selected.svg')
+			background-repeat: no-repeat
+			background-position: 50%
+		&--select
+			background: linear-gradient(158.2deg, #FFFFFF 16.27%, #F7F7F7 85.32%)
+			box-shadow: 1px 2px 4px rgba(12, 58, 126, 0.3)
+
+.df-popup
+	visibility: hidden
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: auto
+	-webkit-overflow-scrolling: touch
+	font-family: $df-font
+	color: $black
+	background: rgba(0, 0, 0, 0.5)
+	opacity: 0
+	z-index: 1000
+	transition: 0.3s
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		min-height: 100vh
+	&__inner
+		position: relative
+		box-shadow: 0px 8px 20px #6F6F6F
+		margin: 32px
+		opacity: 0
+		transform: translateY(20%) scale(0.8)
+		transition: 0.3s
+	&__close
+		position: absolute
+		top: 32px
+		right: 32px
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background-color: rgba($black, 0.15)
+		z-index: 1
+		transition: 0.3s
+		svg
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+
+body
+	&.fix-overflow
+		overflow: hidden
+
+html:not(.touchevents)
+	.df-btn
+		&--bordered
+			&:hover
+				border-color: $blue-hover
+				background-color: rgba(45, 125, 225, 0.05)
+				color: $blue-hover
+		&--ca
+			&:hover
+				color: #fff
+				background-color: $blue-hover
+				box-shadow: 0 14px 20px -15px rgba($blue-hover, 0.5)
+
+	.df-switch
+		&:hover
+			background-color: $light-gray-hover
+		&.selected
+			&:hover
+				background-color: $blue-hover
+
+	.df-popup
+		&__close
+			&:hover
+				background-color: rgba($black, 0.25)
+
+
+@media only screen and (max-width : $lg-max)
+	.h2
+		font-size: 32px
+		line-height: 40px
+
+	.df-btn
+		&--med
+			padding: 11px 20px
+			font-size: 14px
+			line-height: 18px
+
+	.df-switch
+		&--small
+			width: 80px
+		&--large
+			height: 44px
+			line-height: 44
+			width: 80px
+		&__selected, &__select
+			height: 44px
+			span
+				display: none
+		&__selected
+			justify-content: flex-end
+		&__circle
+			&--large
+				width: 36px
+				height: 36px
+
+@media only screen and (max-width : $md-max)
+	.df-popup
+		&__inner
+			margin: 0
+			max-width: 100%!important
+		&__close
+			top: 16px
+			right: 16px
+
+@media only screen and (max-width : 374px)
+	.df-dropdown
+		min-width: 60px
+		&--large
+			min-width: 165px
+		&__head
+			padding-right: 30px
+			&--large
+				padding-right: 35px
+	

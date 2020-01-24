@@ -1,0 +1,167 @@
+.p-dish
+	&__inner
+		max-width: 772px
+		background-color: #fff
+		border-radius: 8px
+		overflow: hidden
+	&__img
+		position: relative
+		width: 100%
+		padding-top: 63%
+		background-repeat: no-repeat
+		background-position: 50%
+		background-size: cover
+		border-radius: 8px 8px 0 0
+	&__description
+		padding: 48px 32px
+		padding-top: 32px
+	&__title
+		font-size: 24px
+		line-height: 28px
+		font-weight: 500
+		margin-bottom: 19px
+	&__info
+		display: flex
+		align-items: center
+		&:not(:last-of-type)
+			margin-bottom: 8px
+	&__icon
+		margin-right: 8px
+	&__value
+		font-size: 14px
+		line-height: 18px
+		color: $gray-text
+	&__features
+		margin-top: 27px
+		margin-bottom: 20px
+		padding-top: 20px
+		padding-bottom: 24px
+		border-top: 1px solid $light-gray-border
+		border-bottom: 1px solid $light-gray-border
+	&__subtitle
+		font-size: 14px
+		line-height: 17px
+		color: $gray-text
+		margin-bottom: 12px
+	&__table
+		table-layout: fixed
+		text-align: center
+		th
+			font-size: 18px
+			line-height: 21px
+			font-weight: 400
+			padding-right: 32px
+			padding-bottom: 6px
+			overflow: hidden
+			text-overflow: ellipsis
+		td
+			font-size: 14px
+			line-height: 17px
+			padding-right: 32px
+			overflow: hidden
+			text-overflow: ellipsis
+	&__footer
+		display: flex
+	&__column
+		width: 50%
+		&:first-of-type
+			padding-right: 10px
+		&:last-of-type
+			padding-left: 10px
+	&__text
+		font-size: 14px
+		line-height: 22px
+	&__labels
+		position: absolute
+		display: flex
+		align-items: center
+		top: 32px
+		left: 32px
+		flex-wrap: wrap
+		list-style: none
+		margin: 0
+		padding: 0
+		font-size: 0
+		margin-right: 100px
+	&__label
+		font-size: 14px
+		line-height: 28px
+		white-space: nowrap
+		color: #fff
+		background-color: rgba(65, 126, 218, 0.65)
+		border-radius: 6px
+		padding: 0 16px
+		margin-bottom: 6px
+		&:not(:last-of-type)
+			margin-right: 6px
+	&__switch
+		position: absolute
+		right: 32px
+		bottom: 32px
+
+.p-dish-opened
+	.p-dish
+		visibility: visible
+		opacity: 1
+		&__inner
+			transform: translateX(0) scale(1)
+			opacity: 1
+
+.p-main
+	.df-popup__close
+		display: none
+	&__inner
+		max-width: 644px
+		padding: 24px 32px 36px
+		border-radius: 8px
+	&__title
+		font-size: 24px
+		line-height: 28px
+		font-weight: 500
+		margin-bottom: 16px
+		margin-right: 50px
+	&__close
+		position: absolute
+		top: 16px
+		right: 16px
+	&__carousel
+		.owl-dots
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-top: 17px
+		.owl-dot
+			display: block
+			width: 8px
+			height: 8px
+			background-color: $light-gray-border!important
+			border-radius: 50%
+			transition: 0.3s
+			&:not(:last-of-type)
+				margin-right: 12px
+			&.active
+				width: 10px
+				height: 10px
+				background-color: $main-blue!important
+	&__img
+		border-radius: 4px
+		margin-bottom: 8px
+	&__description
+		font-size: 12px
+		line-height: 18px
+		color: $gray-text
+	&__text
+		margin-top: 32px
+		font-size: 16px
+		line-height: 24px
+
+
+.p-main-opened
+	.p-main
+		visibility: visible
+		opacity: 1
+		&__inner
+			background-color: #fff
+			transform: translateX(0) scale(1)
+			opacity: 1
+		
