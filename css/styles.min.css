@@ -4567,6 +4567,10 @@ a:hover {
   text-decoration: none;
 }
 
+.h1 {
+  font-weight: 400;
+}
+
 .h2 {
   font-family: "Grotesque", sans-serif;
   font-size: 40px;
@@ -4852,6 +4856,7 @@ a:hover {
   -o-transition: 0.3s;
   transition: 0.3s;
   cursor: pointer;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .df-switch--small {
@@ -5610,10 +5615,10 @@ html:not(.touchevents) .footer__pay a:hover, html:not(.touchevents) .footer__soc
 }
 
 .p-dish__inner {
+  width: 100%;
   max-width: 772px;
   background-color: #fff;
   border-radius: 8px;
-  overflow: hidden;
 }
 
 .p-dish__img {
@@ -5782,6 +5787,8 @@ html:not(.touchevents) .footer__pay a:hover, html:not(.touchevents) .footer__soc
 }
 
 .p-main__inner {
+  background-color: #fff;
+  width: 100%;
   max-width: 644px;
   padding: 24px 32px 36px;
   border-radius: 8px;
@@ -5858,7 +5865,6 @@ html:not(.touchevents) .footer__pay a:hover, html:not(.touchevents) .footer__soc
 }
 
 .p-main-opened .p-main__inner {
-  background-color: #fff;
   -webkit-transform: translateX(0) scale(1);
       -ms-transform: translateX(0) scale(1);
           transform: translateX(0) scale(1);
