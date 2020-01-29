@@ -14,11 +14,11 @@
 
 	<link rel="stylesheet" href="css/libs.css">
 	<link rel="stylesheet" href="css/styles.min.css">
-	<link rel="stylesheet" href="css/index.min.css">
+	<link rel="stylesheet" href="css/additional.min.css">
 
 </head>
 
-<body class="main-page">
+<body>
 
 	<header class="header">
 		<div class="container">
@@ -79,21 +79,29 @@
 		</div>
 	</header>
 
-	<section class="top">
+	<section class="back">
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<div class="top__inner">
-						<h1 class="h1 top__title">
-							Продукты и&nbsp;рецепты
-							на&nbsp;неделю с&nbsp;доставкой
-						</h1>
-						<div class="top__subline">
-							<h2 class="top__subtitle">Выберите блюда для всей семьи и готовьте вкусно каждый день</h2>
-							<div class="top__text">
-								Доставим 12-го (вс.) или 13-го (пн.) января в&nbsp;выбранное вами время
-							</div>
-						</div>
+					<div class="back__inner">
+						<a href="/" class="back__button df-btn--back">
+							<svg width="9" height="18" viewBox="0 0 9 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path fill-rule="evenodd" clip-rule="evenodd" d="M1.16636 7.36549L7.4637 0.967238C7.58123 0.847823 7.77379 0.847823 7.89132 0.967238L8.54288 1.62924C8.6578 1.74599 8.6578 1.93335 8.54288 2.05011L2.23885 8.45516C1.94269 8.75607 1.94269 9.24393 2.23885 9.54484L8.54288 15.9499C8.6578 16.0666 8.6578 16.254 8.54288 16.3708L7.89132 17.0328C7.77379 17.1522 7.58123 17.1522 7.4637 17.0328L1.16636 10.6345C0.277881 9.7318 0.277878 8.2682 1.16636 7.36549Z"/>
+							</svg>								
+							<span>Вернуться в меню</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="text">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="text__inner">
+						Добавьте дополнительные блюда к вашему заказу
 					</div>
 				</div>
 			</div>
@@ -103,169 +111,6 @@
 	<div id="app">
 		<!-- VueJs component -->
 	</div>
-
-	<section class="inside">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="inside__inner">
-						<h2 class="inside__title inside__title--mobile h2">Что внутри набора</h2>
-						<div class="inside__img">
-							<img src="/img/inside.png" alt="Что внутри набора">
-						</div>
-						<div class="inside__right">
-							<h2 class="inside__title inside__title--desctop h2">Что внутри набора</h2>
-							<ul class="inside__list">
-								<li class="inside__item">
-									<div class="inside__number">1</div>
-									Рецепты от&nbsp;шеф-повара, по&nbsp;которым легко приготовит даже новичок
-									<br>
-									<a href="#" class="inside__link js-open-main-popup">Как мы&nbsp;создаем рецепты</a>
-								</li>
-								<li class="inside__item">
-									<div class="inside__number">2</div>
-									Свежие ингредиенты, отмеренные в&nbsp;том количестве, которое нужно по&nbsp;рецепту
-									<br>
-									<a href="#" class="inside__link">Как мы&nbsp;собираем наборы</a>
-								</li>
-								<li class="inside__item inside__item--last">
-									<div class="inside__icon">
-										<img src="/img/svg/recycling.svg" alt="Переработка">
-									</div>
-									Мы&nbsp;заботимся о&nbsp;природе и&nbsp;забираем всю упаковку с&nbsp;прошлого заказа на&nbsp;переработку
-									<br>
-									<a href="#" class="inside__link">Подробнее</a>
-								</li>
-							</ul>
-						</div>
-						<div class="inside__bottom">
-							С&nbsp;нашим набором вы&nbsp;сможете проводить больше времени с&nbsp;семьей, а&nbsp;готовка станет отдыхом и&nbsp;вдохновением
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="faq">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<h2 class="faq__title h2">Вопросы и ответы</h2>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="faq__card">
-						<div class="f-dropdown js-faq-dropdown">
-							<a href="#" class="f-dropdown__head">
-								<span>Ужин дома дороже чем в&nbsp;магазине?</span>
-								<svg class="f-dropdown__arrow" width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.82065 10.1115L0.217238 1.6438C0.0978233 1.52627 0.0978233 1.3337 0.217238 1.21617L1.24246 0.20712C1.35922 0.0922022 1.54658 0.0922024 1.66334 0.207121L10.2736 8.68154C10.6748 9.07642 11.3252 9.07642 11.7264 8.68154L20.3367 0.20712C20.4534 0.0922021 20.6408 0.092202 20.7575 0.20712L21.7828 1.21617C21.9022 1.3337 21.9022 1.52627 21.7828 1.6438L13.1793 10.1115C11.9757 11.2962 10.0243 11.2962 8.82065 10.1115Z" fill="#417EDA"/>
-								</svg>											
-							</a>
-							<div class="f-dropdown__dd">
-								Готовят даже дети. Наши рецепты создают профессионалы&nbsp;&mdash; шеф-повара и&nbsp;технологи. Даже если вы&nbsp;новичок в&nbsp;кулинарии, просто следуйте инструкции и&nbsp;все получится!
-							</div>
-						</div>
-					</div>
-					<div class="faq__card">
-						<div class="f-dropdown js-faq-dropdown">
-							<a href="#" class="f-dropdown__head">
-								<span>У&nbsp;меня точно получится приготовить?</span>
-								<svg class="f-dropdown__arrow" width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.82065 10.1115L0.217238 1.6438C0.0978233 1.52627 0.0978233 1.3337 0.217238 1.21617L1.24246 0.20712C1.35922 0.0922022 1.54658 0.0922024 1.66334 0.207121L10.2736 8.68154C10.6748 9.07642 11.3252 9.07642 11.7264 8.68154L20.3367 0.20712C20.4534 0.0922021 20.6408 0.092202 20.7575 0.20712L21.7828 1.21617C21.9022 1.3337 21.9022 1.52627 21.7828 1.6438L13.1793 10.1115C11.9757 11.2962 10.0243 11.2962 8.82065 10.1115Z" fill="#417EDA"/>
-								</svg>											
-							</a>
-							<div class="f-dropdown__dd">
-								Готовят даже дети. Наши рецепты создают профессионалы&nbsp;&mdash; шеф-повара и&nbsp;технологи. Даже если вы&nbsp;новичок в&nbsp;кулинарии, просто следуйте инструкции и&nbsp;все получится!
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="faq__card">
-						<div class="f-dropdown js-faq-dropdown">
-							<a href="#" class="f-dropdown__head">
-								<span>Доставка и оплата</span>
-								<svg class="f-dropdown__arrow" width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.82065 10.1115L0.217238 1.6438C0.0978233 1.52627 0.0978233 1.3337 0.217238 1.21617L1.24246 0.20712C1.35922 0.0922022 1.54658 0.0922024 1.66334 0.207121L10.2736 8.68154C10.6748 9.07642 11.3252 9.07642 11.7264 8.68154L20.3367 0.20712C20.4534 0.0922021 20.6408 0.092202 20.7575 0.20712L21.7828 1.21617C21.9022 1.3337 21.9022 1.52627 21.7828 1.6438L13.1793 10.1115C11.9757 11.2962 10.0243 11.2962 8.82065 10.1115Z" fill="#417EDA"/>
-								</svg>											
-							</a>
-							<div class="f-dropdown__dd">
-								Готовят даже дети. Наши рецепты создают профессионалы&nbsp;&mdash; шеф-повара и&nbsp;технологи. Даже если вы&nbsp;новичок в&nbsp;кулинарии, просто следуйте инструкции и&nbsp;все получится!
-							</div>
-						</div>
-					</div>
-					<div class="faq__card">
-						<div class="f-dropdown js-faq-dropdown">
-							<a href="#" class="f-dropdown__head">
-								<span>Где вы&nbsp;закупаете продукты и&nbsp;собираете наборы?</span>
-								<svg class="f-dropdown__arrow" width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.82065 10.1115L0.217238 1.6438C0.0978233 1.52627 0.0978233 1.3337 0.217238 1.21617L1.24246 0.20712C1.35922 0.0922022 1.54658 0.0922024 1.66334 0.207121L10.2736 8.68154C10.6748 9.07642 11.3252 9.07642 11.7264 8.68154L20.3367 0.20712C20.4534 0.0922021 20.6408 0.092202 20.7575 0.20712L21.7828 1.21617C21.9022 1.3337 21.9022 1.52627 21.7828 1.6438L13.1793 10.1115C11.9757 11.2962 10.0243 11.2962 8.82065 10.1115Z" fill="#417EDA"/>
-								</svg>											
-							</a>
-							<div class="f-dropdown__dd">
-								Готовят даже дети. Наши рецепты создают профессионалы&nbsp;&mdash; шеф-повара и&nbsp;технологи. Даже если вы&nbsp;новичок в&nbsp;кулинарии, просто следуйте инструкции и&nbsp;все получится!
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-lg-4 col-md-12">
-					<div class="faq__card">
-						<div class="f-dropdown js-faq-dropdown">
-							<a href="#" class="f-dropdown__head">
-								<span>Что такое Ужин Дома Family?</span>
-								<svg class="f-dropdown__arrow" width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<path fill-rule="evenodd" clip-rule="evenodd" d="M8.82065 10.1115L0.217238 1.6438C0.0978233 1.52627 0.0978233 1.3337 0.217238 1.21617L1.24246 0.20712C1.35922 0.0922022 1.54658 0.0922024 1.66334 0.207121L10.2736 8.68154C10.6748 9.07642 11.3252 9.07642 11.7264 8.68154L20.3367 0.20712C20.4534 0.0922021 20.6408 0.092202 20.7575 0.20712L21.7828 1.21617C21.9022 1.3337 21.9022 1.52627 21.7828 1.6438L13.1793 10.1115C11.9757 11.2962 10.0243 11.2962 8.82065 10.1115Z" fill="#417EDA"/>
-								</svg>											
-							</a>
-							<div class="f-dropdown__dd">
-								Готовят даже дети. Наши рецепты создают профессионалы&nbsp;&mdash; шеф-повара и&nbsp;технологи. Даже если вы&nbsp;новичок в&nbsp;кулинарии, просто следуйте инструкции и&nbsp;все получится!
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-
-	<section class="feedback">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="feedback__inner">
-						<h2 class="feedback__title h2">С&nbsp;нами уже более 30&nbsp;000 семей</h2>
-						<div class="feedback__social">
-							<img src="/img/svg/insta.svg" alt="">
-							<span>Читайте отзывы по тегу</span>&ensp;
-							<a href="#" target="_blank">#ужиндома_тестдрайв</a>
-						</div>
-						<div class="feedback__wrap">
-							<div class="feedback__slider owl-carousel js-feedback-slider">
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-								<div class="feedback__slide">
-									<img src="/img/feedback-slider/1.jpg" alt="">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
 
 	<footer class="footer">
 		<div class="footer__top">
@@ -497,63 +342,8 @@
 		</div>
 	</div>
 
-	<div id="main-popup" class="p-main df-popup">
-		<div class="df-popup__wrapper">
-			<div class="df-popup__inner p-main__inner">
-				<a href="#" class="p-main__close js-close-main-popup">
-					<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect x="17.9397" y="16.2427" width="2.4" height="14.4" rx="0.5" transform="rotate(135 17.9397 16.2427)" fill="#7C8289"/>
-						<rect x="7.75732" y="17.9397" width="2.4" height="14.4" rx="0.5" transform="rotate(-135 7.75732 17.9397)" fill="#7C8289"/>
-					</svg>											
-				</a>
-				<a href="#" class="df-popup__close js-close-main-popup">
-					<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="2.51415" height="20.1132" rx="0.5" transform="matrix(0.707105 -0.707108 0.707105 0.707108 0.000244141 1.7778)" fill="white"/>
-						<rect width="2.51415" height="20.1132" rx="0.5" transform="matrix(-0.707105 -0.707108 -0.707105 0.707108 16 1.7778)" fill="white"/>
-					</svg>						
-				</a>
-				<h2 class="p-main__title">Как мы создаем рецепты</h2>
-				<div class="p-main__carousel owl-carousel js-p-main-carousel">
-					<div class="p-main__slide">
-						<img src="/img/3.jpg" class="p-main__img">
-						<div class="p-main__description">
-							На фото: Технолог А.Б. Иванова и шеф-повар В.Г. Сидорова
-						</div>
-					</div>
-					<div class="p-main__slide">
-						<img src="/img/4.jpg" class="p-main__img">
-					</div>
-				</div>
-				<div class="p-main__text">
-					<p>
-						Рецепты создает шеф-повар и&nbsp;прорабатывает на&nbsp;нашем производстве. Мы&nbsp;дегустируем, оцениваем и&nbsp;делаем фото.
-					</p>
-				</div>
-				<div class="p-main__carousel owl-carousel js-p-main-carousel">
-					<div class="p-main__slide">
-						<img src="/img/4.jpg" class="p-main__img">
-					</div>
-					<div class="p-main__slide">
-						<img src="/img/3.jpg" class="p-main__img">
-						<div class="p-main__description">
-							На фото: Технолог А.Б. Иванова и шеф-повар В.Г. Сидорова
-						</div>
-					</div>
-				</div>
-				<div class="p-main__text">
-					<p>
-						Команда технологов оценивает вкус блюда, сохранность продуктов, пишет инструкцию для клиентов, а&nbsp;также отправляет рецепт тестировщикам, которые проверяют насколько легко приготовить блюдо на&nbsp;домашней кухне.
-					</p>
-					<p>
-						И&nbsp;только такой, проверенный и&nbsp;понятный рецепт мы&nbsp;отправляем вам.
-					</p>
-				</div>
-			</div>
-		</div>
-	</div>
-
 	<script src="js/libs.js"></script>
-	<script src="js/index.js"></script>
+	<script src="js/additional.js"></script>
 
 
 </body>

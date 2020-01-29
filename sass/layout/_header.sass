@@ -1,13 +1,14 @@
 .header
+	position: relative
 	font-family: $df-font
 	color: $black
+	z-index: 500
 	&.fixed
 		position: fixed
 		top: 0
 		left: 0
 		right: 0
 		background-color: #fff
-		z-index: 500
 		transform: translateY(-100%)
 		&.show
 			transform: translateY(0)
@@ -136,6 +137,7 @@
 		transform: scale(0)
 		opacity: 0
 		transition: transform 0.3s, opacity 0.2s
+		z-index: 2
 	&__close
 		display: none
 

@@ -7,6 +7,9 @@ a, button
 a
 	@include reset-link
 
+.h1
+	font-weight: 400
+
 .h2
 	font-family: $df-font-1
 	font-size: 40px
@@ -23,7 +26,13 @@ a
 	box-shadow: none
 	-webkit-appearance: none
 	text-decoration: none!important
+	overflow: hidden
+	text-overflow: ellipsis
 	transition: 0.3s
+	&--large
+		font-size: 20px
+		line-height: 24px
+		padding: 15px 5px
 	&--med
 		padding: 12px 24px
 		font-size: 16px
@@ -51,6 +60,24 @@ a
 		&:disabled
 			background-color: $gray-text
 			box-shadow: 0 14px 20px -15px rgba($gray-text, 0.5)
+			pointer-events: none
+	&--back
+		display: flex
+		align-items: center
+		font-size: 16px
+		line-height: 19px
+		color: $main-blue
+		svg
+			display: block
+			margin-right: 16px
+			path
+				fill: $main-blue
+				transition: 0.3s
+		&:hover
+			color: $blue-hover
+			svg
+				path
+					fill: $blue-hover
 
 .df-dropdown
 	display: block
@@ -84,7 +111,7 @@ a
 		overflow: hidden
 		transition: 0.3s
 		&--large
-			padding-right: 68px
+			padding-right: 40px
 		&:hover
 			background-color: $light-gray-hover
 	&__arrow
@@ -188,6 +215,7 @@ a
 	overflow: hidden
 	transition: 0.3s
 	cursor: pointer
+	-webkit-mask-image: -webkit-radial-gradient(white, black)
 	&--small
 		width: 143px
 		height: 44px
@@ -259,6 +287,148 @@ a
 			background: linear-gradient(158.2deg, #FFFFFF 16.27%, #F7F7F7 85.32%)
 			box-shadow: 1px 2px 4px rgba(12, 58, 126, 0.3)
 
+.df-add
+	flex: none
+	position: relative
+	display: flex
+	justify-content: flex-end
+	align-items: center
+	width: 44px
+	height: 44px
+	border-radius: 33px
+	letter-spacing: -0.02em
+	background-color: $gray-light
+	white-space: nowrap
+	transition: 0.3s
+	cursor: pointer
+	font-family: $df-font
+	color: $black
+	transition: 0.3s
+	&.isOpened
+		width: 122px
+		.df-add__label
+			visibility: visible
+			opacity: 1
+	&__counter
+		font-size: 24px
+	&__label
+		visibility: hidden
+		position: absolute
+		top: -1em
+		left: 50%
+		font-size: 10px
+		line-height: 14px
+		color: $gray-text
+		background-color: #fff
+		transform: translateX(-50%)
+		padding: 0 5px
+		border-radius: 6px
+		opacity: 0
+		transition: 0.3s
+		&::after, &::before
+			content: ''
+			display: block
+			position: absolute
+			bottom: -5px
+			height: 50%
+			width: 10px
+			background-color: $gray-light
+			border-radius: 10px
+		&::after
+			right: -10px
+		&::before
+			left: -10px
+	&__wrapper
+		position: relative
+		padding: 4px
+		border-radius: 50%
+		background-color: $gray-light
+		&.max
+			&:hover
+				.df-add__tooltip
+					visibility: visible
+					opacity: 1
+					transform: translateY(0)
+	&__plus, &__minus
+		position: relative
+		width: 36px
+		height: 36px
+		background: linear-gradient(158.2deg, #FFFFFF 16.27%, #F7F7F7 85.32%)
+		box-shadow: 1px 2px 4px rgba(12, 58, 126, 0.3)
+		border-radius: 50%
+		svg
+			display: block
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			margin: auto
+			path
+				fill: $main-blue
+				transition: 0.3s
+		&:hover
+			svg
+				path
+					fill: $blue-hover
+	&__minus
+		position: absolute
+		top: 4px
+		left: 4px
+	&__plus
+		&--disabled
+			opacity: 0.3
+	&__holder
+		position: absolute
+		display: flex
+		justify-content: center
+		align-items: center
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		padding: 4px
+		border-radius: 33px
+		-webkit-mask-image: -webkit-radial-gradient(white, black)
+	&__tooltip
+		top: -80px
+		&--right
+			left: -70%
+			.df-tooltip__arrow
+				left: 28%
+		&--left
+			left: -250%
+			.df-tooltip__arrow
+				left: 73%
+
+.df-tooltip
+	visibility: hidden
+	position: absolute
+	width: 172px
+	font-family: $df-font
+	color: #fff
+	font-size: 12px
+	line-height: 14px
+	padding: 10px
+	border-radius: 6px
+	background-color: rgba($black, 0.65)
+	white-space: normal
+	z-index: 100
+	opacity: 0
+	transform: translateY(20%)
+	transition: 0.3s cubic-bezier(0.165, 0.84, 0.44, 1)
+	&__arrow
+		position: absolute
+		bottom: -8px
+		left: 50%
+		width: 0
+		height: 0
+		border-left: 8px solid transparent
+		border-right: 8px solid transparent
+		border-top: 8px solid rgba($black, 0.65)
+
+
+
 .df-popup
 	visibility: hidden
 	position: fixed
@@ -308,6 +478,7 @@ a
 body
 	&.fix-overflow
 		overflow: hidden
+
 
 html:not(.touchevents)
 	.df-btn
