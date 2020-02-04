@@ -2,18 +2,21 @@
 @import fonts
 @import libs
 @import common
+@import './layout/_header.sass'
+@import './layout/_m-menu.sass'
+@import './layout/_footer.sass'
+@import './layout/_popups.sass'
 
-@import header
-@import footer
+@import './layout/_media.sass'
 
-@import banner
-@import production
+::placeholder
+	color: $gray-text
 
-@import about
-
-@import prices
-
-@import contacts
-
-@import product
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $df-font
+	color: $black
 

@@ -1,0 +1,66 @@
+.p-map
+	&__inner
+		width: 100%
+		max-width: 644px
+		background-color: #fff
+		padding: 32px
+	&__title
+		font-size: 24px
+		line-height: 28px
+		margin-bottom: 32px
+		padding-right: 70px
+		font-weight: 500
+	[data-type="city"]
+		max-width: 380px
+		margin-bottom: 16px
+	&__line
+		display: flex
+		flex-wrap: wrap
+		min-width: 100%
+		margin-left: -10px
+		margin-right: -10px
+		margin-top: 16px
+	&__input
+		&--30
+			width: calc((100% / 3) - 20px)
+			margin-left: 10px
+			margin-right: 10px
+	&__default
+		margin-top: 16px
+		margin-bottom: 32px
+	&__map
+		width: 100%
+		height: 270px
+	&__button
+		width: 100%
+		margin-top: 24px
+		color: #fff
+		background-color: $family-pink
+		&:hover
+			color: #fff
+			background-color: $pink-hover
+		&:disabled
+			pointer-events: none
+			opacity: 0.3
+
+html:not(.touchevents)
+	.p-map
+		&__button
+			&:hover
+				color: #fff
+				background-color: $pink-hover
+
+@media only screen and (max-width : $md-max)
+	.p-map
+		&__inner
+			padding: 20px 16px 32px
+		&__title
+			margin-bottom: 24px
+		&__input
+			&--30
+				width: calc(50% - 20px)
+				&:last-of-type
+					margin-top: 16px
+
+
+			

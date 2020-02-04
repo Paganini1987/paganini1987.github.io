@@ -1,0 +1,96 @@
+[
+  {
+    "id": "1",
+    "name": "Оригинальное",
+    "url": "#Оригинальное",
+    "persons": 2,
+    "maxCount": 3,
+    "active": "true",
+    "dishes": [
+      {
+        "dish_id": "1",
+        "priority": 1
+      },
+      {
+        "dish_id": "2",
+        "priority": 2
+      },
+      {
+        "dish_id": "5",
+        "priority": 3
+      },
+      {
+        "dish_id": "7"
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "name": "Семейное",
+    "maxCount": 2,
+    "persons": 4,
+    "url": "#Семейное",
+    "dishes": [
+      {
+        "dish_id": "2",
+        "priority": 1
+      },
+      {
+        "dish_id": "3",
+        "priority": 2
+      },
+      {
+        "dish_id": "4",
+        "priority": 3
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "name": "Лайф",
+    "persons": 1,
+    "maxCount": 3,
+    "url": "#Лайф",
+    "dishes": [
+      {
+        "dish_id": "5",
+        "priority": 1
+      },
+      {
+        "dish_id": "6",
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "name": "Вег",
+    "persons": 2,
+    "maxCount": 2,
+    "url": "#Вег",
+    "dishes": [
+      {
+        "dish_id": "1",
+        "priority": 1
+      },
+      {
+        "dish_id": "7",
+        "priority": 2
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "name": "Все ужины",
+    "isSet": true,
+    "url": "#Все",
+    "dishes": [
+      {
+        "dish_id": "1"
+      },
+      {
+        "dish_id": "2"
+      }
+    ]
+  }
+]

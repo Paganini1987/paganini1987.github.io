@@ -1,0 +1,157 @@
+@media only screen and (max-width : $lg-max)
+	.container
+		padding-left: 16px
+		padding-right: 16px
+
+	.header
+		&__inner
+			height: 72px
+			border-bottom: 1px solid $light-gray-border
+		&__logo
+			max-width: 157px
+			svg
+				width: 100%
+		&__button
+			&--out
+				display: none
+		&__hamburger
+			display: block
+
+	.main-menu
+		display: none
+
+	.h-tel
+		display: none
+
+	.h-discount
+		&.isOpened
+			.h-discount__popup
+				transform: scale(1)
+				opacity: 1
+				transition: transform 0.3s cubic-bezier(0.165, 0.84, 0.44, 1), opacity 0.6s
+				z-index: 5
+		&__popup
+			top: 15px
+			right: 0
+			padding: 20px 40px 24px 20px
+			letter-spacing: -0.02em
+		&__title
+			display: none
+		&__close
+			display: block
+			position: absolute
+			top: 8px
+			right: 8px
+
+	.footer
+		&__top, &__bottom
+			padding: 32px 0
+		&__inner
+			flex-wrap: wrap
+		&__logo
+			width: 100%
+			max-width: 100%
+			margin-bottom: 32px
+			svg
+				width: 163px
+		&__top-button
+			&--desctop
+				display: none
+		&__title
+			font-size: 18px
+			line-height: 26px
+			margin-bottom: 20px
+		&__menu
+			width: 100%
+			flex-wrap: wrap
+		&__column
+			&--hidden-mobile
+				display: none
+			&--hidden-desctop
+				display: flex
+			&--w100
+				width: 100%
+			&--w50
+				width: 50%
+			&--top
+				justify-content: flex-start
+			&--mb32
+				margin-bottom: 32px
+			&--mb51
+				margin-bottom: 51px
+			&--mt32
+				margin-top: 32px
+			&--pr5
+				padding-right: 5px
+
+			&:not(:last-of-type)
+				margin-right: 0
+		&__item
+			&:not(:last-of-type)
+				margin-bottom: 12px
+			&--hidden-mobile
+				display: none
+			&--hidden-desctop
+				display: block
+		&__copyright
+			font-size: 10px
+			line-height: 16px
+			padding-right: 10px
+			&--desctop
+				display: none
+			&--mobile
+				display: block
+		&__socials
+			margin: 0
+
+	body
+		&.main-page
+			.footer
+				&__bottom
+					padding-bottom: 122px
+
+
+@media only screen and (max-width : $md-max)
+	.p-dish
+		&__labels
+			top: 16px
+			left: 16px
+			margin-right: 60px
+		&__description
+			padding: 20px
+			padding-bottom: 40px
+		&__footer
+			display: block
+		&__column
+			width: 100%
+			&:first-of-type, &:last-of-type
+				padding: 0
+			&:first-of-type
+				margin-bottom: 14px
+		&__switch
+			right: 16px
+			bottom: 16px
+
+	.p-main
+		.df-popup__close
+			display: block
+		&__inner
+			padding: 20px 16px 30px
+		&__title
+			margin-bottom: 20px
+			letter-spacing: -0.02em
+		&__close
+			display: none
+	
+
+@media only screen and (max-width : 374px)
+	.header
+		&__logo
+			max-width: 140px
+
+	.footer
+		&__item
+			&--phone
+				font-size: 18px
+
+		
