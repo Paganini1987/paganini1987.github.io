@@ -308,7 +308,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var axio
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nvar DOMAIN = 'http://uzhindoma.brychkin.w.ibrush.ru';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  API: {\n    SITE_ID: 's1',\n    getWeeks: DOMAIN + '/bitrix/services/main/ajax.php?action=ibrush:api.api.catalog.getWeeks',\n    getWeekMenu: DOMAIN + '/bitrix/services/main/ajax.php?action=ibrush:api.api.catalog.getWeekMenu'\n  },\n  _state: {\n    dropdownOpened: {}\n  },\n  weeks: [],\n  currentWeek: {},\n  weekMenu: [],\n  categories: [],\n  currentCategory: {},\n  persons: '',\n  dishes: '',\n  setIsFull: false,\n  selected: {\n    set: {\n      isMainMenu: false,\n      dishesArr: [],\n      persons: '',\n      dishes: ''\n    }\n  }\n});\n\n//# sourceURL=webpack:///./app/js/src/store/state.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nvar DOMAIN = 'https://uzhindoma.brychkin.w.ibrush.ru';\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  API: {\n    SITE_ID: 's1',\n    getWeeks: DOMAIN + '/bitrix/services/main/ajax.php?action=ibrush:api.api.catalog.getWeeks',\n    getWeekMenu: DOMAIN + '/bitrix/services/main/ajax.php?action=ibrush:api.api.catalog.getWeekMenu'\n  },\n  _state: {\n    dropdownOpened: {}\n  },\n  weeks: [],\n  currentWeek: {},\n  weekMenu: [],\n  categories: [],\n  currentCategory: {},\n  persons: '',\n  dishes: '',\n  setIsFull: false,\n  selected: {\n    set: {\n      isMainMenu: false,\n      dishesArr: [],\n      persons: '',\n      dishes: ''\n    }\n  }\n});\n\n//# sourceURL=webpack:///./app/js/src/store/state.js?");
 
 /***/ }),
 

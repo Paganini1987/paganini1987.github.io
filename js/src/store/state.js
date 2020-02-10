@@ -1,4 +1,4 @@
-const DOMAIN = 'http://uzhindoma.brychkin.w.ibrush.ru'
+const DOMAIN = 'https://uzhindoma.brychkin.w.ibrush.ru'
 
 export default {
 	API: {

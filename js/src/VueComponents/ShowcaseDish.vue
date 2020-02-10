@@ -82,6 +82,16 @@
 				</div>
 			</div>
 		</div>
+
+		<!-- <div class="dish__overlay" :class="{ active: setIsFull }">
+			<div class="dish__o-center">
+				<div class="dish__o-title">Ваш набор сформирован</div>
+				<div class="dish__o-text">
+					Чтобы выбрать это блюдо,
+					уберите любое другое
+				</div>
+			</div>
+		</div> -->
 	</a>
 </template>
 
