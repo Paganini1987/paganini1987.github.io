@@ -4,11 +4,11 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="showcase__inner">
-						<div class="showcase__list">
-							<div class="showcase__item" v-for="dish in currentCategoryDishesList" :key="dish.id">
-								<showcase-dish :key="dish.id" @click.native="showPopup" :input-data="dish"></showcase-dish>
+						<transition-group name="list" tag="div" class="showcase__list">
+							<div class="showcase__item" v-for="product in sortedProducts" :key="product.id" v-position>
+								<showcase-dish :key="product.id" @click.native="showPopup" :input-data="product"></showcase-dish>
 							</div>
-						</div>
+						</transition-group>
 					</div>
 				</div>
 			</div>
@@ -28,10 +28,32 @@ export default {
 			type: Boolean
 		}
 	},
+	directives: {
+		position: {
+			inserted (el) {
+				el.style.top = el.offsetTop + 'px';
+				el.style.left = (el.offsetLeft - 10) + 'px';
+			}
+		}
+	},
 	computed: {
 		...mapGetters({
-			currentCategoryDishesList: 'GET_CURRENT_CATEGORY_DISHES_LIST'
-		})
+			products:  'GET_WEEK_MENU'
+		}),
+		sortedProducts () {
+			// TODO убрать адрес сайта у картинок, чтобы забирать их из папки upload
+			return Object.keys(this.products).map(key=>this.products[key]).sort((a, b)=>a.sort - b.sort).map(product=>{
+
+				if (!product._mod) {
+					product._mod = true
+					product.detail_img = 'https://uzhindoma.ru' + product.detail_img
+					product.preview_img = 'https://uzhindoma.ru' + product.preview_img
+				}
+
+				return product
+			})
+		}
+
 	},
 	methods: {
 		showPopup () {

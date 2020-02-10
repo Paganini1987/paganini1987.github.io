@@ -241,7 +241,6 @@
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 14px;
-  overflow: hidden;
 }
 
 .showcase__item {
@@ -383,6 +382,36 @@
   display: none;
 }
 
+.list-move {
+  -webkit-transition: all 600ms ease-in-out 50ms;
+  -o-transition: all 600ms ease-in-out 50ms;
+  transition: all 600ms ease-in-out 50ms;
+}
+
+.list-enter-active {
+  -webkit-transition: all 300ms ease-out;
+  -o-transition: all 300ms ease-out;
+  transition: all 300ms ease-out;
+}
+
+.list-leave-active {
+  -webkit-transition: all 200ms ease-in;
+  -o-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  position: absolute;
+  z-index: 0;
+}
+
+.list-enter, .list-leave-to {
+  opacity: 0;
+}
+
+.list-enter {
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
+}
+
 @media only screen and (max-width: 1200px) {
   .showcase {
     background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), color-stop(8.64%, #F9F9FA), color-stop(88.03%, #F9F9FA), to(#FFFFFF));
@@ -463,17 +492,27 @@
 }
 
 .dish__img {
+  position: relative;
   -webkit-box-flex: 0;
       -ms-flex: none;
           flex: none;
   border-radius: 6px 6px 0 0;
+  width: 100%;
+  padding-top: 58%;
   overflow: hidden;
 }
 
 .dish__img img {
+  position: absolute;
   display: block;
-  max-width: 100%;
-  height: auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .dish__description {
@@ -567,6 +606,7 @@
   margin: 0;
   padding: 0;
   font-size: 0;
+  z-index: 1;
 }
 
 .dish__label {

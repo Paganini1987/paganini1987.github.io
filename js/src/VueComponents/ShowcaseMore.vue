@@ -4,11 +4,8 @@
 		<div class="s-more__bottom">
 			<div class="s-more__line s-more__line--left"></div>
 			<ul class="s-more__list">
-				<li class="s-more__item">
-					<a href="#" class="s-more__link active">с 23 по 29 сентября</a>
-				</li>
-				<li class="s-more__item">
-					<a href="#" class="s-more__link">с 20 по 26 января</a>
+				<li class="s-more__item" v-for="(week, index) in weeks" :key="index">
+					<a href="#" class="s-more__link" @click.prevent="setCurrentWeek(week)" :class="{ active: week === currentWeek }">{{ week._str }}</a>
 				</li>
 			</ul>
 			<div class="s-more__line s-more__line--right"></div>
@@ -17,8 +14,21 @@
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
-	name: 'ShowcaseMore'
+	name: 'ShowcaseMore',
+	computed: {
+		...mapGetters({
+			weeks: 'GET_WEEKS',
+			currentWeek: 'GET_CURRENT_WEEK'
+		})
+	},
+	methods: {
+		setCurrentWeek (week) {
+			this.$store.dispatch('SET_CURRENT_WEEK', week)
+		}
+	}
 }
 </script>
 

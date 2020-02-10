@@ -1,11 +1,11 @@
 <template>
-	<div class="df-dropdown" :data-type="attribute" :class="{ 'df-dropdown--large': isLarge, 'df-dropdown--small': isSmall, 'df-dropdown--simple': isSimple, isOpened: isOpened }">
+	<div class="df-dropdown" :data-type="attribute" :class="{ 'df-dropdown--large': isLarge, 'df-dropdown--small': isSmall, 'df-dropdown--simple': isSimple, isOpened: proxyIsOpened }">
 		<div class="df-dropdown__holder">
 			<div class="df-dropdown__label" :class="{ 'df-dropdown__label--small': isSmall, 'df-dropdown__label--simple': isSimple, 'df-dropdown__label--white': isWhite }">{{ label }}</div>
 		</div>
-		<a href="#" @click.prevent.stop="isOpened = !isOpened" class="df-dropdown__head" :class="{ 'df-dropdown__head--large': isLarge, 'df-dropdown__head--white': isWhite }">
+		<a href="#" @click.prevent.stop="proxyIsOpened = !proxyIsOpened" class="df-dropdown__head" :class="{ 'df-dropdown__head--large': isLarge, 'df-dropdown__head--white': isWhite }">
 			<span v-if="proxyCurrentValue || proxyCurrentValue.name">{{ proxyCurrentValue.name ? proxyCurrentValue.name : proxyCurrentValue }}</span>
-			<input v-else type="text" class="df-dropdown__input" :placeholder="placeholder">
+			<input v-else-if="placeholder" type="text" class="df-dropdown__input" :placeholder="placeholder">
 			<svg class="df-dropdown__arrow" width="12" height="6" viewBox="0 0 12 6" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path fill-rule="evenodd" clip-rule="evenodd" d="M4.81126 5.51538L0.217238 0.993803C0.0978232 0.876272 0.0978231 0.683711 0.217237 0.566181L0.582051 0.20712C0.698811 0.0922022 0.88617 0.0922021 1.00293 0.20712L5.60375 4.73538C5.8226 4.95077 6.1774 4.95077 6.39625 4.73538L10.9971 0.20712C11.1138 0.0922021 11.3012 0.0922021 11.4179 0.20712L11.7828 0.56618C11.9022 0.683711 11.9022 0.876272 11.7828 0.993803L7.18874 5.51538C6.53222 6.16154 5.46779 6.16154 4.81126 5.51538Z" fill="black"/>
 			</svg>										
@@ -76,22 +76,32 @@ export default {
 	computed: {
 		proxyCurrentValue: {
 			get () {
-				return this.currentValue
+				return this.currentValue ? this.currentValue : '0'
 			},
 			set (val) {
 				this.$emit('change-value', val)
 				this.isOpened = false
 			}
+		},
+		proxyIsOpened: {
+			get () {
+				return this.isOpened
+			},
+			set (val) {
+				this.isOpened = val
+			}
 		}
 	},
 	methods: {
 		handler () {
-			this.isOpened = false
+			this.proxyIsOpened = false
 		}
 	},
 	created () {
 		document.addEventListener('click', this.handler.bind(this));
 		this.id = Math.round(Math.random()*1000000)
+
+		this.$store.dispatch('SET_DROPDOWN_STATE', { id: this.id, _state: false})
 	},
 	beforeDestroy () {
 		document.removeEventListener('click', this.handler.bind(this));

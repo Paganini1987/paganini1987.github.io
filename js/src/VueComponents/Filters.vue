@@ -5,20 +5,20 @@
 				<div class="col-md-12">
 					<div class="filters__inner">
 						<ul class="filters__list" :class="{ notIsSet: !currentCategory.isSet && isAdditional }">
-							<li class="filters__item" v-for="(item, index) in categoriesList" :key="index">
-								<a :href="item.url" class="filters__link" @click.prevent="setCategory(item)" :class="{ active: item === proxyCurrentCategory }">{{ item.name }}</a>
+							<li class="filters__item" v-for="(item, index) in sortedCategories" :key="index">
+								<a :href="'#' + item.name" class="filters__link" @click.prevent="setCategory(item)" :class="{ active: item === proxyCurrentCategory }">{{ item.name }}</a>
 							</li>
 						</ul>
 						<div v-if="currentCategory.isSet || !isAdditional" class="filters__group">
 
-							<drop-down is-large attribute="dishes" label="Ваше меню" :list="categoriesList" :current-value="proxyCurrentCategory" @change-value="setCategory"></drop-down>
+							<drop-down is-large attribute="dishes" label="Ваше меню" :list="sortedCategories" :current-value="proxyCurrentCategory" @change-value="setCategory"></drop-down>
 							
 							<drop-down is-small label="Блюд" :list="dishesList" :current-value="proxyDishes" @change-value="setDishes"></drop-down>
 							
 							<drop-down is-small label="Персон" :list="personsList" :current-value="proxyPersons" @change-value="setPersons"></drop-down>
 
 						</div>
-						<button v-if="!isAdditional" class="filters__button filters__button--main filters__button--fixed-on-mobile df-btn df-btn--ca" :disabled="currentCategory.maxCount !== selectedDished">
+						<button v-if="!isAdditional" class="filters__button filters__button--main filters__button--fixed-on-mobile df-btn df-btn--ca" :disabled="+proxyDishes !== selectedDishesCount">
 							{{ buttonText }}
 						</button>
 
@@ -47,8 +47,7 @@ export default {
 	},
 	data () {
 		return {
-			personsList: [1, 2, 3, 4, 5],
-			dishesList: [1, 2, 3, 4, 5]
+			
 		}
 	},
 	directives: {
@@ -119,12 +118,16 @@ export default {
 	},
 	computed: {
 		...mapGetters({
+			categories: 'GET_CATEGORIES',
 			currentCategory: 'GET_CURRENT_CATEGORY',
-			categoriesList: 'GET_CATEGORIES_LIST',
+			setParams: 'GET_SET_PARAMS',
 			persons: 'GET_PERSONS_COUNT',
 			dishes: 'GET_DISHES_COUNT',
-			currentCategoryDishesList: 'GET_CURRENT_CATEGORY_DISHES_LIST'
+			selectedDishes: 'GET_SELECTED_DISHES'
 		}),
+		sortedCategories () {
+			return this.categories.sort((a,b)=>(+a) - (+b))
+		},
 		proxyCurrentCategory: {
 			get () {
 				return this.currentCategory
@@ -139,7 +142,6 @@ export default {
 			},
 			set (value) {
 				this.$store.dispatch('SET_PERSONS_COUNT', value)
-				$('.js-dropdown').removeClass('isOpened')
 			}
 		},
 		proxyDishes: {
@@ -148,25 +150,36 @@ export default {
 			},
 			set (value) {
 				this.$store.dispatch('SET_DISHES_COUNT', value)
-				$('.js-dropdown').removeClass('isOpened')
 			}
 		},
-		selectedDished () {
-			return this.currentCategoryDishesList.filter(dish => dish._selected).length
+		dishesList () {
+			return this.setParams.map(param=>param.count_din).filter((param, i, arr)=>arr.indexOf(param) === i).sort()
+		},
+		personsList () {
+			return this.setParams.map(param=>param.count_pers).filter((param, i, arr)=>arr.indexOf(param) === i).sort()
+		},
+		defaultDishesPersons () {
+			return this.setParams.filter(param=>param.default === 'Y').length ? this.setParams.filter(param=>param.default === 'Y')[0] : this.setParams[0]
+		},
+		setPrice () {
+			return this.setParams.filter(param=>param.count_din === this.proxyDishes && param.count_pers === this.proxyPersons).length ? this.setParams.filter(param=>param.count_din === this.proxyDishes && param.count_pers === this.proxyPersons)[0].price : 0
+		},
+		selectedDishesCount () {
+			return this.selectedDishes.length
 		},
 		buttonText () {
-			if (this.currentCategory.maxCount === this.selectedDished) {
-				return `Заказать ${ this.dishes } ${ this.words } за 2 800 ₽`
+			if (+this.proxyDishes === this.selectedDishesCount) {
+				return `Заказать ${ this.selectedDishesCount } ${ this.words } за ${ this.priceFormat(this.setPrice) } ₽`
 			}
-			if (this.currentCategory.maxCount > this.selectedDished) {
-				return `Выбрано ${ this.selectedDished } блюд из ${ this.currentCategory.maxCount }`
+			if (+this.proxyDishes > this.selectedDishesCount) {
+				return `Выбрано ${ this.selectedDishesCount } блюд из ${ this.proxyDishes }`
 			}
-			if (this.currentCategory.maxCount < this.selectedDished) {
-				return `Выбрано ${ this.selectedDished } блюд из ${ this.currentCategory.maxCount }`
+			if (+this.proxyDishes < this.selectedDishesCount) {
+				return `Выбрано ${ this.selectedDishesCount } блюд из ${ this.proxyDishes }`
 			}
 		},
 		words: function() {
-			let number = this.dishes;
+			let number = this.selectedDishesCount;
 			let cases = [2, 0, 1, 1, 1, 2];
 			let titles = ['ужин', 'ужина', 'ужинов']
 
@@ -182,13 +195,16 @@ export default {
 		},
 		setPersons (val) {
 			this.proxyPersons = val
+		},
+		priceFormat (value) {
+			return value.toString().replace(/\D/g, '').replace(/(?!^)(?=(?:\d{3})+(?:\.|$))/g, ' ')
 		}
 	},
-	created () {
-		
-	},
-	mounted () {
-
+	watch: {
+		defaultDishesPersons () {
+			this.proxyPersons = this.defaultDishesPersons.count_pers
+			this.proxyDishes = this.defaultDishesPersons.count_din
+		}
 	}
 }
 </script>

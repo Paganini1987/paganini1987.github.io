@@ -10,7 +10,7 @@
 		margin-right: -$gutter-width/2
 		flex-wrap: wrap
 		margin-top: 14px
-		overflow: hidden
+		// overflow: hidden
 	&__item
 		width: calc(100%/3 - 20px)
 		margin: 10px
@@ -101,6 +101,23 @@
 			margin-bottom: 8px
 		&--hidden-on-desctop
 			display: none
+
+.list
+	&-move
+		transition: all 600ms ease-in-out 50ms
+	&-enter-active
+		transition: all 300ms ease-out
+
+	&-leave-active
+		transition: all 200ms ease-in
+		position: absolute
+		z-index: 0
+
+	&-enter, &-leave-to
+		opacity: 0
+
+	&-enter
+		transform: scale(0.9)
 		
 @media only screen and (max-width : $lg-max)
 	.showcase
