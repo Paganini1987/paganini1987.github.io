@@ -6,7 +6,9 @@
         >
         <section class="section">
             <div class="container">
-                <router-view />
+                <keep-alive>
+                    <router-view />
+                </keep-alive>
             </div>
         </section>
     </div>

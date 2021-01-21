@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/precache-manifest.f733539edf8aa0a51b01a9c4cfe4b9d2.js"
+  "/precache-manifest.80b507ca6985d07ab416b496701fc070.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "liga-sporta"});
