@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["error"],{dda8:function(t,e,r){"use strict";r.r(e);var s=function(){var t=this,e=t.$createElement,r=t._self._c||e;return r("div",[r("h1",{staticClass:"title"},[t._v("404")]),r("h2",{staticClass:"title is-5"},[t._v("Страница не найдена")]),r("router-link",{attrs:{to:"/"}},[t._v("На главную")])],1)},n=[],a={name:"Error"},l=a,i=r("2877"),o=Object(i["a"])(l,s,n,!1,null,null,null);e["default"]=o.exports}}]);
+//# sourceMappingURL=error.bb881559.js.map
