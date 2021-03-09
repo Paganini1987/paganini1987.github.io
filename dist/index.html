@@ -1,35 +1,63 @@
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <script src="https://cdn.jsdelivr.net/gh/aframevr/aframe@1c2407b26c61958baa93967b5412487cd94b290b/dist/aframe-master.min.js"></script>
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
 
-<head>
+    <style>
+        .arjs-loader {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-	<meta charset="utf-8">
-	<!-- <base href="/"> -->
+        .arjs-loader div {
+            text-align: center;
+            font-size: 1.25em;
+            color: white;
+        }
+    </style>
 
-	<title>OptimizedHTML 5</title>
-	<meta name="description" content="Startup HTML template OptimizedHTML 5">
-
-	<meta name="viewport" content="width=device-width">
-
-	<link rel="icon" href="images/favicon.png">
-	<meta property="og:image" content="images/dist/preview.jpg">
-	
-	<link rel="stylesheet" href="css/main.min.css">
-
-</head>
-
-<body>
-
-	<div style="max-width: 700px; margin: auto">
-
-		<img src="images/dist/preview.jpg" alt="Start HTML5 Template" style="width: 100%"><br><br>
-		<h2>Welcome to startup HTML template OptimizedHTML 5!</h2>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam reprehenderit nulla alias expedita a qui, pariatur doloremque ipsa fugit laboriosam odio iure recusandae laborum delectus praesentium magni reiciendis voluptatem. Sed.</p>
-	
-	</div>
-
-	<script src="js/app.min.js"></script>
-
-</body>
+    <body style="margin: 0px; overflow: hidden">
+        <!-- minimal loader shown until image descriptors are loaded -->
+        <div class="arjs-loader">
+            <div>Loading, please wait...</div>
+        </div>
+        <a-scene
+            vr-mode-ui="enabled: false;"
+            renderer="logarithmicDepthBuffer: true;"
+            embedded
+            arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
+        >
+            <!-- we use cors proxy to avoid cross-origin problems -->
+            <a-nft
+                type="nft"
+                url="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/trex-image/trex"
+                smooth="true"
+                smoothCount="10"
+                smoothTolerance=".01"
+                smoothThreshold="5"
+            >
+                <a-entity
+                    gltf-model="https://arjs-cors-proxy.herokuapp.com/https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
+                    scale="5 5 5"
+                    position="50 150 0"
+                >
+                </a-entity>
+            </a-nft>
+            <a-entity camera></a-entity>
+        </a-scene>
+    </body>
 </html>
